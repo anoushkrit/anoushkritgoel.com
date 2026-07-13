@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import type { ComponentType } from "react";
 import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
@@ -121,10 +122,17 @@ export default function Page() {
           <div className="flex flex-wrap gap-2">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                {(() => {
+                  const SkillIcon = ("icon" in skill
+                    ? skill.icon
+                    : undefined) as ComponentType<{ className?: string }> | undefined;
+                  return (
                 <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
-                  {skill.icon && <skill.icon className="size-4 rounded overflow-hidden object-contain" />}
+                  {SkillIcon ? <SkillIcon className="size-4 rounded overflow-hidden object-contain" /> : null}
                   <span className="text-foreground text-sm font-medium">{skill.name}</span>
                 </div>
+                  );
+                })()}
               </BlurFade>
             ))}
           </div>

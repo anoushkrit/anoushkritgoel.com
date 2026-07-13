@@ -1,10 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { DATA } from "@/data/resume";
 import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeline";
 
 export default function HackathonsSection() {
+  type HackathonLink = {
+    href: string;
+    icon?: ReactNode;
+    title: string;
+  };
+
   return (
     <section id="research" className="overflow-hidden">
       <div className="flex min-h-0 flex-col gap-y-8 w-full">
@@ -54,7 +61,7 @@ export default function HackathonsSection() {
                 )}
                 {hackathon.links && hackathon.links.length > 0 && (
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
-                    {hackathon.links.map((link, idx) => (
+                    {(hackathon.links as readonly HackathonLink[]).map((link, idx) => (
                       <Link
                         href={link.href}
                         key={idx}
