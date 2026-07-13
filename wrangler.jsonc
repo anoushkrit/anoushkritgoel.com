@@ -11,5 +11,9 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "routes": [
+    { "pattern": "anoushkritgoel.com", "custom_domain": true },
+    { "pattern": "www.anoushkritgoel.com", "custom_domain": true }
+  ]
 }
