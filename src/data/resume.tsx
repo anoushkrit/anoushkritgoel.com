@@ -10,6 +10,8 @@ export const DATA = {
   description: "#NeverGiveUp • Entrepreneur. Researcher. Data Scientist. Artist.",
   summary:
     "Biomedical AI. Innovations & Ideas. Behavioural Psychology. Pragmatic Leadership. Sustainable Growth. Startups. Artificial Learning Paradigms. Philosophy of Life.\n\nMachine Learning | Deep Learning | LLMs | Multimodal LLMs | Reinforcement Learning\n\nMy goal is to maximize human potential by solving healthcare problems. Currently, I am pursuing my M.Tech (by Research) at IIT Mandi in Intelligent Systems under the guidance of Dr. Arnav Bhavsar and Dr. Aditya Nigam.\n\n**Research**: I work on segmenting spatially similar 3D data (point clouds), specifically white matter tract streamlines in neuroimaging. My current focus is constructing fibre streamlines and segmenting fibre bundles, while also extending work to diffusion MRI denoising and reconstruction.\n\n**Startup**: Besides working on my startup Tensr.AI, I focus on real-world problems in deep learning, deep reinforcement learning, machine learning, biomedical sciences, design, and entrepreneurship.\n\n**Industry**: I have 6+ years of combined professional, entrepreneurial, and research experience, including a Lead Data Scientist role at Jio (TelOS/BrainOS initiative under Dr. Shailesh Kumar).",
+  researchIntro:
+    "In clinical scenarios, there is a need to plan surgeries, and for neurological interventions, non-invasive analysis is necessary. For this, in most clinical scenarios, MRI is used to look into the brain, and with the MRI data we aim to find the white matter tracts. The whole connectivity of the brain is understood only through the MRI scans.",
   avatarUrl: "/me.png",
   skills: [
     { name: "Machine Learning" },

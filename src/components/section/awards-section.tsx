@@ -1,15 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { DATA } from "@/data/resume";
-import { ChevronDown, ChevronRight, Trophy } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Trophy } from "lucide-react";
 
 function LogoImage({ issuer }: { issuer: string }) {
   const [imageError, setImageError] = useState(false);
@@ -31,7 +24,7 @@ function LogoImage({ issuer }: { issuer: string }) {
 
   if (!logoSrc || imageError) {
     return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex items-center justify-center flex-none">
+      <div className="size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex items-center justify-center flex-none">
         <Trophy className="size-4 text-muted-foreground" />
       </div>
     );
@@ -41,7 +34,7 @@ function LogoImage({ issuer }: { issuer: string }) {
     <img
       src={logoSrc}
       alt={issuer}
-      className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none bg-background"
+      className="size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none bg-background"
       onError={() => setImageError(true)}
     />
   );
@@ -49,7 +42,7 @@ function LogoImage({ issuer }: { issuer: string }) {
 
 export default function AwardsSection() {
   return (
-    <div className="flex min-h-0 flex-col gap-y-6 w-full">
+    <div className="flex min-h-0 flex-col gap-y-6 w-full max-w-[800px] mx-auto">
       <div className="flex flex-col gap-y-4 items-center justify-center">
         <div className="flex items-center w-full">
           <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
@@ -66,54 +59,34 @@ export default function AwardsSection() {
         </div>
       </div>
 
-      <Accordion type="single" collapsible className="w-full grid gap-4 max-w-[800px] mx-auto">
+      <div className="w-full flex flex-col gap-y-8 mt-4">
         {DATA.awards.map((award) => (
-          <AccordionItem
+          <div
             key={award.title}
-            value={award.title}
-            className="w-full border-b-0 grid gap-2"
+            className="w-full flex gap-x-4 items-start group"
           >
-            <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
-              <div className="flex items-center gap-x-3 justify-between w-full text-left">
-                <div className="flex items-center gap-x-3 flex-1 min-w-0">
-                  <LogoImage issuer={award.issuer} />
-                  <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
-                    <div className="font-semibold leading-none flex items-center gap-2 text-foreground">
-                      {award.title}
-                      <span className="relative inline-flex items-center w-3.5 h-3.5">
-                        <ChevronRight
-                          className={cn(
-                            "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-300 ease-out",
-                            "translate-x-0 opacity-0",
-                            "group-hover:translate-x-1 group-hover:opacity-100",
-                            "group-data-[state=open]:opacity-0 group-data-[state=open]:translate-x-0"
-                          )}
-                        />
-                        <ChevronDown
-                          className={cn(
-                            "absolute h-3.5 w-3.5 shrink-0 text-muted-foreground stroke-2 transition-all duration-200",
-                            "opacity-0 rotate-0",
-                            "group-data-[state=open]:opacity-100 group-data-[state=open]:rotate-180"
-                          )}
-                        />
-                      </span>
-                    </div>
-                    <div className="font-sans text-sm text-muted-foreground">
-                      {award.issuer}
-                    </div>
-                  </div>
+            <LogoImage issuer={award.issuer} />
+            <div className="flex-1 flex flex-col gap-y-1">
+              <div className="flex items-center justify-between w-full text-left">
+                <div className="font-semibold text-base leading-none text-foreground group-hover:text-primary transition-colors">
+                  {award.title}
                 </div>
-                <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
-                  <span>{award.date}</span>
+                <div className="text-xs sm:text-sm tabular-nums text-muted-foreground">
+                  {award.date}
                 </div>
               </div>
-            </AccordionTrigger>
-            <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              {award.description}
-            </AccordionContent>
-          </AccordionItem>
+
+              <div className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                {award.issuer}
+              </div>
+
+              <p className="text-sm text-muted-foreground/90 leading-relaxed mt-1 font-sans">
+                {award.description}
+              </p>
+            </div>
+          </div>
         ))}
-      </Accordion>
+      </div>
     </div>
   );
 }
