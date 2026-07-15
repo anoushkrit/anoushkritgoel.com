@@ -12,33 +12,33 @@ interface GalleryItem {
 const GALLERY_ITEMS: GalleryItem[] = [
   {
     url: "https://brainsuite.org/wp-content/uploads/2015/02/tracts2.png",
-    title: "Brain Tractography",
-    subtitle: "3D Spatial AI",
+    title: "IIT Mandi",
+    subtitle: "Research Reference",
   },
   {
     url: "https://assets.cadbull.com/product_img/original/2024/HAVCequipmentandductingsectiondetailsinAutoCADdwgfileWedOct2022093132.jpg",
-    title: "HVAC & CAD Plans",
-    subtitle: "Vector Path AI",
+    title: "Attentive AI",
+    subtitle: "Work Reference",
   },
   {
     url: "https://prod-images-static.radiopaedia.org/images/45173030/101e4b11d9d079646ebea213875a48_gallery.jpeg",
-    title: "Ultrasound Triage",
-    subtitle: "Medical Image AI",
+    title: "xtLytics LLC",
+    subtitle: "Work Reference",
   },
   {
     url: "https://bimkit.eu/wp-content/uploads/2023/08/Texterkennung-OCR-in-plaenen.webp",
-    title: "Blueprint OCR",
-    subtitle: "Document Layout AI",
+    title: "Attentive.ai",
+    subtitle: "OCR Work Reference",
   },
   {
     url: "https://i0.wp.com/livefiredev.com/wp-content/uploads/2023/04/ocr_table_tool_1_contours.jpg?ssl=1",
-    title: "Table Parse",
-    subtitle: "Invoice OCR",
+    title: "xtLytics LLC",
+    subtitle: "Work Reference",
   },
   {
     url: "https://mlr.cdn-apple.com/media/fig1_84b4ceb42b.png",
-    title: "Clickstream Optimization",
-    subtitle: "Behavioral RL",
+    title: "IIT Mandi",
+    subtitle: "3D Point Cloud Research Reference",
   },
 ];
 
