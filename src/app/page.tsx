@@ -13,6 +13,7 @@ import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import AwardsSection from "@/components/section/awards-section";
 import CertificationsSection from "@/components/section/certifications-section";
+import WorkGallery from "@/components/section/work-gallery";
 import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -31,6 +32,7 @@ export default function Page() {
               delay={BLUR_FADE_DELAY}
               text={DATA.description}
             />
+            <WorkGallery />
           </div>
         </div>
       </section>
