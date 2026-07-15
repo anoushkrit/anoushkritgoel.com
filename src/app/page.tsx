@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import TypingAnimation from "@/components/magicui/typing-animation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
@@ -22,12 +23,9 @@ export default function Page() {
       <section id="hero">
         <div className="mx-auto w-full max-w-4xl space-y-8">
           <div className="gap-2 flex flex-col">
-            <BlurFadeText
-              delay={BLUR_FADE_DELAY}
-              className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
-              yOffset={8}
-              text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
-            />
+            <h1 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl">
+              <TypingAnimation text={`Hi, I'm ${DATA.name}`} speed={80} />
+            </h1>
             <BlurFadeText
               className="text-muted-foreground max-w-3xl md:text-lg lg:text-xl"
               delay={BLUR_FADE_DELAY}
