@@ -177,35 +177,77 @@ export const DATA = {
   projects: [
     {
       title: "TrackletGPT",
-      href: "#",
+      href: "https://github.com/anoushkrit/TrackletGPT",
       dates: "ISBI 2026",
       active: true,
       description:
-        "Accepted at the International Symposium on Biomedical Imaging (ISBI 2026), London, UK: **TrackletGPT: A GPT architecture for White Matter Segmentation** (Conference Rank: A).",
+        "Accepted at International Symposium on Biomedical Imaging (ISBI 2026, London, UK): **TrackletGPT: A GPT architecture for White Matter Segmentation** (Conference Rank: A). Tokenizes B-Spline streamline sub-segments for point cloud reconstruction.",
       technologies: [
-        "Neuroimaging",
-        "White Matter Segmentation",
-        "Transformers",
-        "GPT Architectures",
+        "3D Spatial AI",
+        "B-Spline Tokenization",
+        "GPT Transformers",
+        "PyTorch3D",
       ],
-      links: [],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/anoushkrit/TrackletGPT",
+          icon: <Icons.github className="h-4 w-4" />,
+        },
+      ],
       image: "",
       video: "",
     },
     {
-      title: "TractRLFusion",
-      href: "#",
-      dates: "ISBI 2026",
+      title: "SlicerTracto",
+      href: "https://github.com/anoushkrit/SlicerTracto",
+      dates: "Dec 2024 - Present",
       active: true,
       description:
-        "Accepted at the International Symposium on Biomedical Imaging (ISBI 2026), London, UK: **TractRLFusion**.",
+        "Open-source 3D Slicer extension allowing Neuro-Radiologists to visualize, track, and segment white matter tracts from Diffusion MRI scans in a standalone desktop application with optional server compute offloading.",
       technologies: [
-        "Neuroimaging",
-        "Deep Learning",
-        "Reinforcement Learning",
-        "Fusion Networks",
+        "3D Slicer",
+        "Medical AI",
+        "Dipy / Scilpy",
+        "PyTorch",
+        "Python",
       ],
-      links: [],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/anoushkrit/SlicerTracto",
+          icon: <Icons.github className="h-4 w-4" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Sculpt3D & Talk2point",
+      href: "https://github.com/anoushkrit/Sculpt3D",
+      dates: "2024 - 2025",
+      active: true,
+      description:
+        "Multimodal Text & Sketch-to-3D point cloud generation and interactive editing framework using SDFusion + LLaMA/GPT continuous feedback loops for granular region-specific 3D spatial manipulation.",
+      technologies: [
+        "Multimodal 3D AI",
+        "SDFusion",
+        "LLaMA / GPT",
+        "Open3D",
+        "PyTorch3D",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/anoushkrit/Sculpt3D",
+          icon: <Icons.github className="h-4 w-4" />,
+        },
+        {
+          type: "Talk2point",
+          href: "https://github.com/anoushkrit/talk2point",
+          icon: <Icons.github className="h-4 w-4" />,
+        },
+      ],
       image: "",
       video: "",
     },
@@ -215,12 +257,12 @@ export const DATA = {
       dates: "ISBI 2025",
       active: true,
       description:
-        "Accepted at the 23rd International Symposium on Biomedical Imaging (ISBI 2025), Houston, Texas: **TractoGPT: A GPT architecture for White Matter Segmentation**.",
+        "Accepted at ISBI 2025 (Houston, TX): **TractoGPT**. Models tractography streamlines as 3D point cloud patches pretrained via dual-masking. **Outperformed Sherbrooke Connectivity Imaging Lab (SCIL)'s FIESTA SOTA**.",
       technologies: [
-        "Neuroimaging",
-        "White Matter Segmentation",
+        "3D Spatial AI",
+        "Dual-Masked Pretraining",
         "Transformers",
-        "GPT Architectures",
+        "Neuroimaging",
       ],
       links: [
         {
@@ -230,7 +272,7 @@ export const DATA = {
         },
         {
           type: "GitHub",
-          href: "https://github.com/anoushkrit/TractoEmbed",
+          href: "https://github.com/anoushkrit/TractoGPT",
           icon: <Icons.github className="h-4 w-4" />,
         },
       ],
@@ -239,21 +281,21 @@ export const DATA = {
     },
     {
       title: "TractoEmbed",
-      href: "https://arxiv.org/pdf/2411.08187",
+      href: "https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17",
       dates: "ICPR 2024",
       active: true,
       description:
-        "Accepted at the 27th International Conference on Pattern Recognition (ICPR 2024), Kolkata: **TractoEmbed: A modular multi-embedding framework for White Matter Segmentation**.",
+        "Accepted at ICPR 2024 (Kolkata): **TractoEmbed**. Modular multi-embedding framework using CNN, dVAE, and PointNet. **Outperformed Harvard Medical School's TractCloud on White Matter Tract Segmentation**.",
       technologies: [
-        "Deep Learning",
         "Representation Learning",
+        "PointNet / dVAE",
+        "Harvard Benchmark",
         "Neuroimaging",
-        "White Matter Segmentation",
       ],
       links: [
         {
-          type: "ArXiv",
-          href: "https://arxiv.org/pdf/2411.08187",
+          type: "Paper",
+          href: "https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17",
           icon: <Icons.globe className="h-4 w-4" />,
         },
         {
@@ -267,18 +309,23 @@ export const DATA = {
     },
     {
       title: "Tract-RLformer",
-      href: "https://arxiv.org/abs/2411.05757",
+      href: "https://link.springer.com/chapter/10.1007/978-3-031-78201-5_17",
       dates: "ICPR 2024",
       active: true,
       description:
-        "Accepted at the 27th International Conference on Pattern Recognition (ICPR 2024), Kolkata: **Tract-RLformer: A tract-specific RL policy based decoder-only transformer network**.",
+        "Accepted at ICPR 2024: **Tract-RLformer**. Supervised + Reinforcement Learning 2-stage policy refinement. **Outperformed SCIL's Track2Learn, DeepTract, and PFT (Particle Filtering Tracking)**.",
       technologies: [
         "Reinforcement Learning",
-        "Transformers",
-        "Deep Learning",
-        "Neuroimaging",
+        "Decoder Transformers",
+        "SCIL Benchmark",
+        "PyTorch / OpenAI Gym",
       ],
       links: [
+        {
+          type: "Paper",
+          href: "https://link.springer.com/chapter/10.1007/978-3-031-78201-5_17",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
         {
           type: "ArXiv",
           href: "https://arxiv.org/abs/2411.05757",
