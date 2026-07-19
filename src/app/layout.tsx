@@ -1,7 +1,7 @@
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
+import { DATA, ALL_PROJECTS_DETAILS } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -10,12 +10,12 @@ import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: `${DATA.name} | Applied Scientist & AI Researcher`,
+    default: `${DATA.name} | Applied Scientist & 3D Spatial AI Researcher`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
   openGraph: {
-    title: `${DATA.name} | Portfolio & Research`,
+    title: `${DATA.name} | Portfolio & 3D Spatial AI Research`,
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
@@ -50,25 +50,45 @@ export default function RootLayout({
     name: DATA.name,
     url: DATA.url,
     jobTitle: "Research Engineer 2 & AI Researcher",
+    description: DATA.description,
+    knowsAbout: [
+      "3D Spatial AI",
+      "Point Clouds",
+      "Brain MRI Tractography",
+      "Transformers",
+      "Reinforcement Learning",
+      "Vector AI & Blueprint Layout OCR",
+    ],
     worksFor: {
       "@type": "Organization",
       name: "Attentive.AI",
+      url: "https://attentive.ai/",
     },
     alumniOf: [
       {
         "@type": "EducationalOrganization",
         name: "Indian Institute of Technology Mandi",
+        url: "https://www.iitmandi.ac.in/",
       },
       {
         "@type": "EducationalOrganization",
         name: "Shiv Nadar University",
+        url: "https://snu.edu.in/",
       },
     ],
     sameAs: [
       DATA.contact.social.GitHub.url,
       DATA.contact.social.LinkedIn.url,
+      DATA.contact.social.Scholar.url,
       DATA.contact.social.X.url,
     ],
+    publication: ALL_PROJECTS_DETAILS.filter((p) => p.category === "Paper").map((paper) => ({
+      "@type": "ScholarlyArticle",
+      headline: paper.title,
+      name: paper.subtitle,
+      url: `${DATA.url}/projects/${paper.slug}`,
+      sameAs: paper.arxivUrl || paper.paperUrl || paper.githubUrl,
+    })),
   };
 
   return (

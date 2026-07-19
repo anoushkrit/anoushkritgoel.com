@@ -1,0 +1,137 @@
+# Anoushkrit Goel - Complete Technical Portfolio & Research Knowledge Base
+
+## Overview
+Anoushkrit Goel is an Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience specializing in 3D Spatial AI (point cloud sequence modeling, B-Spline tokenization, transformer architectures), Medical Imaging & Neuroimaging (Diffusion MRI white matter tractography), Vector AI & Document OCR, and Reinforcement Learning.
+
+Current Role: Research Engineer 2 at Attentive.AI
+Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi (GPA: 9.47/10), B.Tech in Electronics Engineering with Minor in Design from Shiv Nadar University (GPA: 7.61/10).
+
+---
+
+## Peer-Reviewed Publications & Research Papers
+
+### 1. TrackletGPT: A GPT architecture for White Matter Segmentation
+- Venue: IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK) — Rank: A
+- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Code URL: https://github.com/anoushkrit/TrackletGPT
+- Page URL: https://anoushkritgoel.com/projects/trackletgpt
+- Abstract & Method: TrackletGPT introduces a novel 3D point cloud tokenization scheme for fiber tractography. Streamlines are decomposed into continuous B-Spline sub-segments ('tracklets'). Geometric curvature parameters are tokenized into discrete representations, enabling a decoder-only GPT transformer to pretrain on tracklet completion and dual-masking.
+- BibTeX:
+```bibtex
+@inproceedings{goel2026trackletgpt,
+  title={TrackletGPT: A GPT architecture for White Matter Segmentation},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
+  year={2026}
+}
+```
+
+### 2. TractRLFusion: Reinforcement Learning and Fusion Networks for Diffusion MRI
+- Venue: IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK)
+- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Page URL: https://anoushkritgoel.com/projects/tractrlfusion
+- Abstract & Method: Combines reinforcement learning policy gradient algorithms with multi-modal neural fusion networks to track white matter fiber bundles directly through complex crossing-fiber regions in Diffusion MRI.
+
+### 3. TractoGPT: A GPT architecture for White Matter Segmentation
+- Venue: 23rd IEEE International Symposium on Biomedical Imaging (ISBI 2025, Houston, TX, USA)
+- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- ArXiv URL: https://arxiv.org/abs/2411.08187
+- Code URL: https://github.com/anoushkrit/TractoGPT
+- Page URL: https://anoushkritgoel.com/projects/tractogpt
+- SOTA Benchmark Result: Outperformed Sherbrooke Connectivity Imaging Lab (SCIL Canada)'s state-of-the-art model FIESTA.
+- Abstract & Method: TractoGPT models 3D tractography streamlines as spatial point cloud tokens. Introduces a dual-masking self-supervised pretraining objective (masking point coordinates within a patch and whole spatial patches across the brain). Fine-tuned on white matter tract anatomical classification.
+- BibTeX:
+```bibtex
+@article{goel2024tractogpt,
+  title={TractoGPT: A GPT architecture for White Matter Segmentation},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  journal={arXiv preprint arXiv:2411.08187},
+  year={2024}
+}
+```
+
+### 4. TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation
+- Venue: 27th International Conference on Pattern Recognition (ICPR 2024, Kolkata, India) — Springer
+- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Paper URL: https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17
+- Code URL: https://github.com/anoushkrit/TractoEmbed
+- Page URL: https://anoushkritgoel.com/projects/tractoembed
+- SOTA Benchmark Result: Outperformed Harvard Medical School's TractCloud benchmark on white matter tract segmentation.
+- Abstract & Method: Extracts multi-scale spatial representations across 3 levels: streamline level (1D CNN), regional patch level (discrete VAE dVAE), and global bundle level (PointNet).
+- BibTeX:
+```bibtex
+@inproceedings{goel2024tractoembed,
+  title={TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  booktitle={International Conference on Pattern Recognition},
+  pages={262--278},
+  year={2024},
+  organization={Springer}
+}
+```
+
+### 5. Tract-RLformer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network
+- Venue: 27th International Conference on Pattern Recognition (ICPR 2024, Kolkata, India) — Springer
+- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Paper URL: https://link.springer.com/chapter/10.1007/978-3-031-78201-5_17
+- ArXiv URL: https://arxiv.org/abs/2411.05757
+- Page URL: https://anoushkritgoel.com/projects/tract-rlformer
+- SOTA Benchmark Result: Outperformed SCIL Canada's Track2Learn, DeepTract, and Particle Filtering Tracking (PFT).
+- Abstract & Method: Combines supervised pretraining with reinforcement learning policy refinement in an OpenAI Gym environment, directly delineating target fiber tracts without post-processing.
+- BibTeX:
+```bibtex
+@inproceedings{goel2024tract,
+  title={Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  booktitle={International Conference on Pattern Recognition},
+  pages={279--295},
+  year={2024},
+  organization={Springer}
+}
+```
+
+---
+
+## Open Source Software & AI Tools
+
+### 1. SlicerTracto
+- Category: Standalone 3D Slicer Extension GUI Application
+- Code URL: https://github.com/anoushkrit/SlicerTracto
+- Page URL: https://anoushkritgoel.com/projects/slicer-tracto
+- Description: Culmination of research into an open-source 3D Slicer desktop extension enabling neuro-radiologists to visualize, track, and segment white matter tracts from Diffusion MRI scans with on-prem/cloud GPU compute offloading. Deployed at PGI Chandigarh Hospital.
+
+### 2. Sculpt3D & Talk2point
+- Category: Multimodal 3D Generative AI Framework
+- Code URL: https://github.com/anoushkrit/Sculpt3D
+- Page URL: https://anoushkritgoel.com/projects/sculpt3d
+- Description: Multimodal text and sketch-to-3D point cloud generation and interactive region-specific editing framework using SDFusion + LLaMA/GPT continuous feedback loops.
+
+---
+
+## Work Experience & Industrial Contributions
+
+### 1. Attentive.AI (Jun 2025 - Present) | Research Engineer 2
+- Architected vector path tokenization (PDF → SVG) increasing macro-F1 by 7%.
+- Shipped DEIMv2 (DINOv3 backbone) reducing HVAC annotation TAT to 35%.
+- Built ArchGlyphOCR: dense architectural plan text proposal pipeline outperforming Google DocAI & Gemini 3.1 Pro.
+
+### 2. IIT Mandi (Feb 2023 - Jun 2025) | Researcher
+- Developed foundational 3D spatial AI point cloud transformer models for brain MRI white matter tractography.
+- Published 5 peer-reviewed papers (ISBI 2026, ISBI 2025, ICPR 2024).
+
+### 3. StatusNeo (Aug 2022 - Mar 2023) | Lead Data Scientist
+- Led Cortex AI team under Dr. Shailesh Kumar for Reliance Jio's TelOS MLOps ecosystem.
+- Built cross-framework schema (sklearn ↔ PyTorch ↔ TensorFlow) via Protobuf & ONNX serialization.
+
+### 4. Gamezop (Jun 2021 - Jun 2022) | Senior Data Scientist
+- Built ClickVision: MDP behavioral reinforcement learning model over clickstream trajectories.
+- Reduced wasted offers and user churn by 62%.
+
+### 5. Tensr.AI (Feb 2020 - Jun 2021) | Founder & CEO
+- Scaled startup team to 15 engineers; certified by DST & DPIIT Government of India.
+- Prototyped Teresa Band (SCG/ECG cardiac wearable) and built pyCardiograms (LSTM waveform library).
+- Incubated at SIIC IIT Kanpur, HTIC IIT Madras, and IIT Mandi Catalyst. Rank 3 at Himalayan Startup Trek.
+
+### 6. xtLytics LLC (Jan 2019 - Jan 2020) | Data Scientist
+- CADtnet: Edge TFLite model for mobile breast cancer ultrasound triage in LMICs (Guadalajara, Mexico).
+- TableOCR: Invoice table OCR using GCP Vision + Tesseract + Faster-RCNN.

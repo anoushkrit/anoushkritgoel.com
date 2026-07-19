@@ -1,0 +1,51 @@
+# Anoushkrit Goel - Portfolio & Research Index
+
+> Applied Scientist, AI Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Brain MRI Tractography, Vector AI & Blueprint Layout OCR, and Reinforcement Learning.
+
+## Core Background & Profile
+- Name: Anoushkrit Goel
+- Current Role: Research Engineer 2 at Attentive.AI
+- Academic Degree: M.Tech (by Research) in Intelligent Systems at IIT Mandi (GPA: 9.47/10)
+- Core Focus: 3D Spatial AI (Point Clouds, B-Splines, Transformers), Neuroimaging / Medical AI, Vector AI & OCR
+- Location: Mandi / Gurgaon, India
+- Website: https://anoushkritgoel.com
+- Contact Email: anoushkrit.work@gmail.com
+- GitHub: https://github.com/anoushkrit
+- LinkedIn: https://www.linkedin.com/in/anoushkrit-goel/
+- Google Scholar: https://scholar.google.com/citations?user=anoushkritgoel
+
+## Key Peer-Reviewed Research Publications
+- TrackletGPT: A GPT architecture for White Matter Segmentation (IEEE ISBI 2026, London, Rank A)
+  URL: https://anoushkritgoel.com/projects/trackletgpt
+- TractRLFusion: Reinforcement Learning and Fusion Networks for Diffusion MRI (IEEE ISBI 2026, London)
+  URL: https://anoushkritgoel.com/projects/tractrlfusion
+- TractoGPT: A GPT architecture for White Matter Segmentation (IEEE ISBI 2025, Houston) [Outperformed SCIL FIESTA SOTA]
+  URL: https://anoushkritgoel.com/projects/tractogpt
+- TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation (ICPR 2024, Kolkata) [Outperformed Harvard TractCloud SOTA]
+  URL: https://anoushkritgoel.com/projects/tractoembed
+- Tract-RLformer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network (ICPR 2024, Kolkata) [Outperformed SCIL Track2Learn SOTA]
+  URL: https://anoushkritgoel.com/projects/tract-rlformer
+
+## Open Source Software & AI Tools
+- SlicerTracto: Standalone 3D Slicer Extension GUI app for dMRI brain tractography visualization, tracking, and segmentation (Deployed at PGI Chandigarh Hospital)
+  URL: https://anoushkritgoel.com/projects/slicer-tracto
+- Sculpt3D & Talk2point: Multimodal Text/Sketch-to-3D point cloud generation and interactive editing framework using SDFusion + LLaMA/GPT
+  URL: https://anoushkritgoel.com/projects/sculpt3d
+
+## Industrial & Startup Tenure
+- Attentive.AI (Jun 2025 - Present): Research Engineer 2 — Vector AI, DEIMv2 (DINOv3), ArchGlyphOCR blueprint callout parsing.
+  URL: https://anoushkritgoel.com/work/attentive-ai
+- IIT Mandi (Feb 2023 - Jun 2025): Researcher — 3D Spatial AI foundational models, 5 peer-reviewed publications.
+  URL: https://anoushkritgoel.com/work/iit-mandi
+- StatusNeo (Aug 2022 - Mar 2023): Lead Data Scientist — TelOS & Cortex MLOps ecosystems for Reliance Jio.
+  URL: https://anoushkritgoel.com/work/statusneo
+- Gamezop (Jun 2021 - Jun 2022): Senior Data Scientist — ClickVision MDP behavioral reinforcement learning.
+  URL: https://anoushkritgoel.com/work/gamezop
+- Tensr.AI (Feb 2020 - Jun 2021): Founder & CEO — Teresa Band biomedical SCG/ECG wearable, pyCardiograms library. Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst.
+  URL: https://anoushkritgoel.com/work/tensr-ai
+- xtLytics LLC (Jan 2019 - Jan 2020): Data Scientist — CADtnet TFLite breast ultrasound triage app, TableOCR invoice parser.
+  URL: https://anoushkritgoel.com/work/xtlytics
+
+## Detailed AI Readable Text Dump
+For the complete untruncated technical text dump including full paper abstracts, benchmark metrics, and BibTeX citations, visit:
+https://anoushkritgoel.com/llms-full.txt
