@@ -11,13 +11,13 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
-import { Briefcase, Award, GraduationCap, Microscope, Sparkles } from "lucide-react";
 
 export default function Navbar() {
   const desktopNavItems = [
     { href: "#about", label: "About" },
     { href: "#work", label: "Experience" },
-    { href: "#achievements", label: "Research" },
+    { href: "#achievements", label: "Publications" },
+    { href: "#software-tools", label: "Software & Tools" },
     { href: "#awards", label: "Awards" },
     { href: "#certifications", label: "Certifications" },
     { href: "#contact", label: "Contact" },
@@ -28,14 +28,6 @@ export default function Navbar() {
       {/* Desktop Glassmorphic Header Navbar */}
       <header className="fixed top-4 inset-x-0 z-50 hidden md:flex justify-center pointer-events-none px-6">
         <nav className="pointer-events-auto flex items-center justify-between gap-6 px-6 py-2.5 rounded-full border border-border/80 bg-card/80 backdrop-blur-xl shadow-lg shadow-black/5 ring-1 ring-border/20 transition-all">
-          <Link
-            href="#"
-            className="flex items-center gap-2 font-bold text-sm text-foreground hover:text-primary transition-colors"
-          >
-            <Sparkles className="size-4 text-cyan-400" />
-            <span>{DATA.initials}</span>
-          </Link>
-
           <div className="flex items-center gap-1">
             {desktopNavItems.map((item) => (
               <a

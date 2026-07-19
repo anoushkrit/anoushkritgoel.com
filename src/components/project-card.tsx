@@ -3,7 +3,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, Copy, Check, FileText } from "lucide-react";
+import { ArrowUpRight, Copy, Check, CodeXml } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
@@ -168,16 +168,19 @@ export function ProjectCard({
               </div>
             )}
 
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowBibtex(!showBibtex);
-              }}
-              title="View BibTeX Citation"
-              className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-            >
-              <FileText className="size-4" />
-            </button>
+            {bibtex && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowBibtex(!showBibtex);
+                }}
+                title="View BibTeX Citation"
+                className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors flex items-center gap-1 font-mono text-xs border border-border/60"
+              >
+                <CodeXml className="size-4 text-cyan-400" />
+                <span className="text-[10px] font-semibold text-muted-foreground">BibTeX</span>
+              </button>
+            )}
 
             {href && href !== "#" && (
               <Link

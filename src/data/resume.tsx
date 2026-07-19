@@ -1,46 +1,36 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, MicroscopeIcon, TrophyIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Anoushkrit Goel",
   initials: "AG",
-  url: "https://www.anoushkritgoel.com",
-  location: "IIT Mandi, Himachal Pradesh, India",
-  locationLink: "https://maps.google.com/?q=IIT+Mandi",
-  description: "Applied Scientist | 1x Entrepreneur | Spatial AI (3D and 2D) | Medical AI | AI Researcher",
+  url: "https://anoushkritgoel.com",
+  location: "Mandi / Gurgaon, India",
+  locationLink: "https://www.google.com/maps/place/IIT+Mandi",
+  description:
+    "Applied Scientist | 1x Entrepreneur | Spatial AI (3D & 2D) | Medical AI & Neuroimaging | 7+ Years Experience",
   summary:
-    "Biomedical AI. Innovations & Ideas. Behavioural Psychology. Pragmatic Leadership. Sustainable Growth. Startups. Artificial Learning Paradigms. Philosophy of Life.\n\nMachine Learning | Deep Learning | LLMs | Multimodal LLMs | Reinforcement Learning\n\nMy goal is to maximize human potential by solving healthcare problems. Currently, I am pursuing my M.Tech (by Research) at IIT Mandi in Intelligent Systems under the guidance of Dr. Arnav Bhavsar and Dr. Aditya Nigam.\n\n**Research**: I work on segmenting spatially similar 3D data (point clouds), specifically white matter tract streamlines in neuroimaging. My current focus is constructing fibre streamlines and segmenting fibre bundles, while also extending work to diffusion MRI denoising and reconstruction.\n\n**Startup**: Besides working on my startup Tensr.AI, I focus on real-world problems in deep learning, deep reinforcement learning, machine learning, biomedical sciences, design, and entrepreneurship.\n\n**Industry**: I have 6+ years of combined professional, entrepreneurial, and research experience, including a Lead Data Scientist role at Jio (TelOS/BrainOS initiative under Dr. Shailesh Kumar).",
-  researchIntro:
-    "In clinical scenarios, there is a need to plan surgeries, and for neurological interventions, non-invasive analysis is necessary. For this, in most clinical scenarios, MRI is used to look into the brain, and with the MRI data we aim to find the white matter tracts. The whole connectivity of the brain is understood only through the MRI scans.",
+    "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Currently pursuing M.Tech (by Research) at IIT Mandi under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions.",
   avatarUrl: "/me.png",
   skills: [
-    { name: "Python" },
-    { name: "PyTorch" },
-    { name: "TensorFlow" },
-    { name: "HuggingFace" },
-    { name: "Transformers (GPT, BERT)" },
-    { name: "PointGPT" },
-    { name: "DEIMv2 / DINOv3" },
-    { name: "OCR (Tesseract, GCP Vision, VLMs)" },
-    { name: "LangChain / LangGraph" },
-    { name: "RAG / GraphRAG" },
-    { name: "Multimodal LLMs (Text+Image+3D)" },
-    { name: "scikit-learn" },
-    { name: "ONNX" },
-    { name: "3D Slicer" },
-    { name: "MRtrix3" },
-    { name: "FSL / FreeSurfer" },
-    { name: "MATLAB" },
-    { name: "C / C#" },
-    { name: "ProtoBuf" },
-    { name: "LaTeX" },
-    { name: "AWS" },
-    { name: "GCP" },
+    { name: "3D Spatial AI (Point Clouds)", icon: Icons.globe },
+    { name: "PyTorch & PyTorch3D", icon: Icons.globe },
+    { name: "Medical AI & Neuroimaging", icon: Icons.globe },
+    { name: "DEIMv2 & DINOv3", icon: Icons.globe },
+    { name: "3D Slicer Extension (SlicerTracto)", icon: Icons.globe },
+    { name: "Reinforcement Learning (Gym)", icon: Icons.globe },
+    { name: "Document OCR (ArchGlyphOCR)", icon: Icons.globe },
+    { name: "Transformers (GPT / BERT)", icon: Icons.globe },
+    { name: "Open3D & Fury.gl", icon: Icons.globe },
+    { name: "ONNX & Protobuf Schemas", icon: Icons.globe },
+    { name: "Python", icon: Icons.globe },
+    { name: "C++", icon: Icons.globe },
+    { name: "Scikit-Learn", icon: Icons.globe },
+    { name: "TFLite Edge Deployment", icon: Icons.globe },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "#achievements", icon: TrophyIcon, label: "Achievements" },
-    { href: "#research", icon: MicroscopeIcon, label: "Research" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "anoushkrit.work@gmail.com",
@@ -58,19 +48,19 @@ export const DATA = {
         icon: Icons.linkedin,
         navbar: true,
       },
+      Scholar: {
+        name: "Google Scholar",
+        url: "https://scholar.google.com/citations?user=anoushkritgoel",
+        icon: Icons.globe,
+        navbar: true,
+      },
       X: {
         name: "X",
         url: "https://x.com/anoushkrit",
         icon: Icons.x,
         navbar: true,
       },
-      Link: {
-        name: "Website",
-        url: "https://www.anoushkritgoel.com",
-        icon: Icons.globe,
-        navbar: true,
-      },
-      email: {
+      Email: {
         name: "Send Email",
         url: "mailto:anoushkrit.work@gmail.com",
         icon: Icons.email,
@@ -79,18 +69,25 @@ export const DATA = {
     },
   },
 
+  researchIntro:
+    "My research focuses on 3D spatial AI, point cloud sequence modeling, and non-invasive neuroimaging (diffusion MRI white matter tractography), outperforming established benchmarks from Harvard Medical School (TractCloud) and SCIL Canada (FIESTA).",
+
   work: [
     {
       company: "Attentive.AI",
-      href: "https://www.attentive.ai/",
+      href: "https://attentive.ai/",
       badges: [],
       location: "Gurgaon, IN",
       title: "Research Engineer 2",
       logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=attentive.ai",
       start: "Jun 2025",
       end: "Present",
-      description:
-        "Architected a vector path tokenization framework (PDF → SVG) as a pretraining objective, for zero-shot symbol detection and vector path annotation, increasing SOTA by 7%, avg macro-F1. Trained and shipped DEIMv2 (DINOv3 backbone) for multi-class vector paths segmentation and geometry dimensions estimation, reducing total annotation time (TAT) for HVAC to 35% of original time. Designed, built and deployed a novel OCR for blueprints, ArchGlyphOCR, a text-region proposal + prediction pipeline for dense and high resolution plans, outperforming Google DocAI and Gemini 3.1 Pro on callout extraction, eliminating API costs, rework and longer wait-times.",
+      description: "Vector AI, Blueprint Layout OCR & Geometry Segmentation",
+      bullets: [
+        "Architected a vector path tokenization framework (PDF → SVG) as a pretraining objective for zero-shot symbol detection and vector path annotation, increasing SOTA macro-F1 by 7%.",
+        "Trained and shipped DEIMv2 (DINOv3 backbone) for multi-class vector path segmentation and geometry dimension estimation, reducing total annotation time (TAT) for HVAC to 35% of original duration.",
+        "Designed, built, and deployed ArchGlyphOCR: a dense plan text-region proposal + prediction pipeline outperforming Google DocAI & Gemini 3.1 Pro on callout extraction while eliminating API costs.",
+      ],
     },
     {
       company: "IIT Mandi",
@@ -101,8 +98,12 @@ export const DATA = {
       logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=iitmandi.ac.in",
       start: "Feb 2023",
       end: "Jun 2025",
-      description:
-        "Designed foundational models for 3D streamlines using PointGPT style architectures, with novel tokenization, dual-masking pretraining, multi-embedding for WM tract segmentation. Built and deployed SlicerTracto, an open-source end-to-end 3D Slicer extension for brain MRI tractography (reconstruction, tracking, segmentation, visualization); deployed at PGI Chandigarh Hospital with options to infer from local / on-prem / cloud GPUs. Published 5 papers: ICPR'24 (TractoEmbed, TractRL-former), ISBI'25 (TractoGPT), ISBI'26 (TrackletGPT, TractRLFusion), outperforming Harvard Medical School (TractCloud) and SCIL Canada (FIESTA). GPT, BERT, RL-transformers on 3D point cloud spatial data.",
+      description: "3D Spatial AI & Neuroimaging Foundational Models",
+      bullets: [
+        "Designed foundational models for 3D streamlines using PointGPT style architectures with novel tokenization, dual-masking pretraining, and multi-embedding representation learning for WM tract segmentation.",
+        "Built and deployed SlicerTracto, an open-source 3D Slicer extension for brain MRI tractography (reconstruction, tracking, segmentation, visualization); deployed at PGI Chandigarh Hospital.",
+        "Published 5 papers at ICPR'24 (TractoEmbed, TractRL-former), ISBI'25 (TractoGPT), and ISBI'26 (TrackletGPT, TractRLFusion), outperforming Harvard Medical School (TractCloud) and SCIL Canada (FIESTA).",
+      ],
     },
     {
       company: "StatusNeo",
@@ -113,8 +114,12 @@ export const DATA = {
       logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=statusneo.com",
       start: "Aug 2022",
       end: "Mar 2023",
-      description:
-        "Led Cortex AI team for Reliance Jio (BrainOS) spanning across Jio's verticals, where we built framework-agnostic ML library via protobuf schemas and ONNX; mapped model ontology, parsed 6 sklearn models and PyTorch libraries into a single cross-framework schema (sklearn ↔ PyTorch ↔ TF).",
+      description: "TelOS & Cortex MLOps Frameworks for Reliance Jio",
+      bullets: [
+        "Led the Cortex AI team under Dr. Shailesh Kumar for Reliance Jio's TelOS MLOps ecosystem across multiple verticals.",
+        "Built a programming language & framework-agnostic ML library via Protobuf schemas and ONNX serialization.",
+        "Mapped comprehensive model ontologies, aligning 6 Scikit-Learn models and PyTorch libraries into a unified cross-framework schema (sklearn ↔ PyTorch ↔ TensorFlow).",
+      ],
     },
     {
       company: "Gamezop",
@@ -125,8 +130,12 @@ export const DATA = {
       logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=gamezop.com",
       start: "Jun 2021",
       end: "Jun 2022",
-      description:
-        "Led ClickVision: MDP-formulated deposit prediction over clickstream trajectories using RL transition matrices; reduced wasted offers and churn by 62%, improving deposit conversion; downstream UI changes were shipped based on model findings.",
+      description: "Behavioral Reinforcement Learning & Clickstream Optimization",
+      bullets: [
+        "Created ClickVision: a Markov Decision Process (MDP) deposit prediction model over large-scale clickstream trajectories using RL transition matrices.",
+        "Reduced wasted offers and user churn by 62%, significantly boosting deposit conversion rates.",
+        "Shipped downstream UI and product changes based on model trajectory predictions.",
+      ],
     },
     {
       company: "Tensr.AI",
@@ -137,8 +146,13 @@ export const DATA = {
       logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=tensr.ai",
       start: "Feb 2020",
       end: "Jun 2021",
-      description:
-        "Built pyCardiograms (LSTM-based SCG waveform prediction, wave annotation across ECG/PPG/SCG). Scaled to 15 members; DST DPIIT certified; incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst; ranked #3 Himalayan Startup Trek 2019. Designing, prototyping, and building our proprietary health wearable, Teresa Band, to capture the biomedical signals.",
+      description: "Biomedical Signal Processing & Health Wearable Prototyping",
+      bullets: [
+        "Built pyCardiograms (LSTM-based SCG waveform prediction, wave annotation across ECG/PPG/SCG).",
+        "Scaled team to 15 members; DST & DPIIT Government certified startup.",
+        "Secured incubation at SIIC IIT Kanpur, HTIC IIT Madras, and IIT Mandi Catalyst; ranked #3 at Himalayan Startup Trek 2019.",
+        "Designed and prototyped Teresa Band, a proprietary health wearable capturing mechanical heart vibrations.",
+      ],
     },
     {
       company: "xtLytics LLC",
@@ -149,8 +163,11 @@ export const DATA = {
       logoUrl: "https://www.google.com/s2/favicons?sz=128&domain=xtlytics.com",
       start: "Jan 2019",
       end: "Jan 2020",
-      description:
-        "Invoice OCR: GCP Vision + Tesseract + Faster-RCNN to extract and structure loosely-tabular document content into .csv/.xlsx via geometric bounding-box heuristics. CADtnet: Developed an edge TFLite model (VGG-19, MobileNet, ResNet), for a mobile app to perform breast cancer triage on ultrasound images, deployed in LMICs (Low-Middle Income Countries).",
+      description: "Medical Image Triage & Invoice OCR",
+      bullets: [
+        "Invoice OCR: Built GCP Vision + Tesseract + Faster-RCNN pipeline to extract and structure tabular content into CSV/XLSX via geometric bounding box heuristics.",
+        "CADtnet: Developed edge TFLite model (VGG-19, MobileNet, ResNet) for mobile breast cancer triage on ultrasound images, deployed in LMICs.",
+      ],
     },
   ],
 
@@ -174,6 +191,7 @@ export const DATA = {
     },
   ],
 
+  // Peer-Reviewed Publications ONLY
   projects: [
     {
       title: "TrackletGPT",
@@ -181,13 +199,19 @@ export const DATA = {
       dates: "ISBI 2026",
       active: true,
       description:
-        "Accepted at International Symposium on Biomedical Imaging (ISBI 2026, London, UK): **TrackletGPT: A GPT architecture for White Matter Segmentation** (Conference Rank: A). Tokenizes B-Spline streamline sub-segments for point cloud reconstruction.",
+        "Accepted at IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK): **TrackletGPT: A GPT architecture for White Matter Segmentation** (Conference Rank: A). Tokenizes B-Spline streamline sub-segments for 3D point cloud reconstruction.",
       technologies: [
         "3D Spatial AI",
         "B-Spline Tokenization",
         "GPT Transformers",
         "PyTorch3D",
       ],
+      bibtex: `@inproceedings{goel2026trackletgpt,
+  title={TrackletGPT: A GPT architecture for White Matter Segmentation},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
+  year={2026}
+}`,
       links: [
         {
           type: "GitHub",
@@ -199,75 +223,51 @@ export const DATA = {
       video: "",
     },
     {
-      title: "SlicerTracto",
-      href: "https://github.com/anoushkrit/SlicerTracto",
-      dates: "Dec 2024 - Present",
+      title: "TractRLFusion",
+      href: "https://github.com/anoushkrit",
+      dates: "ISBI 2026",
       active: true,
       description:
-        "Open-source 3D Slicer extension allowing Neuro-Radiologists to visualize, track, and segment white matter tracts from Diffusion MRI scans in a standalone desktop application with optional server compute offloading.",
+        "Accepted at IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK): **TractRLFusion**. Reinforcement Learning and fusion networks for diffusion MRI tractography.",
       technologies: [
-        "3D Slicer",
-        "Medical AI",
-        "Dipy / Scilpy",
+        "Reinforcement Learning",
+        "Fusion Networks",
+        "Diffusion MRI",
         "PyTorch",
-        "Python",
       ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/anoushkrit/SlicerTracto",
-          icon: <Icons.github className="h-4 w-4" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Sculpt3D & Talk2point",
-      href: "https://github.com/anoushkrit/Sculpt3D",
-      dates: "2024 - 2025",
-      active: true,
-      description:
-        "Multimodal Text & Sketch-to-3D point cloud generation and interactive editing framework using SDFusion + LLaMA/GPT continuous feedback loops for granular region-specific 3D spatial manipulation.",
-      technologies: [
-        "Multimodal 3D AI",
-        "SDFusion",
-        "LLaMA / GPT",
-        "Open3D",
-        "PyTorch3D",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/anoushkrit/Sculpt3D",
-          icon: <Icons.github className="h-4 w-4" />,
-        },
-        {
-          type: "Talk2point",
-          href: "https://github.com/anoushkrit/talk2point",
-          icon: <Icons.github className="h-4 w-4" />,
-        },
-      ],
+      bibtex: `@inproceedings{goel2026tractrlfusion,
+  title={TractRLFusion: Reinforcement Learning and Fusion Networks for Diffusion MRI},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
+  year={2026}
+}`,
+      links: [],
       image: "",
       video: "",
     },
     {
       title: "TractoGPT",
-      href: "https://arxiv.org/pdf/2411.08187",
+      href: "https://arxiv.org/abs/2411.08187",
       dates: "ISBI 2025",
       active: true,
       description:
-        "Accepted at ISBI 2025 (Houston, TX): **TractoGPT**. Models tractography streamlines as 3D point cloud patches pretrained via dual-masking. **Outperformed Sherbrooke Connectivity Imaging Lab (SCIL)'s FIESTA SOTA**.",
+        "Accepted at 23rd ISBI 2025 (Houston, TX): **TractoGPT**. Models tractography streamlines as 3D point cloud patches pretrained via dual-masking. **Outperformed Sherbrooke Connectivity Imaging Lab (SCIL)'s FIESTA SOTA**.",
       technologies: [
         "3D Spatial AI",
         "Dual-Masked Pretraining",
-        "Transformers",
-        "Neuroimaging",
+        "GPT Transformers",
+        "SCIL Benchmark",
       ],
+      bibtex: `@article{goel2024tractogpt,
+  title={TractoGPT: A GPT architecture for White Matter Segmentation},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  journal={arXiv preprint arXiv:2411.08187},
+  year={2024}
+}`,
       links: [
         {
           type: "ArXiv",
-          href: "https://arxiv.org/pdf/2411.08187",
+          href: "https://arxiv.org/abs/2411.08187",
           icon: <Icons.globe className="h-4 w-4" />,
         },
         {
@@ -285,17 +285,30 @@ export const DATA = {
       dates: "ICPR 2024",
       active: true,
       description:
-        "Accepted at ICPR 2024 (Kolkata): **TractoEmbed**. Modular multi-embedding framework using CNN, dVAE, and PointNet. **Outperformed Harvard Medical School's TractCloud on White Matter Tract Segmentation**.",
+        "Accepted at 27th ICPR 2024 (Kolkata): **TractoEmbed**. Modular multi-embedding framework using CNN, dVAE, and PointNet. **Outperformed Harvard Medical School's TractCloud on White Matter Tract Segmentation**.",
       technologies: [
         "Representation Learning",
         "PointNet / dVAE",
         "Harvard Benchmark",
         "Neuroimaging",
       ],
+      bibtex: `@inproceedings{goel2024tractoembed,
+  title={TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  booktitle={International Conference on Pattern Recognition},
+  pages={262--278},
+  year={2024},
+  organization={Springer}
+}`,
       links: [
         {
           type: "Paper",
           href: "https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
+        {
+          type: "ArXiv",
+          href: "https://arxiv.org/abs/2411.08187",
           icon: <Icons.globe className="h-4 w-4" />,
         },
         {
@@ -313,13 +326,21 @@ export const DATA = {
       dates: "ICPR 2024",
       active: true,
       description:
-        "Accepted at ICPR 2024: **Tract-RLformer**. Supervised + Reinforcement Learning 2-stage policy refinement. **Outperformed SCIL's Track2Learn, DeepTract, and PFT (Particle Filtering Tracking)**.",
+        "Accepted at 27th ICPR 2024: **Tract-RLformer**. Supervised + Reinforcement Learning 2-stage policy refinement. **Outperformed SCIL's Track2Learn, DeepTract, and PFT (Particle Filtering Tracking)**.",
       technologies: [
         "Reinforcement Learning",
         "Decoder Transformers",
         "SCIL Benchmark",
         "PyTorch / OpenAI Gym",
       ],
+      bibtex: `@inproceedings{goel2024tract,
+  title={Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network},
+  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  booktitle={International Conference on Pattern Recognition},
+  pages={279--295},
+  year={2024},
+  organization={Springer}
+}`,
       links: [
         {
           type: "Paper",
@@ -337,6 +358,100 @@ export const DATA = {
     },
   ],
 
+  // Open Source Software Extensions & Tools
+  softwareTools: [
+    {
+      title: "SlicerTracto",
+      href: "https://github.com/anoushkrit/SlicerTracto",
+      dates: "Dec 2024 - Present",
+      description:
+        "Open-source 3D Slicer desktop extension enabling Neuro-Radiologists to visualize, track, and segment white matter tracts from Diffusion MRI scans in a standalone GUI app with optional on-prem/cloud GPU compute offloading. Deployed at PGI Chandigarh.",
+      technologies: ["3D Slicer", "Medical AI", "Dipy / Scilpy", "PyTorch", "Python"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/anoushkrit/SlicerTracto",
+          icon: <Icons.github className="h-4 w-4" />,
+        },
+      ],
+    },
+    {
+      title: "Sculpt3D & Talk2point",
+      href: "https://github.com/anoushkrit/Sculpt3D",
+      dates: "2024 - 2025",
+      description:
+        "Multimodal Text & Sketch-to-3D point cloud generation and interactive editing framework using SDFusion + LLaMA/GPT continuous feedback loops for granular region-specific 3D spatial manipulation.",
+      technologies: ["Multimodal 3D AI", "SDFusion", "LLaMA / GPT", "Open3D", "PyTorch3D"],
+      links: [
+        {
+          type: "Sculpt3D",
+          href: "https://github.com/anoushkrit/Sculpt3D",
+          icon: <Icons.github className="h-4 w-4" />,
+        },
+        {
+          type: "Talk2point",
+          href: "https://github.com/anoushkrit/talk2point",
+          icon: <Icons.github className="h-4 w-4" />,
+        },
+      ],
+    },
+  ],
+
+  awards: [
+    {
+      title: "NIDHI-EIR Fellowship Grant",
+      issuer: "DST & SIIC IIT Kanpur",
+      date: "2021 - 2022",
+      description:
+        "Awarded National NIDHI Entrepreneur-in-Residence fellowship grant by Department of Science & Technology (DST) government of India, incubated at SIIC IIT Kanpur for Teresa Band biomedical wearable development.",
+    },
+    {
+      title: "HTIC IIT Madras Incubation & GDC Fellowship",
+      issuer: "HTIC IIT Madras & GDC Foundation",
+      date: "2020 - 2021",
+      description:
+        "Pre-incubated at Healthcare Technology Innovation Centre (HTIC) IIT Madras; completed Gopalakrishnan Deshpande Foundation customer discovery program with 85+ clinical interviews.",
+    },
+    {
+      title: "IIT Mandi Catalyst Incubation Grant",
+      issuer: "IIT Mandi Catalyst",
+      date: "2020 - 2021",
+      description:
+        "Selected for startup incubation and prototype grant support at IIT Mandi Catalyst following the Himalayan Startup Trek.",
+    },
+    {
+      title: "Rank #3 — Himalayan Startup Trek 2019",
+      issuer: "IIT Mandi",
+      date: "Sep 2019",
+      description:
+        "Ranked 3rd out of 279 competing startups at Himalayan Startup Trek 2019 for Tensr.AI cardiovascular signal assistant.",
+    },
+  ],
+
+  certifications: [
+    {
+      title: "Deep Learning Specialization (5 Courses)",
+      issuer: "DeepLearning.AI / Coursera",
+      date: "2020",
+      credentialId: "N/A",
+      url: "https://www.coursera.org/",
+    },
+    {
+      title: "Deep Reinforcement Learning Nanodegree",
+      issuer: "Udacity",
+      date: "2021",
+      credentialId: "N/A",
+      url: "https://www.udacity.com/",
+    },
+    {
+      title: "Deep Learning with PyTorch",
+      issuer: "Coursera",
+      date: "2020",
+      credentialId: "N/A",
+      url: "https://www.coursera.org/",
+    },
+  ],
+
   hackathons: [
     {
       title: "TrackletGPT & TractRLFusion Acceptances",
@@ -348,7 +463,7 @@ export const DATA = {
       links: [],
     },
     {
-      title: "TractoGPT Accepted",
+      title: "TractoGPT Accepted at ISBI 2025",
       dates: "Jan 2025",
       location: "Houston, Texas",
       description:
@@ -357,227 +472,13 @@ export const DATA = {
       links: [],
     },
     {
-      title: "TractoEmbed & Tract-RLformer Accepted",
+      title: "TractoEmbed & Tract-RLformer Accepted at ICPR 2024",
       dates: "Jul & May 2024",
       location: "Kolkata, India",
       description:
         "Papers accepted at the 27th ICPR: TractoEmbed and Tract-RLformer.",
       image: "",
       links: [],
-    },
-    {
-      title: "Masters Coursework Completed",
-      dates: "Feb 2024",
-      location: "IIT Mandi",
-      description:
-        "Completed intelligent systems research coursework with a peak CGPA of 9.47/10.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Started Masters at IIT Mandi",
-      dates: "Feb 2023",
-      location: "IIT Mandi",
-      description:
-        "Initiated M.Tech (by Research) under the guidance of Dr. Arnav Bhavsar and Dr. Aditya Nigam.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Promoted to Lead Data Scientist",
-      dates: "Oct 2022",
-      location: "Reliance Jio",
-      description:
-        "Promoted to lead Jio's protobuf schema unification project (Cortex) under Dr. Shailesh Kumar.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Joined Reliance Jio",
-      dates: "Aug 2022",
-      location: "Jio BrainOS / TelOS",
-      description:
-        "Joined Jio as Senior Data Scientist to work on language-agnostic MLOps system architectures.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Joined MANAS Lab, IIT Mandi",
-      dates: "Oct 2021",
-      location: "Research Associate",
-      description:
-        "Began neuroimaging white matter tractography research under Dr. Aditya Nigam and Dr. Arnav Bhavsar.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Joined Gamezop",
-      dates: "Jun 2021",
-      location: "Senior Data Scientist",
-      description:
-        "Developed and deployed clickstream deposit probability modeling frameworks.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Awarded NIDHI-EIR Fellowship",
-      dates: "Feb 2021",
-      location: "SIIC IIT Kanpur",
-      description:
-        "Selected as a NIDHI-EIR Fellow at SIIC IIT Kanpur to scale Teresa heart-monitoring device prototype.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "IIT Madras Customer Discovery",
-      dates: "Jan 2021",
-      location: "IIT Madras (GDC Program)",
-      description:
-        "Conducted 75+ prospective healthcare customer interviews to pivot and refine Teresa band.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Founded Tensr.AI",
-      dates: "Feb 2020",
-      location: "CEO & Founder",
-      description:
-        "Started Tensr.AI with the vision of increasing human potential with assisted AI assistant devices.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Deployed CADt-net",
-      dates: "Nov 2019",
-      location: "Mexico Deployment",
-      description:
-        "Deployed Android-based deep learning app (TFLite + U-Net++) for low-cost breast cancer ultrasound screening in Mexico.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Himalayan Startup Trek Award",
-      dates: "Sep 2019",
-      location: "IIT Mandi",
-      description:
-        "Placed 3rd out of 279 startups at the Himalayan Startup Trek 2019 Catalyst incubator.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Graduated Shiv Nadar University",
-      dates: "Jun 2019",
-      location: "SNU",
-      description:
-        "Completed B.Tech in Electronics & Communication Engineering with a Minor in Design.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Started Career at xtLytics",
-      dates: "Jan 2019",
-      location: "Data Scientist",
-      description:
-        "Began professional data science work on medical imaging and GCP-based Invoice OCR pipelines.",
-      image: "",
-      links: [],
-    },
-  ],
-
-  awards: [
-    {
-      title: "Startup Incubation Support (IIT Mandi)",
-      issuer: "IIT Mandi Catalyst",
-      date: "Sep 2019",
-      description:
-        "Placed 3rd among 279 startups at Himalayan Startup Trek 2019. Awarded incubation support supported by DST and funded by the NIDHI Seed Support scheme.",
-    },
-    {
-      title: "DPIIT Recognition",
-      issuer: "DPIIT, Ministry of Commerce and Industry, Gov. of India",
-      date: "2020",
-      description:
-        "Tensr.AI was awarded the official Certificate of Recognition as an AI startup enabling human augmentation.",
-    },
-    {
-      title: "HTIC IIT Madras Incubation",
-      issuer: "IIT Madras",
-      date: "Jan 2021",
-      description:
-        "Accepted into the Healthcare Technology Innovation Centre (HTIC) pre-incubation program for the Teresa health device.",
-    },
-    {
-      title: "NIDHI EIR Fellowship",
-      issuer: "SIIC IIT Kanpur",
-      date: "Feb 2021",
-      description:
-        "Awarded NIDHI-EIR Fellowship to scale cardiorespiratory monitoring hardware prototype (Teresa Band).",
-    },
-  ],
-
-  certifications: [
-    {
-      title: "Deep Learning Specialization",
-      issuer: "Coursera & deeplearning.ai",
-      date: "Aug 2019",
-      credentialId: "WXBN3CDY3J33",
-      url: "https://www.coursera.org/account/accomplishments/specialization/WXBN3CDY3J33",
-    },
-    {
-      title: "Neural Networks and Deep Learning",
-      issuer: "Coursera (by Andrew Ng)",
-      date: "Aug 2019",
-      credentialId: "3G94WMR432EK",
-      url: "https://www.coursera.org/account/accomplishments/verify/3G94WMR432EK",
-    },
-    {
-      title: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
-      issuer: "Coursera (by Andrew Ng)",
-      date: "Aug 2019",
-      credentialId: "Z659SG7D22SG",
-      url: "https://www.coursera.org/account/accomplishments/certificate/Z659SG7D22SG",
-    },
-    {
-      title: "Sequence Models",
-      issuer: "Coursera (by Andrew Ng)",
-      date: "Sep 2019",
-      credentialId: "G8GZ7ZJFJCUQ",
-      url: "https://www.coursera.org/account/accomplishments/verify/G8GZ7ZJFJCUQ",
-    },
-    {
-      title: "Structuring Machine Learning Projects",
-      issuer: "Coursera (by Andrew Ng)",
-      date: "Aug 2019",
-      credentialId: "V8N6SVNRZS2J",
-      url: "https://www.coursera.org/account/accomplishments/certificate/V8N6SVNRZS2J",
-    },
-    {
-      title: "Convolutional Neural Networks",
-      issuer: "Coursera (by Andrew Ng)",
-      date: "Aug 2019",
-      credentialId: "4KWP4593LP53",
-      url: "https://www.coursera.org/account/accomplishments/certificate/4KWP4593LP53",
-    },
-    {
-      title: "Sequences and Time Series Prediction",
-      issuer: "Coursera (by Laurence Moroney)",
-      date: "2019",
-      credentialId: "LFNALX5FJ8SS",
-      url: "https://www.coursera.org/account/accomplishments/certificate/LFNALX5FJ8SS",
-    },
-    {
-      title: "Introduction to Reinforcement Learning",
-      issuer: "Coursera Project Network",
-      date: "Aug 2021",
-      credentialId: "N/A",
-      url: "#",
-    },
-    {
-      title: "Introduction to PyTorch",
-      issuer: "Udacity",
-      date: "Dec 2019",
-      credentialId: "N/A",
-      url: "#",
     },
   ],
 } as const;

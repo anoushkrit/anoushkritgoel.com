@@ -31,7 +31,7 @@ export default function CertificationsSection() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
         {DATA.certifications.map((cert) => {
-          const isLinkable = cert.url && cert.url !== "#";
+          const isLinkable = Boolean(cert.url);
 
           const CardContent = (
             <div className="flex items-start gap-3 p-4 border border-border/70 bg-card/60 backdrop-blur-xl hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 rounded-2xl h-full relative group">

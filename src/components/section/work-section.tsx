@@ -17,7 +17,7 @@ export default function WorkSection() {
           >
             <LogoImage src={work.logoUrl} alt={work.company} className="size-12" />
 
-            <div className="flex-1 flex flex-col gap-1.5 min-w-0 w-full">
+            <div className="flex-1 flex flex-col gap-2 min-w-0 w-full">
               <div className="flex flex-wrap items-center justify-between gap-2 w-full">
                 <div className="flex items-center gap-2 flex-wrap">
                   <h3 className="font-bold text-base sm:text-lg text-foreground group-hover:text-cyan-400 transition-colors">
@@ -43,9 +43,17 @@ export default function WorkSection() {
                 {work.title}
               </div>
 
-              <p className="text-xs sm:text-sm text-muted-foreground/95 leading-relaxed mt-1 font-sans">
-                {work.description}
-              </p>
+              {work.bullets && work.bullets.length > 0 ? (
+                <ul className="list-disc pl-5 text-xs sm:text-sm text-muted-foreground/95 space-y-1.5 leading-relaxed font-sans mt-1">
+                  {work.bullets.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-xs sm:text-sm text-muted-foreground/95 leading-relaxed mt-1 font-sans">
+                  {work.description}
+                </p>
+              )}
             </div>
           </div>
         );

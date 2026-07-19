@@ -15,15 +15,15 @@ import CertificationsSection from "@/components/section/certifications-section";
 import WorkGallery from "@/components/section/work-gallery";
 import { LogoImage } from "@/components/ui/logo-image";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight, GraduationCap, Briefcase, Cpu, Layers, Sparkles } from "lucide-react";
+import { ProjectCard } from "@/components/project-card";
+import { ArrowUpRight, GraduationCap, Briefcase, Cpu, Layers, Sparkles, Code2 } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   const quickStats = [
     { label: "Publications", value: "5 Papers", highlight: "ISBI'26 Rank A" },
-    { label: "Experience", value: "6+ Years", highlight: "AI & Startups" },
-    { label: "Incubation Grants", value: "$100K+", highlight: "SIIC / HTIC / Catalyst" },
+    { label: "Experience", value: "7+ Years", highlight: "AI & Startups" },
     { label: "Core Focus", value: "3D Spatial AI", highlight: "Neuro & Medical AI" },
   ];
 
@@ -50,7 +50,7 @@ export default function Page() {
           </div>
 
           {/* Quick Stats Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
             {quickStats.map((stat, idx) => (
               <BlurFade key={stat.label} delay={BLUR_FADE_DELAY * 2 + idx * 0.03}>
                 <div className="p-3.5 rounded-xl border border-border/70 bg-card/60 backdrop-blur-xl flex flex-col gap-0.5 shadow-xs hover:border-cyan-500/40 transition-colors">
@@ -191,30 +191,77 @@ export default function Page() {
         </BlurFade>
       </section>
 
+      {/* Open Source Software & Tools Section */}
+      <section id="software-tools" className="w-full">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <div className="flex flex-col gap-y-4 items-center justify-center text-center">
+              <div className="flex items-center w-full">
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+                <div className="border border-border/80 bg-card z-10 rounded-full px-4 py-1 flex items-center gap-2 shadow-xs">
+                  <Code2 className="size-4 text-emerald-400" />
+                  <span className="text-foreground text-xs font-semibold uppercase tracking-wider">
+                    Open Source Software & Tools
+                  </span>
+                </div>
+                <div className="flex-1 h-px bg-gradient-to-l from-transparent via-border to-transparent" />
+              </div>
+              <div className="flex flex-col gap-y-2 items-center justify-center">
+                <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                  Open Source Software & AI Tools
+                </h2>
+                <p className="text-muted-foreground md:text-base text-balance max-w-2xl">
+                  Standalone extensions, 3D Slicer tools, and multimodal spatial editing frameworks.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 w-full">
+            {DATA.softwareTools.map((tool, id) => (
+              <BlurFade
+                key={tool.title}
+                delay={BLUR_FADE_DELAY * 13 + id * 0.05}
+                className="h-full"
+              >
+                <ProjectCard
+                  href={tool.href}
+                  title={tool.title}
+                  description={tool.description}
+                  dates={tool.dates}
+                  tags={tool.technologies}
+                  links={tool.links}
+                />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Honors & Awards Section */}
       <section id="awards">
-        <BlurFade delay={BLUR_FADE_DELAY * 12}>
+        <BlurFade delay={BLUR_FADE_DELAY * 14}>
           <AwardsSection />
         </BlurFade>
       </section>
 
       {/* Certifications Section */}
       <section id="certifications">
-        <BlurFade delay={BLUR_FADE_DELAY * 13}>
+        <BlurFade delay={BLUR_FADE_DELAY * 15}>
           <CertificationsSection />
         </BlurFade>
       </section>
 
       {/* News & Timeline Section */}
       <section id="research">
-        <BlurFade delay={BLUR_FADE_DELAY * 14}>
+        <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <HackathonsSection />
         </BlurFade>
       </section>
 
       {/* Contact Footer Section */}
       <section id="contact">
-        <BlurFade delay={BLUR_FADE_DELAY * 15}>
+        <BlurFade delay={BLUR_FADE_DELAY * 17}>
           <ContactSection />
         </BlurFade>
       </section>
