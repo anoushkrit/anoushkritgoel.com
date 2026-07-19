@@ -1,7 +1,8 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/resume";
-import { Microscope } from "lucide-react";
+import { Microscope, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -28,6 +29,49 @@ export default function ProjectsSection() {
             <p className="text-muted-foreground md:text-base text-balance max-w-2xl">
               Acceptances and key contributions across 3D Spatial AI, Brain MRI Tractography, and Reinforcement Learning.
             </p>
+
+            {/* Conference Source Links Badge Row */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
+              <span className="text-xs font-mono text-muted-foreground">Peer-Reviewed Papers:</span>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-semibold">
+                <span>(2)</span>
+                <Link
+                  href="https://icpr2024.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline hover:text-amber-200 inline-flex items-center gap-1"
+                >
+                  <span>ICPR 2024</span>
+                  <ExternalLink className="size-3" />
+                </Link>
+              </div>
+
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-semibold">
+                <span>(1)</span>
+                <Link
+                  href="https://2025.biomedicalimaging.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline hover:text-cyan-200 inline-flex items-center gap-1"
+                >
+                  <span>ISBI 2025</span>
+                  <ExternalLink className="size-3" />
+                </Link>
+              </div>
+
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-xs font-semibold">
+                <span>(2)</span>
+                <Link
+                  href="https://biomedicalimaging.org/2026/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline hover:text-emerald-200 inline-flex items-center gap-1"
+                >
+                  <span>ISBI 2026</span>
+                  <ExternalLink className="size-3" />
+                </Link>
+              </div>
+            </div>
           </div>
 
           {DATA.researchIntro && (

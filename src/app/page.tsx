@@ -16,17 +16,11 @@ import WorkGallery from "@/components/section/work-gallery";
 import { LogoImage } from "@/components/ui/logo-image";
 import { Badge } from "@/components/ui/badge";
 import { ProjectCard } from "@/components/project-card";
-import { ArrowUpRight, GraduationCap, Briefcase, Cpu, Layers, Sparkles, Code2 } from "lucide-react";
+import { ArrowUpRight, GraduationCap, Briefcase, Cpu, Layers, Sparkles, Code2, ExternalLink } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
-  const quickStats = [
-    { label: "Publications", value: "5 Papers", highlight: "ISBI'26 Rank A" },
-    { label: "Experience", value: "7+ Years", highlight: "AI & Startups" },
-    { label: "Core Focus", value: "3D Spatial AI", highlight: "Neuro & Medical AI" },
-  ];
-
   return (
     <main className="min-h-dvh flex flex-col gap-16 relative">
       {/* Hero Section */}
@@ -51,21 +45,79 @@ export default function Page() {
 
           {/* Quick Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-            {quickStats.map((stat, idx) => (
-              <BlurFade key={stat.label} delay={BLUR_FADE_DELAY * 2 + idx * 0.03}>
-                <div className="p-3.5 rounded-xl border border-border/70 bg-card/60 backdrop-blur-xl flex flex-col gap-0.5 shadow-xs hover:border-cyan-500/40 transition-colors">
-                  <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">
-                    {stat.label}
-                  </span>
-                  <span className="text-sm sm:text-base font-bold text-foreground">
-                    {stat.value}
-                  </span>
-                  <span className="text-[10px] font-semibold text-cyan-400/90">
-                    {stat.highlight}
-                  </span>
+            {/* Publications Card with Direct Conference Source Links */}
+            <BlurFade delay={BLUR_FADE_DELAY * 2}>
+              <div className="p-3.5 rounded-xl border border-border/70 bg-card/60 backdrop-blur-xl flex flex-col gap-1 shadow-xs hover:border-cyan-500/40 transition-colors">
+                <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">
+                  Publications
+                </span>
+                <span className="text-sm sm:text-base font-bold text-foreground">
+                  5 Papers
+                </span>
+                <div className="text-[10px] font-semibold text-cyan-400/90 flex flex-wrap items-center gap-1">
+                  <span>(2)</span>
+                  <Link
+                    href="https://icpr2024.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-cyan-300 font-bold inline-flex items-center gap-0.5"
+                  >
+                    <span>ICPR 2024</span>
+                    <ExternalLink className="size-2.5" />
+                  </Link>
+                  <span>, (1)</span>
+                  <Link
+                    href="https://2025.biomedicalimaging.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-cyan-300 font-bold inline-flex items-center gap-0.5"
+                  >
+                    <span>ISBI 2025</span>
+                    <ExternalLink className="size-2.5" />
+                  </Link>
+                  <span>, (2)</span>
+                  <Link
+                    href="https://biomedicalimaging.org/2026/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-cyan-300 font-bold inline-flex items-center gap-0.5"
+                  >
+                    <span>ISBI 2026</span>
+                    <ExternalLink className="size-2.5" />
+                  </Link>
                 </div>
-              </BlurFade>
-            ))}
+              </div>
+            </BlurFade>
+
+            {/* Experience Card */}
+            <BlurFade delay={BLUR_FADE_DELAY * 2.1}>
+              <div className="p-3.5 rounded-xl border border-border/70 bg-card/60 backdrop-blur-xl flex flex-col gap-0.5 shadow-xs hover:border-cyan-500/40 transition-colors">
+                <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">
+                  Experience
+                </span>
+                <span className="text-sm sm:text-base font-bold text-foreground">
+                  7+ Years
+                </span>
+                <span className="text-[10px] font-semibold text-cyan-400/90">
+                  AI & Startups
+                </span>
+              </div>
+            </BlurFade>
+
+            {/* Core Focus Card */}
+            <BlurFade delay={BLUR_FADE_DELAY * 2.2}>
+              <div className="p-3.5 rounded-xl border border-border/70 bg-card/60 backdrop-blur-xl flex flex-col gap-0.5 shadow-xs hover:border-cyan-500/40 transition-colors">
+                <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">
+                  Core Focus
+                </span>
+                <span className="text-sm sm:text-base font-bold text-foreground">
+                  3D Spatial AI
+                </span>
+                <span className="text-[10px] font-semibold text-cyan-400/90">
+                  Neuro & Medical AI
+                </span>
+              </div>
+            </BlurFade>
           </div>
 
           {/* Work Showcase Gallery */}
