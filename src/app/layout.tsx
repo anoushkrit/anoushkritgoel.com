@@ -10,12 +10,12 @@ import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} | Applied Scientist & AI Researcher`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
   openGraph: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | Portfolio & Research`,
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
@@ -37,10 +37,6 @@ export const metadata: Metadata = {
     title: `${DATA.name}`,
     card: "summary_large_image",
   },
-  verification: {
-    google: "",
-    yandex: "",
-  },
 };
 
 export default function RootLayout({
@@ -48,29 +44,66 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: DATA.name,
+    url: DATA.url,
+    jobTitle: "Research Engineer 2 & AI Researcher",
+    worksFor: {
+      "@type": "Organization",
+      name: "Attentive.AI",
+    },
+    alumniOf: [
+      {
+        "@type": "EducationalOrganization",
+        name: "Indian Institute of Technology Mandi",
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "Shiv Nadar University",
+      },
+    ],
+    sameAs: [
+      DATA.contact.social.GitHub.url,
+      DATA.contact.social.LinkedIn.url,
+      DATA.contact.social.X.url,
+    ],
+  };
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased relative",
+          "min-h-screen bg-background font-sans antialiased relative overflow-x-hidden"
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <TooltipProvider delayDuration={0}>
-            <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
+            {/* Ambient Background Grid & Radial Glow Mesh */}
+            <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[350px] opacity-40 dark:opacity-30 bg-radial from-cyan-500/20 via-indigo-500/10 to-transparent blur-3xl" />
+              <div className="absolute top-[40%] right-0 w-[400px] h-[400px] opacity-20 dark:opacity-20 bg-radial from-emerald-500/20 via-teal-500/10 to-transparent blur-3xl" />
               <FlickeringGrid
-                className="h-full w-full"
+                className="h-[180px] w-full opacity-30"
                 squareSize={2}
-                gridGap={2}
+                gridGap={3}
                 style={{
                   maskImage: "linear-gradient(to bottom, black, transparent)",
                   WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
                 }}
               />
             </div>
-            <div className="relative z-10 max-w-4xl mx-auto py-12 pb-24 sm:py-24 px-6">
+
+            {/* Layout Wrapper */}
+            <div className="relative z-10 max-w-6xl mx-auto py-8 pb-32 sm:py-16 px-4 sm:px-6 lg:px-8">
               {children}
             </div>
+
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
