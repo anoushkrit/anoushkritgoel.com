@@ -54,6 +54,7 @@ export default function ProjectsSection() {
                 tags={project.technologies}
                 image={project.image}
                 video={project.video}
+                bibtex={project.bibtex}
                 links={project.links}
               />
             </BlurFade>

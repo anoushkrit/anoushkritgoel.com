@@ -3,6 +3,8 @@
 import { DATA } from "@/data/resume";
 import { LogoImage } from "@/components/ui/logo-image";
 import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function WorkSection() {
   return (
@@ -11,51 +13,55 @@ export default function WorkSection() {
         const isCurrent = work.end === "Present" || work.end?.toLowerCase() === "current";
 
         return (
-          <div
-            key={work.company + work.title}
-            className="w-full p-5 sm:p-6 rounded-2xl border border-border/70 bg-card/60 backdrop-blur-xl hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group flex flex-col sm:flex-row items-start gap-4"
+          <Link
+            key={work.slug + work.title}
+            href={`/work/${work.slug}`}
+            className="block w-full"
           >
-            <LogoImage src={work.logoUrl} alt={work.company} className="size-12" />
+            <div className="w-full p-5 sm:p-6 rounded-2xl border border-border/70 bg-card/60 backdrop-blur-xl hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group flex flex-col sm:flex-row items-start gap-4">
+              <LogoImage src={work.logoUrl} alt={work.company} className="size-12" />
 
-            <div className="flex-1 flex flex-col gap-2 min-w-0 w-full">
-              <div className="flex flex-wrap items-center justify-between gap-2 w-full">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="font-bold text-base sm:text-lg text-foreground group-hover:text-cyan-400 transition-colors">
-                    {work.company}
-                  </h3>
-                  {isCurrent && (
-                    <Badge className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold py-0.5 px-2">
-                      Current Role
-                    </Badge>
-                  )}
-                  {work.location && (
-                    <span className="text-xs text-muted-foreground/80 font-mono">
-                      • {work.location}
-                    </span>
-                  )}
+              <div className="flex-1 flex flex-col gap-2 min-w-0 w-full">
+                <div className="flex flex-wrap items-center justify-between gap-2 w-full">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="font-bold text-base sm:text-lg text-foreground group-hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+                      <span>{work.company}</span>
+                      <ArrowUpRight className="size-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
+                    </h3>
+                    {isCurrent && (
+                      <Badge className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold py-0.5 px-2">
+                        Current Role
+                      </Badge>
+                    )}
+                    {work.location && (
+                      <span className="text-xs text-muted-foreground/80 font-mono">
+                        • {work.location}
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-xs font-mono text-cyan-400/90 bg-cyan-500/5 border border-cyan-500/20 px-2.5 py-1 rounded-full">
+                    {work.start} — {work.end ?? "Present"}
+                  </div>
                 </div>
-                <div className="text-xs font-mono text-cyan-400/90 bg-cyan-500/5 border border-cyan-500/20 px-2.5 py-1 rounded-full">
-                  {work.start} — {work.end ?? "Present"}
+
+                <div className="text-sm font-semibold text-indigo-400">
+                  {work.title}
                 </div>
-              </div>
 
-              <div className="text-sm font-semibold text-indigo-400">
-                {work.title}
+                {work.bullets && work.bullets.length > 0 ? (
+                  <ul className="list-disc pl-5 text-xs sm:text-sm text-muted-foreground/95 space-y-1.5 leading-relaxed font-sans mt-1">
+                    {work.bullets.map((bullet, idx) => (
+                      <li key={idx}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-xs sm:text-sm text-muted-foreground/95 leading-relaxed mt-1 font-sans">
+                    {work.description}
+                  </p>
+                )}
               </div>
-
-              {work.bullets && work.bullets.length > 0 ? (
-                <ul className="list-disc pl-5 text-xs sm:text-sm text-muted-foreground/95 space-y-1.5 leading-relaxed font-sans mt-1">
-                  {work.bullets.map((bullet, idx) => (
-                    <li key={idx}>{bullet}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-xs sm:text-sm text-muted-foreground/95 leading-relaxed mt-1 font-sans">
-                  {work.description}
-                </p>
-              )}
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>

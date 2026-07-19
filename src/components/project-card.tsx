@@ -89,8 +89,6 @@ export function ProjectCard({
         <div className="relative shrink-0 overflow-hidden">
           <Link
             href={href || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
             className="block"
           >
             {video ? (
@@ -107,21 +105,21 @@ export function ProjectCard({
             )}
           </Link>
           {links && links.length > 0 && (
-            <div className="absolute top-3 right-3 flex flex-wrap gap-1.5">
-              {links.map((link, idx) => (
+            <div className="absolute top-3 right-3 flex flex-wrap gap-1.5 z-10">
+              {links.map((linkItem, idx) => (
                 <Link
-                  href={link.href}
+                  href={linkItem.href}
                   key={idx}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={linkItem.href.startsWith("/") ? "_self" : "_blank"}
+                  rel={linkItem.href.startsWith("/") ? undefined : "noopener noreferrer"}
                   onClick={(e) => e.stopPropagation()}
                 >
                   <Badge
                     className="flex items-center gap-1.5 text-xs bg-black/80 text-white backdrop-blur-md hover:bg-black"
                     variant="default"
                   >
-                    {link.icon}
-                    {link.type}
+                    {linkItem.icon}
+                    {linkItem.type}
                   </Badge>
                 </Link>
               ))}
@@ -134,9 +132,12 @@ export function ProjectCard({
         <div className="flex items-start justify-between gap-3">
           <div className="flex flex-col gap-1 flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="font-bold text-base sm:text-lg leading-snug text-foreground group-hover:text-primary transition-colors">
-                {title}
-              </h3>
+              <Link href={href || "#"} className="hover:underline">
+                <h3 className="font-bold text-base sm:text-lg leading-snug text-foreground group-hover:text-cyan-400 transition-colors flex items-center gap-1">
+                  <span>{title}</span>
+                  <ArrowUpRight className="size-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </h3>
+              </Link>
               {isRankA && (
                 <Badge className="bg-amber-500/10 text-amber-500 border border-amber-500/30 text-[10px] font-semibold py-0 px-2">
                   Rank A
@@ -149,19 +150,19 @@ export function ProjectCard({
           <div className="flex items-center gap-1.5 flex-none">
             {!hasMedia && links && links.length > 0 && (
               <div className="flex flex-wrap gap-1">
-                {links.map((link, idx) => (
+                {links.map((linkItem, idx) => (
                   <Link
-                    href={link.href}
+                    href={linkItem.href}
                     key={idx}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={linkItem.href.startsWith("/") ? "_self" : "_blank"}
+                    rel={linkItem.href.startsWith("/") ? undefined : "noopener noreferrer"}
                     onClick={(e) => e.stopPropagation()}
                   >
                     <Badge
                       className="flex items-center gap-1 text-[10px] font-semibold bg-secondary text-secondary-foreground hover:bg-muted py-0.5 px-2 rounded-md border border-border/60"
                     >
-                      {link.icon}
-                      {link.type}
+                      {linkItem.icon}
+                      {linkItem.type}
                     </Badge>
                   </Link>
                 ))}
@@ -180,18 +181,6 @@ export function ProjectCard({
                 <CodeXml className="size-4 text-cyan-400" />
                 <span className="text-[10px] font-semibold text-muted-foreground">BibTeX</span>
               </button>
-            )}
-
-            {href && href !== "#" && (
-              <Link
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors p-1.5 rounded-lg hover:bg-muted"
-                aria-label={`Open ${title}`}
-              >
-                <ArrowUpRight className="h-4 w-4" aria-hidden />
-              </Link>
             )}
           </div>
         </div>
