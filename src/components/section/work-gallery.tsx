@@ -11,7 +11,7 @@ interface GalleryItem {
   org: string;
   title: string;
   category: string;
-  glow: "cyan" | "indigo" | "emerald" | "amber";
+  glow: "red" | "cyan" | "indigo" | "emerald" | "amber";
 }
 
 const GALLERY_ITEMS: GalleryItem[] = [
@@ -20,14 +20,14 @@ const GALLERY_ITEMS: GalleryItem[] = [
     org: "IIT Mandi",
     title: "3D Brain Tractography & Point Clouds",
     category: "3D Spatial AI",
-    glow: "cyan",
+    glow: "red",
   },
   {
     url: "https://assets.cadbull.com/product_img/original/2024/HAVCequipmentandductingsectiondetailsinAutoCADdwgfileWedOct2022093132.jpg",
     org: "Attentive.AI",
     title: "HVAC Vector Path & Geometry Estimation",
     category: "Vector AI",
-    glow: "cyan",
+    glow: "red",
   },
   {
     url: "https://prod-images-static.radiopaedia.org/images/45173030/101e4b11d9d079646ebea213875a48_gallery.jpeg",
@@ -69,7 +69,7 @@ export default function WorkGallery() {
           <span className="text-xs uppercase tracking-wider font-semibold text-muted-foreground">
             Research & Industry AI Showcase
           </span>
-          <Badge variant="outline" className="text-[10px] font-mono border-cyan-500/30 text-cyan-400">
+          <Badge variant="outline" className="text-[10px] font-mono border-red-500/30 text-red-400">
             6 Core Domains
           </Badge>
         </div>
@@ -106,7 +106,7 @@ export default function WorkGallery() {
                   </div>
 
                   <div>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-cyan-300">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-red-300">
                       {item.category}
                     </span>
                     <h4 className="text-white text-xs sm:text-sm font-semibold leading-snug mt-0.5 line-clamp-2">
@@ -132,7 +132,7 @@ export default function WorkGallery() {
           >
             <div className="flex justify-between items-center border-b border-border/60 pb-3">
               <div>
-                <span className="text-xs font-mono text-cyan-400">{activeImage.category}</span>
+                <span className="text-xs font-mono text-red-400">{activeImage.category}</span>
                 <h3 className="text-base sm:text-lg font-bold text-foreground">{activeImage.title}</h3>
                 <p className="text-xs text-muted-foreground">{activeImage.org}</p>
               </div>

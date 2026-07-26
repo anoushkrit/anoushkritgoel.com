@@ -7,12 +7,16 @@ interface TypingAnimationProps {
   text: string;
   speed?: number;
   className?: string;
+  highlightWord?: string;
+  highlightClassName?: string;
 }
 
 export default function TypingAnimation({
   text,
   speed = 100, // speed in ms per character
   className,
+  highlightWord,
+  highlightClassName = "text-red-600 dark:text-red-500 font-extrabold",
 }: TypingAnimationProps) {
   const [displayedText, setDisplayedText] = useState("");
 
@@ -30,10 +34,32 @@ export default function TypingAnimation({
     return () => clearInterval(interval);
   }, [text, speed]);
 
+  const renderContent = () => {
+    if (!highlightWord || !text.includes(highlightWord)) {
+      return displayedText;
+    }
+
+    const highlightIndex = text.indexOf(highlightWord);
+
+    if (displayedText.length <= highlightIndex) {
+      return displayedText;
+    }
+
+    const mainPart = displayedText.slice(0, highlightIndex);
+    const highlightedPart = displayedText.slice(highlightIndex);
+
+    return (
+      <>
+        {mainPart}
+        <span className={highlightClassName}>{highlightedPart}</span>
+      </>
+    );
+  };
+
   return (
     <span className={cn("inline-block", className)}>
-      {displayedText}
-      <span className="ml-1 inline-block w-[3px] h-[0.8em] bg-primary animate-pulse align-middle" />
+      {renderContent()}
+      <span className="ml-1 inline-block w-[3px] h-[0.8em] bg-red-600 dark:bg-red-500 animate-pulse align-middle" />
     </span>
   );
 }

@@ -106,8 +106,8 @@ export default function RootLayout({
           <TooltipProvider delayDuration={0}>
             {/* Ambient Background Grid & Radial Glow Mesh */}
             <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[350px] opacity-40 dark:opacity-30 bg-radial from-cyan-500/20 via-indigo-500/10 to-transparent blur-3xl" />
-              <div className="absolute top-[40%] right-0 w-[400px] h-[400px] opacity-20 dark:opacity-20 bg-radial from-emerald-500/20 via-teal-500/10 to-transparent blur-3xl" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[350px] opacity-40 dark:opacity-30 bg-radial from-red-600/25 via-rose-900/10 to-transparent blur-3xl" />
+              <div className="absolute top-[40%] right-0 w-[400px] h-[400px] opacity-20 dark:opacity-20 bg-radial from-red-700/20 via-rose-800/10 to-transparent blur-3xl" />
               <FlickeringGrid
                 className="h-[180px] w-full opacity-30"
                 squareSize={2}

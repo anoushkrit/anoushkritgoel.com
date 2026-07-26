@@ -36,7 +36,7 @@ export default async function ProjectDetailPage({
 
   const categoryColors = {
     Paper: "bg-amber-500/10 text-amber-400 border-amber-500/30",
-    "Software & Tool": "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
+    "Software & Tool": "bg-red-500/10 text-red-400 border-red-500/30",
     "Startup Product": "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
     "Course Project": "bg-indigo-500/10 text-indigo-400 border-indigo-500/30",
     "Employment Project": "bg-teal-500/10 text-teal-400 border-teal-500/30",
@@ -49,7 +49,7 @@ export default async function ProjectDetailPage({
       <div>
         <Link
           href={project.orgSlug ? `/work/${project.orgSlug}` : "/#achievements"}
-          className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors p-2 rounded-lg bg-card/60 border border-border/60"
+          className="inline-flex items-center gap-2 text-xs font-mono text-red-400 hover:text-red-300 transition-colors p-2 rounded-lg bg-card/60 border border-border/60"
         >
           <ArrowLeft className="size-3.5" />
           <span>{project.orgSlug ? `Back to ${project.organization}` : "Back to Overview"}</span>
@@ -65,7 +65,7 @@ export default async function ProjectDetailPage({
               <Badge className={`text-xs font-semibold px-3 py-1 border ${categoryColors[project.category]}`}>
                 {project.category}
               </Badge>
-              <div className="flex items-center gap-2 font-mono text-xs text-cyan-400/90 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+              <div className="flex items-center gap-2 font-mono text-xs text-red-400/90 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
                 {project.dates}
               </div>
             </div>
@@ -73,7 +73,7 @@ export default async function ProjectDetailPage({
             <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
               {project.title}
             </h1>
-            <p className="text-base sm:text-lg font-semibold text-cyan-400">{project.subtitle}</p>
+            <p className="text-base sm:text-lg font-semibold text-red-400">{project.subtitle}</p>
 
             <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium mt-1">
               <Building2 className="size-3.5 text-muted-foreground" />
@@ -81,7 +81,7 @@ export default async function ProjectDetailPage({
               {project.orgSlug ? (
                 <Link
                   href={`/work/${project.orgSlug}`}
-                  className="text-foreground hover:text-cyan-400 font-semibold underline underline-offset-2 transition-colors"
+                  className="text-foreground hover:text-red-400 font-semibold underline underline-offset-2 transition-colors"
                 >
                   {project.organization}
                 </Link>
@@ -121,7 +121,7 @@ export default async function ProjectDetailPage({
                 href={project.arxivUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 text-xs font-semibold border border-red-500/30 transition-colors"
               >
                 <Globe className="size-3.5" />
                 <span>ArXiv Preprint</span>
@@ -154,7 +154,7 @@ export default async function ProjectDetailPage({
           {/* Full Description */}
           <div className="flex flex-col gap-2">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-              <Layers className="size-4 text-cyan-400" />
+              <Layers className="size-4 text-red-500" />
               Technical Overview
             </h2>
             <p className="text-sm sm:text-base text-muted-foreground/95 leading-relaxed font-sans">
@@ -166,7 +166,7 @@ export default async function ProjectDetailPage({
           {project.highlights && project.highlights.length > 0 && (
             <div className="flex flex-col gap-2 pt-2 border-t border-border/50">
               <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                <Sparkles className="size-4 text-cyan-400" />
+                <Sparkles className="size-4 text-red-500" />
                 Key Technical Highlights
               </h2>
               <ul className="list-disc pl-5 text-xs sm:text-sm text-muted-foreground/95 space-y-1.5 leading-relaxed">
@@ -182,7 +182,7 @@ export default async function ProjectDetailPage({
             <div className="flex flex-col gap-2 pt-2 border-t border-border/50">
               <div className="flex items-center justify-between">
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <CodeXml className="size-4 text-cyan-400" />
+                  <CodeXml className="size-4 text-red-500" />
                   BibTeX Citation
                 </h2>
               </div>
