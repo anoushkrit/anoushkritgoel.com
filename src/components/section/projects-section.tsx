@@ -14,7 +14,7 @@ export default function ProjectsSection() {
           <div className="flex items-center w-full">
             <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
             <div className="border border-border/80 bg-card z-10 rounded-full px-4 py-1 flex items-center gap-2 shadow-xs">
-              <Microscope className="size-4 text-red-500" />
+              <Microscope className="size-4 text-rose-500" />
               <span className="text-foreground text-xs font-semibold uppercase tracking-wider">
                 Research Milestones
               </span>
@@ -46,13 +46,13 @@ export default function ProjectsSection() {
                 </Link>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-red-500/30 bg-red-500/10 text-red-300 text-xs font-semibold">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-300 text-xs font-semibold">
                 <span>(1)</span>
                 <Link
                   href="https://2025.biomedicalimaging.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-200 inline-flex items-center gap-1"
+                  className="hover:underline hover:text-rose-200 inline-flex items-center gap-1"
                 >
                   <span>ISBI 2025</span>
                   <ExternalLink className="size-3" />
@@ -75,7 +75,7 @@ export default function ProjectsSection() {
           </div>
 
           {DATA.researchIntro && (
-            <div className="w-full max-w-3xl border-l-4 border-red-500/60 bg-card/60 backdrop-blur-md p-4 rounded-r-2xl border-border/60 text-left mt-2">
+            <div className="w-full max-w-3xl border-l-4 border-rose-500/40 bg-card/60 backdrop-blur-md p-4 rounded-r-2xl border-border/60 text-left mt-2">
               <p className="text-xs sm:text-sm text-muted-foreground/90 leading-relaxed font-sans italic">
                 "{DATA.researchIntro}"
               </p>

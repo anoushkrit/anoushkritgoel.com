@@ -18,13 +18,13 @@ export default function WorkSection() {
             href={`/work/${work.slug}`}
             className="block w-full"
           >
-            <div className="w-full p-5 sm:p-6 rounded-2xl border border-border/70 bg-card/60 backdrop-blur-xl hover:border-red-500/40 hover:shadow-lg hover:shadow-red-500/5 transition-all duration-300 group flex flex-col sm:flex-row items-start gap-4">
+            <div className="w-full p-5 sm:p-6 rounded-2xl border border-border/70 bg-card/60 backdrop-blur-xl hover:border-rose-500/30 hover:shadow-[0_0_20px_-5px_rgba(225,29,72,0.12)] transition-all duration-300 group flex flex-col sm:flex-row items-start gap-4">
               <LogoImage src={work.logoUrl} alt={work.company} className="size-12" />
 
               <div className="flex-1 flex flex-col gap-2 min-w-0 w-full">
                 <div className="flex flex-wrap items-center justify-between gap-2 w-full">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <h3 className="font-bold text-base sm:text-lg text-foreground group-hover:text-red-400 transition-colors flex items-center gap-1.5">
+                    <h3 className="font-bold text-base sm:text-lg text-foreground group-hover:text-rose-400 transition-colors flex items-center gap-1.5">
                       <span>{work.company}</span>
                       <ArrowUpRight className="size-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
                     </h3>
@@ -39,7 +39,7 @@ export default function WorkSection() {
                       </span>
                     )}
                   </div>
-                  <div className="text-xs font-mono text-red-400/90 bg-red-500/5 border border-red-500/20 px-2.5 py-1 rounded-full">
+                  <div className="text-xs font-mono text-rose-400/90 bg-rose-500/10 border border-rose-500/20 px-2.5 py-1 rounded-full">
                     {work.start} — {work.end ?? "Present"}
                   </div>
                 </div>

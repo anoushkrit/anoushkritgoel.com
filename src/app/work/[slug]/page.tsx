@@ -34,7 +34,7 @@ export default async function WorkDetailPage({
       <div>
         <Link
           href="/#work"
-          className="inline-flex items-center gap-2 text-xs font-mono text-red-400 hover:text-red-300 transition-colors p-2 rounded-lg bg-card/60 border border-border/60"
+          className="inline-flex items-center gap-2 text-xs font-mono text-rose-400 hover:text-rose-300 transition-colors p-2 rounded-lg bg-card/60 border border-border/60"
         >
           <ArrowLeft className="size-3.5" />
           <span>Back to Overview</span>
@@ -56,12 +56,12 @@ export default async function WorkDetailPage({
                     </Badge>
                   )}
                 </div>
-                <p className="text-base font-semibold text-red-400 mt-0.5">{work.title}</p>
+                <p className="text-base font-semibold text-rose-400 mt-0.5">{work.title}</p>
               </div>
             </div>
 
             <div className="flex flex-col sm:items-end gap-1 font-mono text-xs text-muted-foreground">
-              <span className="text-red-400 font-semibold bg-red-500/10 px-3 py-1 rounded-full border border-red-500/30">
+              <span className="text-rose-400 font-semibold bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">
                 {work.start} — {work.end}
               </span>
               <span className="flex items-center gap-1 mt-1">
@@ -73,7 +73,7 @@ export default async function WorkDetailPage({
 
           <div className="border-t border-border/50 pt-4 flex flex-col gap-2">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-              <Briefcase className="size-4 text-red-500" />
+              <Briefcase className="size-4 text-rose-500" />
               Role Overview & Impact
             </h2>
             <ul className="list-disc pl-5 text-sm text-muted-foreground/95 space-y-2 leading-relaxed font-sans">
@@ -89,7 +89,7 @@ export default async function WorkDetailPage({
                 href={work.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-foreground hover:text-red-400 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-foreground hover:text-rose-400 transition-colors"
               >
                 <span>Visit {work.company} Website</span>
                 <ExternalLink className="size-3.5" />
@@ -108,7 +108,7 @@ export default async function WorkDetailPage({
                 <h2 className="text-xl font-bold text-foreground">Projects & Initiatives at {work.company}</h2>
                 <p className="text-xs text-muted-foreground">Detailed technical models and systems built during this tenure</p>
               </div>
-              <Badge variant="outline" className="font-mono text-xs border-red-500/30 text-red-400">
+              <Badge variant="outline" className="font-mono text-xs border-rose-500/20 text-rose-400">
                 {projects.length} {projects.length === 1 ? "Project" : "Projects"}
               </Badge>
             </div>

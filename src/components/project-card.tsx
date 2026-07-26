@@ -81,7 +81,7 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        "flex flex-col h-full border border-border/80 bg-card/70 backdrop-blur-xl rounded-2xl overflow-hidden hover:border-red-500/40 hover:shadow-lg hover:shadow-red-500/5 transition-all duration-300 group",
+        "flex flex-col h-full border border-border/80 bg-card/70 backdrop-blur-xl rounded-2xl overflow-hidden hover:border-rose-500/30 hover:shadow-[0_0_20px_-5px_rgba(225,29,72,0.12)] transition-all duration-300 group",
         className
       )}
     >
@@ -133,7 +133,7 @@ export function ProjectCard({
           <div className="flex flex-col gap-1 flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               <Link href={href || "#"} className="hover:underline">
-                <h3 className="font-bold text-base sm:text-lg leading-snug text-foreground group-hover:text-red-400 transition-colors flex items-center gap-1">
+                <h3 className="font-bold text-base sm:text-lg leading-snug text-foreground group-hover:text-rose-400 transition-colors flex items-center gap-1">
                   <span>{title}</span>
                   <ArrowUpRight className="size-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </h3>
@@ -144,7 +144,7 @@ export function ProjectCard({
                 </Badge>
               )}
             </div>
-            <time className="text-xs font-mono text-red-400">{dates}</time>
+            <time className="text-xs font-mono text-rose-400/90">{dates}</time>
           </div>
 
           <div className="flex items-center gap-1.5 flex-none">
@@ -178,7 +178,7 @@ export function ProjectCard({
                 title="View BibTeX Citation"
                 className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors flex items-center gap-1 font-mono text-xs border border-border/60"
               >
-                <CodeXml className="size-4 text-red-400" />
+                <CodeXml className="size-4 text-rose-400" />
                 <span className="text-[10px] font-semibold text-muted-foreground">BibTeX</span>
               </button>
             )}

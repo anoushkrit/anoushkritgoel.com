@@ -36,7 +36,7 @@ export default async function ProjectDetailPage({
 
   const categoryColors = {
     Paper: "bg-amber-500/10 text-amber-400 border-amber-500/30",
-    "Software & Tool": "bg-red-500/10 text-red-400 border-red-500/30",
+    "Software & Tool": "bg-rose-500/10 text-rose-400 border-rose-500/20",
     "Startup Product": "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
     "Course Project": "bg-indigo-500/10 text-indigo-400 border-indigo-500/30",
     "Employment Project": "bg-teal-500/10 text-teal-400 border-teal-500/30",
@@ -49,7 +49,7 @@ export default async function ProjectDetailPage({
       <div>
         <Link
           href={project.orgSlug ? `/work/${project.orgSlug}` : "/#achievements"}
-          className="inline-flex items-center gap-2 text-xs font-mono text-red-400 hover:text-red-300 transition-colors p-2 rounded-lg bg-card/60 border border-border/60"
+          className="inline-flex items-center gap-2 text-xs font-mono text-rose-400 hover:text-rose-300 transition-colors p-2 rounded-lg bg-card/60 border border-border/60"
         >
           <ArrowLeft className="size-3.5" />
           <span>{project.orgSlug ? `Back to ${project.organization}` : "Back to Overview"}</span>
@@ -65,7 +65,7 @@ export default async function ProjectDetailPage({
               <Badge className={`text-xs font-semibold px-3 py-1 border ${categoryColors[project.category]}`}>
                 {project.category}
               </Badge>
-              <div className="flex items-center gap-2 font-mono text-xs text-red-400/90 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
+              <div className="flex items-center gap-2 font-mono text-xs text-rose-400/90 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">
                 {project.dates}
               </div>
             </div>
@@ -73,7 +73,7 @@ export default async function ProjectDetailPage({
             <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
               {project.title}
             </h1>
-            <p className="text-base sm:text-lg font-semibold text-red-400">{project.subtitle}</p>
+            <p className="text-base sm:text-lg font-semibold text-rose-400">{project.subtitle}</p>
 
             <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium mt-1">
               <Building2 className="size-3.5 text-muted-foreground" />
@@ -81,7 +81,7 @@ export default async function ProjectDetailPage({
               {project.orgSlug ? (
                 <Link
                   href={`/work/${project.orgSlug}`}
-                  className="text-foreground hover:text-red-400 font-semibold underline underline-offset-2 transition-colors"
+                  className="text-foreground hover:text-rose-400 font-semibold underline underline-offset-2 transition-colors"
                 >
                   {project.organization}
                 </Link>
@@ -121,7 +121,7 @@ export default async function ProjectDetailPage({
                 href={project.arxivUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 text-xs font-semibold border border-red-500/30 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs font-semibold border border-rose-500/20 transition-colors"
               >
                 <Globe className="size-3.5" />
                 <span>ArXiv Preprint</span>

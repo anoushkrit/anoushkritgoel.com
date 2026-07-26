@@ -16,7 +16,7 @@ export default function TypingAnimation({
   speed = 100, // speed in ms per character
   className,
   highlightWord,
-  highlightClassName = "text-red-600 dark:text-red-500 font-extrabold",
+  highlightClassName = "bg-gradient-to-r from-red-500 via-rose-400 to-amber-400 bg-clip-text text-transparent font-extrabold drop-shadow-xs",
 }: TypingAnimationProps) {
   const [displayedText, setDisplayedText] = useState("");
 
@@ -59,7 +59,7 @@ export default function TypingAnimation({
   return (
     <span className={cn("inline-block", className)}>
       {renderContent()}
-      <span className="ml-1 inline-block w-[3px] h-[0.8em] bg-red-600 dark:bg-red-500 animate-pulse align-middle" />
+      <span className="ml-1 inline-block w-[3px] h-[0.8em] bg-rose-500 animate-pulse align-middle" />
     </span>
   );
 }

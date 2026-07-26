@@ -6,9 +6,6 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import type { ComponentType } from "react";
-import ExecutiveStatsBar from "@/components/section/executive-stats-bar";
-import BenchmarkMatrix from "@/components/section/benchmark-matrix";
-import ExpertiseBentoMatrix from "@/components/section/expertise-bento-matrix";
 import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
@@ -17,9 +14,8 @@ import AwardsSection from "@/components/section/awards-section";
 import CertificationsSection from "@/components/section/certifications-section";
 import WorkGallery from "@/components/section/work-gallery";
 import { LogoImage } from "@/components/ui/logo-image";
-import { Badge } from "@/components/ui/badge";
 import { ProjectCard } from "@/components/project-card";
-import { ArrowUpRight, GraduationCap, Briefcase, Cpu, Layers, Sparkles, Code2, ExternalLink, Trophy } from "lucide-react";
+import { ArrowUpRight, GraduationCap, Briefcase, Cpu, Layers, Sparkles, Code2, ExternalLink } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -30,7 +26,7 @@ export default function Page() {
       <section id="hero" className="w-full pt-4">
         <div className="mx-auto w-full space-y-6">
           <div className="flex flex-col gap-3">
-            <div className="inline-flex items-center gap-2 w-fit px-3 py-1 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs font-semibold">
+            <div className="inline-flex items-center gap-2 w-fit px-3.5 py-1 rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-400 text-xs font-semibold backdrop-blur-md shadow-xs">
               <Sparkles className="size-3.5" />
               <span>Available for Research & AI Collaborations</span>
             </div>
@@ -39,7 +35,6 @@ export default function Page() {
               <TypingAnimation
                 text={DATA.name}
                 highlightWord="Goel"
-                highlightClassName="text-red-600 dark:text-red-500 font-extrabold"
                 speed={70}
               />
             </h1>
@@ -51,24 +46,86 @@ export default function Page() {
             />
           </div>
 
-          {/* Executive Stats Bar */}
-          <ExecutiveStatsBar />
-
-          {/* SOTA Outperformance Benchmark Matrix */}
-          <section id="benchmarks" className="pt-2">
-            <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
-              <BenchmarkMatrix />
+          {/* Quick Stats Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            {/* Publications Card with Direct Conference Source Links */}
+            <BlurFade delay={BLUR_FADE_DELAY * 2}>
+              <div className="p-3.5 rounded-xl border border-border/70 bg-card/60 backdrop-blur-xl flex flex-col gap-1 shadow-xs hover:border-rose-500/30 hover:shadow-[0_0_20px_-5px_rgba(225,29,72,0.12)] transition-all duration-300">
+                <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">
+                  Publications
+                </span>
+                <span className="text-sm sm:text-base font-bold text-foreground">
+                  5 Papers
+                </span>
+                <div className="text-[10px] font-semibold text-rose-400/90 flex flex-wrap items-center gap-1">
+                  <span>(2)</span>
+                  <Link
+                    href="https://icpr2024.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-rose-300 font-bold inline-flex items-center gap-0.5"
+                  >
+                    <span>ICPR 2024</span>
+                    <ExternalLink className="size-2.5" />
+                  </Link>
+                  <span>, (1)</span>
+                  <Link
+                    href="https://2025.biomedicalimaging.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-rose-300 font-bold inline-flex items-center gap-0.5"
+                  >
+                    <span>ISBI 2025</span>
+                    <ExternalLink className="size-2.5" />
+                  </Link>
+                  <span>, (2)</span>
+                  <Link
+                    href="https://biomedicalimaging.org/2026/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-rose-300 font-bold inline-flex items-center gap-0.5"
+                  >
+                    <span>ISBI 2026</span>
+                    <ExternalLink className="size-2.5" />
+                  </Link>
+                </div>
+              </div>
             </BlurFade>
-          </section>
+
+            {/* Experience Card */}
+            <BlurFade delay={BLUR_FADE_DELAY * 2.1}>
+              <div className="p-3.5 rounded-xl border border-border/70 bg-card/60 backdrop-blur-xl flex flex-col gap-0.5 shadow-xs hover:border-rose-500/30 hover:shadow-[0_0_20px_-5px_rgba(225,29,72,0.12)] transition-all duration-300">
+                <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">
+                  Experience
+                </span>
+                <span className="text-sm sm:text-base font-bold text-foreground">
+                  7+ Years
+                </span>
+                <span className="text-[10px] font-semibold text-rose-400/90">
+                  AI & Startups
+                </span>
+              </div>
+            </BlurFade>
+
+            {/* Core Focus Card */}
+            <BlurFade delay={BLUR_FADE_DELAY * 2.2}>
+              <div className="p-3.5 rounded-xl border border-border/70 bg-card/60 backdrop-blur-xl flex flex-col gap-0.5 shadow-xs hover:border-rose-500/30 hover:shadow-[0_0_20px_-5px_rgba(225,29,72,0.12)] transition-all duration-300">
+                <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">
+                  Core Focus
+                </span>
+                <span className="text-sm sm:text-base font-bold text-foreground">
+                  3D Spatial AI
+                </span>
+                <span className="text-[10px] font-semibold text-rose-400/90">
+                  Neuro & Medical AI
+                </span>
+              </div>
+            </BlurFade>
+          </div>
 
           {/* Work Showcase Gallery */}
           <WorkGallery />
         </div>
-      </section>
-
-      {/* Core Domain Mastery Bento Section */}
-      <section id="expertise" className="w-full">
-        <ExpertiseBentoMatrix />
       </section>
 
       {/* About Section */}
@@ -76,7 +133,7 @@ export default function Page() {
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <div className="flex items-center gap-2">
-              <Layers className="size-4 text-red-500" />
+              <Layers className="size-4 text-rose-500" />
               <h2 className="text-xl font-bold text-foreground">About & Vision</h2>
             </div>
           </BlurFade>
@@ -93,7 +150,7 @@ export default function Page() {
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <div className="flex items-center gap-2">
-              <Briefcase className="size-4 text-red-500" />
+              <Briefcase className="size-4 text-rose-500" />
               <h2 className="text-xl font-bold text-foreground">Industrial & Entrepreneurial Experience</h2>
             </div>
           </BlurFade>
@@ -108,7 +165,7 @@ export default function Page() {
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <div className="flex items-center gap-2">
-              <GraduationCap className="size-4 text-red-500" />
+              <GraduationCap className="size-4 text-rose-500" />
               <h2 className="text-xl font-bold text-foreground">Academic Credentials</h2>
             </div>
           </BlurFade>
@@ -126,11 +183,11 @@ export default function Page() {
                   rel="noopener noreferrer"
                   className="block h-full"
                 >
-                  <div className="p-5 sm:p-6 rounded-2xl border border-border/70 bg-card/60 backdrop-blur-xl hover:border-red-500/40 hover:shadow-lg hover:shadow-red-500/5 transition-all duration-300 group h-full flex flex-col justify-between gap-4">
+                  <div className="p-5 sm:p-6 rounded-2xl border border-border/70 bg-card/60 backdrop-blur-xl hover:border-rose-500/30 hover:shadow-[0_0_20px_-5px_rgba(225,29,72,0.12)] transition-all duration-300 group h-full flex flex-col justify-between gap-4">
                     <div className="flex items-start gap-4">
                       <LogoImage alt={education.school} type="education" className="size-11" />
                       <div className="flex-1 min-w-0 flex flex-col gap-1">
-                        <div className="font-bold text-base text-foreground group-hover:text-red-400 transition-colors flex items-center justify-between gap-2">
+                        <div className="font-bold text-base text-foreground group-hover:text-rose-400 transition-colors flex items-center justify-between gap-2">
                           <span>{education.school}</span>
                           <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
@@ -140,7 +197,7 @@ export default function Page() {
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between text-xs font-mono text-red-400/90 border-t border-border/50 pt-3">
+                    <div className="flex items-center justify-between text-xs font-mono text-rose-400/90 border-t border-border/50 pt-3">
                       <span>{education.start} — {education.end}</span>
                     </div>
                   </div>
@@ -156,7 +213,7 @@ export default function Page() {
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <div className="flex items-center gap-2">
-              <Cpu className="size-4 text-red-500" />
+              <Cpu className="size-4 text-rose-500" />
               <h2 className="text-xl font-bold text-foreground">Skills & Technology Stack</h2>
             </div>
           </BlurFade>
@@ -169,7 +226,7 @@ export default function Page() {
                       ? skill.icon
                       : undefined) as ComponentType<{ className?: string }> | undefined;
                     return (
-                      <div className="border border-border/80 bg-background/80 hover:border-red-500/40 rounded-xl h-8 w-fit px-3 flex items-center gap-2 shadow-xs transition-colors">
+                      <div className="border border-border/80 bg-background/80 hover:border-rose-500/30 rounded-xl h-8 w-fit px-3 flex items-center gap-2 shadow-xs transition-colors">
                         {SkillIcon ? <SkillIcon className="size-4 rounded overflow-hidden object-contain" /> : null}
                         <span className="text-foreground text-xs sm:text-sm font-medium">{skill.name}</span>
                       </div>

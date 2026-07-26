@@ -69,7 +69,7 @@ export default function WorkGallery() {
           <span className="text-xs uppercase tracking-wider font-semibold text-muted-foreground">
             Research & Industry AI Showcase
           </span>
-          <Badge variant="outline" className="text-[10px] font-mono border-red-500/30 text-red-400">
+          <Badge variant="outline" className="text-[10px] font-mono border-rose-500/20 text-rose-400">
             6 Core Domains
           </Badge>
         </div>
@@ -106,7 +106,7 @@ export default function WorkGallery() {
                   </div>
 
                   <div>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-red-300">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-rose-300">
                       {item.category}
                     </span>
                     <h4 className="text-white text-xs sm:text-sm font-semibold leading-snug mt-0.5 line-clamp-2">
@@ -132,7 +132,7 @@ export default function WorkGallery() {
           >
             <div className="flex justify-between items-center border-b border-border/60 pb-3">
               <div>
-                <span className="text-xs font-mono text-red-400">{activeImage.category}</span>
+                <span className="text-xs font-mono text-rose-400">{activeImage.category}</span>
                 <h3 className="text-base sm:text-lg font-bold text-foreground">{activeImage.title}</h3>
                 <p className="text-xs text-muted-foreground">{activeImage.org}</p>
               </div>
