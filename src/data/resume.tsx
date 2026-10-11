@@ -237,10 +237,15 @@ export const DATA = {
     {
       title: "TrackletGPT",
       href: "/projects/trackletgpt",
+      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      venue: "IEEE International Symposium on Biomedical Imaging (ISBI)",
+      year: "2026",
       dates: "ISBI 2026",
+      arxivUrl: "https://arxiv.org/abs/2601.13935",
+      scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
-        "Accepted at IEEE ISBI 2026 (London, UK): **TrackletGPT: A GPT architecture for White Matter Segmentation** (Rank A). B-Spline sub-segment tokenization for 3D point clouds.",
+        "White Matter Tract Segmentation is imperative for studying brain structural connectivity, neurological disorders and neurosurgery. This task remains complex, as tracts differ among themselves, across subjects and conditions, yet have similar 3D structure across hemispheres and subjects. To address these challenges, we propose TrackletGPT, a language-like GPT framework which reintroduces sequential information in tokens using tracklets. TrackletGPT generalises seamlessly across datasets, is fully automatic, and encodes granular sub-streamline segments, Tracklets, scaling and refining GPT models in Tractography Segmentation. Based on our experiments, TrackletGPT outperforms state-of-the-art methods on average DICE, Overlap and Overreach scores on TractoInferno and HCP datasets, even on inter-dataset experiments.",
       technologies: ["3D Spatial AI", "B-Spline Tokenization", "GPT Transformers", "PyTorch3D"],
       bibtex: `@inproceedings{goel2026trackletgpt,
   title={TrackletGPT: A GPT architecture for White Matter Segmentation},
@@ -255,9 +260,19 @@ export const DATA = {
           icon: <Icons.globe className="h-4 w-4" />,
         },
         {
+          type: "ArXiv",
+          href: "https://arxiv.org/abs/2601.13935",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
+        {
           type: "GitHub",
-          href: "https://github.com/anoushkrit/TrackletGPT",
+          href: "https://github.com/anoushkrit/all-projects",
           icon: <Icons.github className="h-4 w-4" />,
+        },
+        {
+          type: "Scholar",
+          href: "https://scholar.google.com/citations?user=anoushkritgoel",
+          icon: <Icons.globe className="h-4 w-4" />,
         },
       ],
       image: "",
@@ -266,10 +281,15 @@ export const DATA = {
     {
       title: "TractRLFusion",
       href: "/projects/tractrlfusion",
+      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      venue: "IEEE International Symposium on Biomedical Imaging (ISBI)",
+      year: "2026",
       dates: "ISBI 2026",
+      arxivUrl: "https://arxiv.org/abs/2601.13897",
+      scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
-        "Accepted at IEEE ISBI 2026 (London, UK): **TractRLFusion**. Reinforcement Learning policy fusion networks for Diffusion MRI tractography.",
+        "Tractography plays a pivotal role in the non-invasive reconstruction of white matter fiber pathways, providing vital information on brain connectivity and supporting precise neurosurgical planning. Although traditional methods relied mainly on classical deterministic and probabilistic approaches, recent progress has benefited from supervised deep learning (DL) and deep reinforcement learning (DRL) to improve tract reconstruction. A persistent challenge in tractography is accurately reconstructing white matter tracts while minimizing spurious connections. To address this, we propose TractRLFusion, a novel GPT-based policy fusion framework that integrates multiple RL policies through a data-driven fusion strategy. Our method employs a two-stage training data selection process for effective policy fusion, followed by a multi-critic fine-tuning phase to enhance robustness and generalization. Experiments on HCP, ISMRM, and TractoInferno datasets demonstrate that TractRLFusion outperforms individual RL policies as well as state-of-the-art classical and DRL methods in accuracy and anatomical reliability.",
       technologies: ["Reinforcement Learning", "Fusion Networks", "Diffusion MRI", "PyTorch"],
       bibtex: `@inproceedings{goel2026tractrlfusion,
   title={TractRLFusion: Reinforcement Learning and Fusion Networks for Diffusion MRI},
@@ -283,6 +303,16 @@ export const DATA = {
           href: "/projects/tractrlfusion",
           icon: <Icons.globe className="h-4 w-4" />,
         },
+        {
+          type: "ArXiv",
+          href: "https://arxiv.org/abs/2601.13897",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
+        {
+          type: "Scholar",
+          href: "https://scholar.google.com/citations?user=anoushkritgoel",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
       ],
       image: "",
       video: "",
@@ -290,16 +320,20 @@ export const DATA = {
     {
       title: "TractoGPT",
       href: "/projects/tractogpt",
+      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      venue: "IEEE International Symposium on Biomedical Imaging (ISBI)",
+      year: "2025",
       dates: "ISBI 2025",
+      scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
-        "Accepted at ISBI 2025 (Houston, TX): **TractoGPT**. Dual-masked point cloud GPT model. **Outperformed SCIL Canada's FIESTA benchmark**.",
+        "White matter bundle segmentation is crucial for studying brain structural connectivity, neurosurgical planning, and neurological disorders. White Matter Segmentation remains challenging due to structural similarity in streamlines, subject variability, symmetry in 2 hemispheres, etc. To address these challenges, we propose TractoGPT, a GPT-based architecture trained on streamline, cluster, and fusion data representations separately. TractoGPT is a fully-automatic method that generalizes across datasets and retains shape information of the white matter bundles. Experiments also show that TractoGPT outperforms state-of-the-art methods on average DICE, Overlap and Overreach scores. We use TractoInferno and 105HCP datasets and validate generalization across dataset.",
       technologies: ["3D Spatial AI", "Dual-Masked Pretraining", "GPT Transformers", "SCIL Benchmark"],
-      bibtex: `@article{goel2024tractogpt,
+      bibtex: `@article{goel2025tractogpt,
   title={TractoGPT: A GPT architecture for White Matter Segmentation},
   author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
-  journal={arXiv preprint arXiv:2411.08187},
-  year={2024}
+  journal={arXiv preprint arXiv:2501.15464},
+  year={2025}
 }`,
       links: [
         {
@@ -309,13 +343,18 @@ export const DATA = {
         },
         {
           type: "ArXiv",
-          href: "https://arxiv.org/abs/2411.08187",
+          href: "https://arxiv.org/abs/2501.15464",
           icon: <Icons.globe className="h-4 w-4" />,
         },
         {
           type: "GitHub",
-          href: "https://github.com/anoushkrit/TractoGPT",
+          href: "https://github.com/anoushkrit/all-projects",
           icon: <Icons.github className="h-4 w-4" />,
+        },
+        {
+          type: "Scholar",
+          href: "https://scholar.google.com/citations?user=anoushkritgoel",
+          icon: <Icons.globe className="h-4 w-4" />,
         },
       ],
       image: "",
@@ -324,10 +363,14 @@ export const DATA = {
     {
       title: "TractoEmbed",
       href: "/projects/tractoembed",
+      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      venue: "International Conference on Pattern Recognition (ICPR)",
+      year: "2024",
       dates: "ICPR 2024",
+      scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
-        "Accepted at 27th ICPR 2024 (Kolkata): **TractoEmbed**. Modular multi-embedding CNN/dVAE/PointNet framework. **Outperformed Harvard Medical School's TractCloud**.",
+        "White matter tract segmentation is crucial for studying brain structural connectivity and neurosurgical planning. However, segmentation remains challenging due to issues like class imbalance between major and minor tracts, structural similarity, subject variability, symmetric streamlines between hemispheres etc. To address these challenges, we propose TractoEmbed, a modular multi-level embedding framework, that encodes localized representations through learning tasks in respective encoders. In this paper, TractoEmbed introduces a novel hierarchical streamline data representation that captures maximum spatial information at each level i.e. individual streamlines, clusters, and patches. Experiments show that TractoEmbed outperforms state-of-the-art methods in white matter tract segmentation across different datasets, and spanning various age groups. The modular framework directly allows the integration of additional embeddings in future works.",
       technologies: ["Representation Learning", "PointNet / dVAE", "Harvard Benchmark", "Neuroimaging"],
       bibtex: `@inproceedings{goel2024tractoembed,
   title={TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation},
@@ -353,6 +396,11 @@ export const DATA = {
           href: "https://github.com/anoushkrit/TractoEmbed",
           icon: <Icons.github className="h-4 w-4" />,
         },
+        {
+          type: "Scholar",
+          href: "https://scholar.google.com/citations?user=anoushkritgoel",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
       ],
       image: "",
       video: "",
@@ -360,10 +408,14 @@ export const DATA = {
     {
       title: "Tract-RLformer",
       href: "/projects/tract-rlformer",
+      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      venue: "International Conference on Pattern Recognition (ICPR)",
+      year: "2024",
       dates: "ICPR 2024",
+      scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
-        "Accepted at 27th ICPR 2024: **Tract-RLformer**. Supervised + RL 2-stage policy refinement. **Outperformed SCIL Canada's Track2Learn, DeepTract, and PFT**.",
+        "Fiber tractography is a cornerstone of neuroimaging, enabling the detailed mapping of the brain's white matter pathways through diffusion MRI. This is crucial for understanding brain connectivity and function, making it a valuable tool in neurological applications. Despite its importance, tractography faces challenges due to its complexity and susceptibility to false positives, misrepresenting vital pathways. To address these issues, recent strategies have shifted towards deep learning, utilizing supervised learning, which depends on precise ground truth, or reinforcement learning, which operates without it. In this work, we propose Tract-RLFormer, a network utilizing both supervised and reinforcement learning, in a two-stage policy refinement process that markedly improves the accuracy and generalizability across various data-sets. By employing a tract-specific approach, our network directly delineates the tracts of interest, bypassing the traditional segmentation process. Through rigorous validation on datasets such as TractoInferno, HCP, and ISMRM-2015, our methodology demonstrates a leap forward in tractography, showcasing its ability to accurately map the brain's white matter tracts.",
       technologies: ["Reinforcement Learning", "Decoder Transformers", "SCIL Benchmark", "PyTorch"],
       bibtex: `@inproceedings{goel2024tract,
   title={Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network},
@@ -382,6 +434,16 @@ export const DATA = {
         {
           type: "Paper",
           href: "https://link.springer.com/chapter/10.1007/978-3-031-78201-5_17",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
+        {
+          type: "ArXiv",
+          href: "https://arxiv.org/abs/2411.05757",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
+        {
+          type: "Scholar",
+          href: "https://scholar.google.com/citations?user=anoushkritgoel",
           icon: <Icons.globe className="h-4 w-4" />,
         },
       ],
@@ -407,7 +469,7 @@ export const DATA = {
         },
         {
           type: "GitHub",
-          href: "https://github.com/anoushkrit/SlicerTracto",
+          href: "https://github.com/anoushkrit/all-projects",
           icon: <Icons.github className="h-4 w-4" />,
         },
       ],
@@ -427,12 +489,12 @@ export const DATA = {
         },
         {
           type: "Sculpt3D",
-          href: "https://github.com/anoushkrit/Sculpt3D",
+          href: "https://github.com/anoushkrit/all-projects",
           icon: <Icons.github className="h-4 w-4" />,
         },
         {
           type: "Talk2point",
-          href: "https://github.com/anoushkrit/talk2point",
+          href: "https://github.com/anoushkrit/all-projects",
           icon: <Icons.github className="h-4 w-4" />,
         },
       ],
@@ -617,7 +679,7 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     category: "Software & Tool",
     organization: "IIT Mandi",
     orgSlug: "iit-mandi",
-    githubUrl: "https://github.com/anoushkrit/Sculpt3D",
+    githubUrl: "https://github.com/anoushkrit/all-projects",
     dates: "Jan 2025 - Present",
     technologies: ["SDFusion", "LLaMA / GPT", "Open3D", "PyTorch3D", "Plotly", "Fury.gl", "Python"],
     image: "https://mlr.cdn-apple.com/media/fig1_84b4ceb42b.png",
@@ -639,7 +701,7 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     category: "Software & Tool",
     organization: "IIT Mandi",
     orgSlug: "iit-mandi",
-    githubUrl: "https://github.com/anoushkrit/SlicerTracto",
+    githubUrl: "https://github.com/anoushkrit/all-projects",
     dates: "Dec 2024 - Present",
     technologies: ["3D Slicer Extension", "DIPY", "Scilpy", "PyTorch", "Python", "Qt GUI"],
     image: "https://brainsuite.org/wp-content/uploads/2015/02/tracts2.png",
@@ -660,7 +722,7 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     subtitle: "Granular Region-Specific Text-Guided 3D Point Cloud Editing",
     category: "Side Project",
     organization: "Independent Research",
-    githubUrl: "https://github.com/anoushkrit/talk2point",
+    githubUrl: "https://github.com/anoushkrit/all-projects",
     dates: "Feb 2024 - May 2024",
     technologies: ["ShapeTalk Dataset", "ChangeIt3D", "SDFusion", "Open3D", "PyTorch"],
     shortDescription:
@@ -681,8 +743,9 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     category: "Paper",
     organization: "IIT Mandi",
     orgSlug: "iit-mandi",
-    githubUrl: "https://github.com/anoushkrit/TrackletGPT",
+    githubUrl: "https://github.com/anoushkrit/all-projects",
     dates: "ISBI 2026",
+    arxivUrl: "https://arxiv.org/abs/2601.13935",
     technologies: ["3D Spatial AI", "B-Spline Tokenization", "GPT Transformers", "PyTorch3D", "Plotly"],
     bibtex: `@inproceedings{goel2026trackletgpt,
   title={TrackletGPT: A GPT architecture for White Matter Segmentation},
@@ -691,9 +754,9 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
   year={2026}
 }`,
     shortDescription:
-      "Accepted at IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK): **TrackletGPT** (Conference Rank: A). Introduces B-Spline streamline sub-segment tokenization for GPT-based 3D point cloud reconstruction and segmentation.",
+      "White Matter Tract Segmentation is imperative for studying brain structural connectivity, neurological disorders and neurosurgery. This task remains complex, as tracts differ among themselves, across subjects and conditions, yet have similar 3D structure across hemispheres and subjects. To address these challenges, we propose TrackletGPT, a language-like GPT framework which reintroduces sequential information in tokens using tracklets. TrackletGPT generalises seamlessly across datasets, is fully automatic, and encodes granular sub-streamline segments, Tracklets, scaling and refining GPT models in Tractography Segmentation. Based on our experiments, TrackletGPT outperforms state-of-the-art methods on average DICE, Overlap and Overreach scores on TractoInferno and HCP datasets, even on inter-dataset experiments.",
     fullDescription:
-      "TrackletGPT is a peer-reviewed research paper accepted at the IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK) with Conference Rank A. Building upon TractoGPT, TrackletGPT introduces a novelty in 3D streamline tokenization: representing fiber tract sub-sequences as continuous B-Spline 'tracklets'. By encoding geometric curvature parameters into discrete tokens, the GPT transformer pretrains on tracklet completion and dual-masking, achieving state-of-the-art white matter tract segmentation accuracy across complex crossing-fiber brain anatomical regions.",
+      "White Matter Tract Segmentation is imperative for studying brain structural connectivity, neurological disorders and neurosurgery. This task remains complex, as tracts differ among themselves, across subjects and conditions, yet have similar 3D structure across hemispheres and subjects. To address these challenges, we propose TrackletGPT, a language-like GPT framework which reintroduces sequential information in tokens using tracklets. TrackletGPT generalises seamlessly across datasets, is fully automatic, and encodes granular sub-streamline segments, Tracklets, scaling and refining GPT models in Tractography Segmentation. Based on our experiments, TrackletGPT outperforms state-of-the-art methods on average DICE, Overlap and Overreach scores on TractoInferno and HCP datasets, even on inter-dataset experiments.",
     highlights: [
       "Accepted at IEEE ISBI 2026 (London, UK) with Conference Rank A classification.",
       "Formulated B-Spline continuous curve tokens to preserve spatial streamline trajectory continuity.",
@@ -721,9 +784,9 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
   organization={Springer}
 }`,
     shortDescription:
-      "Accepted at 27th ICPR 2024 (Kolkata): **Tract-RLformer**. Supervised + Reinforcement Learning 2-stage policy refinement network that directly delineates white matter tracts, outperforming SCIL Canada benchmarks.",
+      "Fiber tractography is a cornerstone of neuroimaging, enabling the detailed mapping of the brain's white matter pathways through diffusion MRI. This is crucial for understanding brain connectivity and function, making it a valuable tool in neurological applications. Despite its importance, tractography faces challenges due to its complexity and susceptibility to false positives, misrepresenting vital pathways. To address these issues, recent strategies have shifted towards deep learning, utilizing supervised learning, which depends on precise ground truth, or reinforcement learning, which operates without it. In this work, we propose Tract-RLFormer, a network utilizing both supervised and reinforcement learning, in a two-stage policy refinement process that markedly improves the accuracy and generalizability across various data-sets. By employing a tract-specific approach, our network directly delineates the tracts of interest, bypassing the traditional segmentation process. Through rigorous validation on datasets such as TractoInferno, HCP, and ISMRM-2015, our methodology demonstrates a leap forward in tractography, showcasing its ability to accurately map the brain's white matter tracts.",
     fullDescription:
-      "Tract-RLformer is a peer-reviewed research paper published at the 27th International Conference on Pattern Recognition (ICPR 2024, Kolkata). The network utilizes a hybrid two-stage training strategy combining supervised pretraining with reinforcement learning policy refinement. By training tract-specific agent policies within an OpenAI Gym environment over dMRI vector fields, Tract-RLformer directly tracks and delineates white matter bundles of interest without requiring post-hoc anatomical filtering. It markedly outperformed established tracking algorithms from Sherbrooke Connectivity Imaging Lab (SCIL Canada) including Track2Learn, DeepTract, and Particle Filtering Tracking (PFT).",
+      "Fiber tractography is a cornerstone of neuroimaging, enabling the detailed mapping of the brain's white matter pathways through diffusion MRI. This is crucial for understanding brain connectivity and function, making it a valuable tool in neurological applications. Despite its importance, tractography faces challenges due to its complexity and susceptibility to false positives, misrepresenting vital pathways. To address these issues, recent strategies have shifted towards deep learning, utilizing supervised learning, which depends on precise ground truth, or reinforcement learning, which operates without it. In this work, we propose Tract-RLFormer, a network utilizing both supervised and reinforcement learning, in a two-stage policy refinement process that markedly improves the accuracy and generalizability across various data-sets. By employing a tract-specific approach, our network directly delineates the tracts of interest, bypassing the traditional segmentation process. Through rigorous validation on datasets such as TractoInferno, HCP, and ISMRM-2015, our methodology demonstrates a leap forward in tractography, showcasing its ability to accurately map the brain's white matter tracts.",
     highlights: [
       "Published in Springer ICPR 2024 conference proceedings.",
       "Outperformed SCIL Canada's benchmark tracking algorithms (Track2Learn, DeepTract, PFT).",
@@ -772,9 +835,9 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
   organization={Springer}
 }`,
     shortDescription:
-      "Accepted at 27th ICPR 2024 (Kolkata): **TractoEmbed**. Modular multi-embedding framework using CNN, dVAE, and PointNet. **Outperformed Harvard Medical School's TractCloud benchmark**.",
+      "White matter tract segmentation is crucial for studying brain structural connectivity and neurosurgical planning. However, segmentation remains challenging due to issues like class imbalance between major and minor tracts, structural similarity, subject variability, symmetric streamlines between hemispheres etc. To address these challenges, we propose TractoEmbed, a modular multi-level embedding framework, that encodes localized representations through learning tasks in respective encoders. In this paper, TractoEmbed introduces a novel hierarchical streamline data representation that captures maximum spatial information at each level i.e. individual streamlines, clusters, and patches. Experiments show that TractoEmbed outperforms state-of-the-art methods in white matter tract segmentation across different datasets, and spanning various age groups. The modular framework directly allows the integration of additional embeddings in future works.",
     fullDescription:
-      "TractoEmbed is a peer-reviewed research paper published at the 27th International Conference on Pattern Recognition (ICPR 2024, Kolkata). The paper proposes a modular multi-embedding architecture that extracts representations across three hierarchical levels: individual streamline level (via 1D CNN), regional patch level (via discrete Variational Autoencoder dVAE), and global bundle level (via PointNet). By fusing these multi-scale spatial embeddings, TractoEmbed classifies streamlines into 72 anatomical white matter tracts, outperforming Harvard Medical School's benchmark TractCloud model.",
+      "White matter tract segmentation is crucial for studying brain structural connectivity and neurosurgical planning. However, segmentation remains challenging due to issues like class imbalance between major and minor tracts, structural similarity, subject variability, symmetric streamlines between hemispheres etc. To address these challenges, we propose TractoEmbed, a modular multi-level embedding framework, that encodes localized representations through learning tasks in respective encoders. In this paper, TractoEmbed introduces a novel hierarchical streamline data representation that captures maximum spatial information at each level i.e. individual streamlines, clusters, and patches. Experiments show that TractoEmbed outperforms state-of-the-art methods in white matter tract segmentation across different datasets, and spanning various age groups. The modular framework directly allows the integration of additional embeddings in future works.",
     highlights: [
       "Published in Springer ICPR 2024 proceedings.",
       "Outperformed Harvard Medical School's TractCloud benchmark on white matter tract segmentation.",
@@ -789,20 +852,20 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     category: "Paper",
     organization: "IIT Mandi",
     orgSlug: "iit-mandi",
-    githubUrl: "https://github.com/anoushkrit/TractoGPT",
-    arxivUrl: "https://arxiv.org/abs/2411.08187",
+    githubUrl: "https://github.com/anoushkrit/all-projects",
+    arxivUrl: "https://arxiv.org/abs/2501.15464",
     dates: "ISBI 2025",
     technologies: ["GPT Transformers", "Dual-Masking", "3D Spatial AI", "SCIL Benchmark", "PyTorch"],
-    bibtex: `@article{goel2024tractogpt,
+    bibtex: `@article{goel2025tractogpt,
   title={TractoGPT: A GPT architecture for White Matter Segmentation},
   author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
-  journal={arXiv preprint arXiv:2411.08187},
-  year={2024}
+  journal={arXiv preprint arXiv:2501.15464},
+  year={2025}
 }`,
     shortDescription:
-      "Accepted at 23rd ISBI 2025 (Houston, TX): **TractoGPT**. Models tractography streamlines as 3D point cloud patches pretrained via dual-masking. **Outperformed SCIL Canada's FIESTA benchmark**.",
+      "White matter bundle segmentation is crucial for studying brain structural connectivity, neurosurgical planning, and neurological disorders. White Matter Segmentation remains challenging due to structural similarity in streamlines, subject variability, symmetry in 2 hemispheres, etc. To address these challenges, we propose TractoGPT, a GPT-based architecture trained on streamline, cluster, and fusion data representations separately. TractoGPT is a fully-automatic method that generalizes across datasets and retains shape information of the white matter bundles. Experiments also show that TractoGPT outperforms state-of-the-art methods on average DICE, Overlap and Overreach scores. We use TractoInferno and 105HCP datasets and validate generalization across dataset.",
     fullDescription:
-      "TractoGPT is a peer-reviewed research paper accepted at the 23rd IEEE International Symposium on Biomedical Imaging (ISBI 2025, Houston, Texas). TractoGPT models 3D tractography streamlines as spatial point cloud tokens. The model introduces a dual-masking self-supervised pretraining objective: masking both individual point coordinates within a patch and whole spatial patches across the brain. Once pretrained on point cloud reconstruction, the decoder-only GPT transformer is fine-tuned for white matter tract classification, outperforming Sherbrooke Connectivity Imaging Lab (SCIL Canada)'s state-of-the-art model, FIESTA.",
+      "White matter bundle segmentation is crucial for studying brain structural connectivity, neurosurgical planning, and neurological disorders. White Matter Segmentation remains challenging due to structural similarity in streamlines, subject variability, symmetry in 2 hemispheres, etc. To address these challenges, we propose TractoGPT, a GPT-based architecture trained on streamline, cluster, and fusion data representations separately. TractoGPT is a fully-automatic method that generalizes across datasets and retains shape information of the white matter bundles. Experiments also show that TractoGPT outperforms state-of-the-art methods on average DICE, Overlap and Overreach scores. We use TractoInferno and 105HCP datasets and validate generalization across dataset.",
     highlights: [
       "Accepted at IEEE ISBI 2025 (Houston, Texas).",
       "Outperformed SCIL Canada's state-of-the-art FIESTA model on anatomical tract segmentation.",

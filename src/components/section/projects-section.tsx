@@ -1,5 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade";
-import { ProjectCard } from "@/components/project-card";
+import { PublicationItem } from "@/components/publication-item";
 import { DATA } from "@/data/resume";
 import { Microscope, ExternalLink } from "lucide-react";
 import Link from "next/link";
@@ -83,21 +83,19 @@ export default function ProjectsSection() {
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 w-full auto-rows-fr">
+        <div className="flex flex-col gap-3 w-full max-w-3xl mx-auto">
           {DATA.projects.map((project, id) => (
             <BlurFade
               key={project.title}
               delay={BLUR_FADE_DELAY * 10 + id * 0.05}
-              className="h-full"
             >
-              <ProjectCard
-                href={project.href}
+              <PublicationItem
                 title={project.title}
-                description={project.description}
+                authors={project.authors}
+                venue={project.venue}
+                year={project.year}
                 dates={project.dates}
-                tags={project.technologies}
-                image={project.image}
-                video={project.video}
+                description={project.description}
                 bibtex={project.bibtex}
                 links={project.links}
               />
