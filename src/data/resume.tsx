@@ -45,8 +45,17 @@ export const DATA = {
   description:
     "Applied Scientist | 1x Entrepreneur | Spatial AI (3D & 2D) | Medical AI & Neuroimaging | 7+ Years Experience",
   summary:
-    "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Currently pursuing M.Tech (by Research) at IIT Mandi under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions.",
+    "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Completed M.Tech (by Research) at IIT Mandi (Nov 2025) under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions. I am now seeking a PhD in 3D vision and medical AI, to study how models can reconstruct, understand and edit 3D structure, from everyday scenes to the human brain.",
   avatarUrl: "/me.png",
+  seekingPhD: "Seeking PhD positions in 3D Vision & Medical AI",
+  // Set to "/cv.pdf" once public/cv.pdf is added; the Download CV button is hidden while empty.
+  cvUrl: "",
+  researchInterests: [
+    "3D reconstruction with point clouds & Gaussian splats",
+    "Editing & generation of 3D representations",
+    "Diffusion MRI tractography & white matter analysis",
+    "Self-supervised & generative pretraining for 3D data",
+  ],
   skills: [
     { name: "3D Spatial AI (Point Clouds)", icon: Icons.globe },
     { name: "PyTorch & PyTorch3D", icon: Icons.globe },
@@ -237,7 +246,7 @@ export const DATA = {
     {
       title: "TrackletGPT",
       href: "/projects/trackletgpt",
-      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      authors: "Goel, A., Singh, S., Joshi, A., Jha, R. R., Ahuja, C., Nigam, A., Bhavsar, A.",
       venue: "IEEE International Symposium on Biomedical Imaging (ISBI)",
       year: "2026",
       dates: "ISBI 2026",
@@ -248,8 +257,8 @@ export const DATA = {
         "White Matter Tract Segmentation is imperative for studying brain structural connectivity, neurological disorders and neurosurgery. This task remains complex, as tracts differ among themselves, across subjects and conditions, yet have similar 3D structure across hemispheres and subjects. To address these challenges, we propose TrackletGPT, a language-like GPT framework which reintroduces sequential information in tokens using tracklets. TrackletGPT generalises seamlessly across datasets, is fully automatic, and encodes granular sub-streamline segments, Tracklets, scaling and refining GPT models in Tractography Segmentation. Based on our experiments, TrackletGPT outperforms state-of-the-art methods on average DICE, Overlap and Overreach scores on TractoInferno and HCP datasets, even on inter-dataset experiments.",
       technologies: ["3D Spatial AI", "B-Spline Tokenization", "GPT Transformers", "PyTorch3D"],
       bibtex: `@inproceedings{goel2026trackletgpt,
-  title={TrackletGPT: A GPT architecture for White Matter Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  title={TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation},
+  author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2026}
 }`,
@@ -281,7 +290,7 @@ export const DATA = {
     {
       title: "TractRLFusion",
       href: "/projects/tractrlfusion",
-      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      authors: "Joshi, A., Sharma, A., Goel, A., Jha, R. R., Ahuja, C., Bhavsar, A., Nigam, A.",
       venue: "IEEE International Symposium on Biomedical Imaging (ISBI)",
       year: "2026",
       dates: "ISBI 2026",
@@ -292,8 +301,8 @@ export const DATA = {
         "Tractography plays a pivotal role in the non-invasive reconstruction of white matter fiber pathways, providing vital information on brain connectivity and supporting precise neurosurgical planning. Although traditional methods relied mainly on classical deterministic and probabilistic approaches, recent progress has benefited from supervised deep learning (DL) and deep reinforcement learning (DRL) to improve tract reconstruction. A persistent challenge in tractography is accurately reconstructing white matter tracts while minimizing spurious connections. To address this, we propose TractRLFusion, a novel GPT-based policy fusion framework that integrates multiple RL policies through a data-driven fusion strategy. Our method employs a two-stage training data selection process for effective policy fusion, followed by a multi-critic fine-tuning phase to enhance robustness and generalization. Experiments on HCP, ISMRM, and TractoInferno datasets demonstrate that TractRLFusion outperforms individual RL policies as well as state-of-the-art classical and DRL methods in accuracy and anatomical reliability.",
       technologies: ["Reinforcement Learning", "Fusion Networks", "Diffusion MRI", "PyTorch"],
       bibtex: `@inproceedings{goel2026tractrlfusion,
-  title={TractRLFusion: Reinforcement Learning and Fusion Networks for Diffusion MRI},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  title={TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography},
+  author={Joshi, Ankita and Sharma, Ashutosh and Goel, Anoushkrit and Jha, Ranjeet Ranjan and Ahuja, Chirag and Bhavsar, Arnav and Nigam, Aditya},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2026}
 }`,
@@ -320,7 +329,7 @@ export const DATA = {
     {
       title: "TractoGPT",
       href: "/projects/tractogpt",
-      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      authors: "Goel, A., Singh, S., Joshi, A., Jha, R. R., Ahuja, C., Nigam, A., Bhavsar, A.",
       venue: "IEEE International Symposium on Biomedical Imaging (ISBI)",
       year: "2025",
       dates: "ISBI 2025",
@@ -331,7 +340,7 @@ export const DATA = {
       technologies: ["3D Spatial AI", "Dual-Masked Pretraining", "GPT Transformers", "SCIL Benchmark"],
       bibtex: `@article{goel2025tractogpt,
   title={TractoGPT: A GPT architecture for White Matter Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   journal={arXiv preprint arXiv:2501.15464},
   year={2025}
 }`,
@@ -363,10 +372,11 @@ export const DATA = {
     {
       title: "TractoEmbed",
       href: "/projects/tractoembed",
-      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      authors: "Goel, A., Singh, B., Joshi, A., Jha, R. R., Ahuja, C., Nigam, A., Bhavsar, A.",
       venue: "International Conference on Pattern Recognition (ICPR)",
       year: "2024",
       dates: "ICPR 2024",
+      arxivUrl: "https://arxiv.org/abs/2411.08187",
       scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
@@ -374,7 +384,7 @@ export const DATA = {
       technologies: ["Representation Learning", "PointNet / dVAE", "Harvard Benchmark", "Neuroimaging"],
       bibtex: `@inproceedings{goel2024tractoembed,
   title={TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Goel, Anoushkrit and Singh, Bipanjit and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={International Conference on Pattern Recognition},
   pages={262--278},
   year={2024},
@@ -389,6 +399,11 @@ export const DATA = {
         {
           type: "Paper",
           href: "https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
+        {
+          type: "ArXiv",
+          href: "https://arxiv.org/abs/2411.08187",
           icon: <Icons.globe className="h-4 w-4" />,
         },
         {
@@ -408,10 +423,11 @@ export const DATA = {
     {
       title: "Tract-RLformer",
       href: "/projects/tract-rlformer",
-      authors: "Goel, A., Nigam, A., Bhavsar, A.",
+      authors: "Joshi, A., Sharma, A., Goel, A., Jha, R. R., Ahuja, C., Bhavsar, A., Nigam, A.",
       venue: "International Conference on Pattern Recognition (ICPR)",
       year: "2024",
       dates: "ICPR 2024",
+      arxivUrl: "https://arxiv.org/abs/2411.05757",
       scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
@@ -419,7 +435,7 @@ export const DATA = {
       technologies: ["Reinforcement Learning", "Decoder Transformers", "SCIL Benchmark", "PyTorch"],
       bibtex: `@inproceedings{goel2024tract,
   title={Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Joshi, Ankita and Sharma, Ashutosh and Goel, Anoushkrit and Jha, Ranjeet Ranjan and Ahuja, Chirag and Bhavsar, Arnav and Nigam, Aditya},
   booktitle={International Conference on Pattern Recognition},
   pages={279--295},
   year={2024},
@@ -748,8 +764,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     arxivUrl: "https://arxiv.org/abs/2601.13935",
     technologies: ["3D Spatial AI", "B-Spline Tokenization", "GPT Transformers", "PyTorch3D", "Plotly"],
     bibtex: `@inproceedings{goel2026trackletgpt,
-  title={TrackletGPT: A GPT architecture for White Matter Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  title={TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation},
+  author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2026}
 }`,
@@ -777,7 +793,7 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     technologies: ["Reinforcement Learning", "Decoder Transformers", "OpenAI Gym", "Scilpy", "PyTorch"],
     bibtex: `@inproceedings{goel2024tract,
   title={Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Joshi, Ankita and Sharma, Ashutosh and Goel, Anoushkrit and Jha, Ranjeet Ranjan and Ahuja, Chirag and Bhavsar, Arnav and Nigam, Aditya},
   booktitle={International Conference on Pattern Recognition},
   pages={279--295},
   year={2024},
@@ -828,7 +844,7 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     technologies: ["PointNet", "dVAE", "CNN Embeddings", "PyTorch", "Harvard Benchmark"],
     bibtex: `@inproceedings{goel2024tractoembed,
   title={TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Goel, Anoushkrit and Singh, Bipanjit and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={International Conference on Pattern Recognition},
   pages={262--278},
   year={2024},
@@ -858,7 +874,7 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     technologies: ["GPT Transformers", "Dual-Masking", "3D Spatial AI", "SCIL Benchmark", "PyTorch"],
     bibtex: `@article{goel2025tractogpt,
   title={TractoGPT: A GPT architecture for White Matter Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   journal={arXiv preprint arXiv:2501.15464},
   year={2025}
 }`,

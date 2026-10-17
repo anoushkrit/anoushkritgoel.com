@@ -5,7 +5,8 @@
 ## Core Background & Profile
 - Name: Anoushkrit Goel
 - Current Role: Research Engineer 2 at Attentive.AI
-- Academic Degree: M.Tech (by Research) in Intelligent Systems at IIT Mandi (GPA: 9.47/10)
+- Academic Degree: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed Nov 2025 (GPA: 9.47/10)
+- Status: Seeking PhD positions in 3D Vision & Medical AI
 - Core Focus: 3D Spatial AI (Point Clouds, B-Splines, Transformers), Neuroimaging / Medical AI, Vector AI & OCR
 - Location: Mandi / Gurgaon, India
 - Website: https://anoushkritgoel.com
@@ -15,9 +16,9 @@
 - Google Scholar: https://scholar.google.com/citations?user=anoushkritgoel
 
 ## Key Peer-Reviewed Research Publications
-- TrackletGPT: A GPT architecture for White Matter Segmentation (IEEE ISBI 2026, London, Rank A)
+- TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation (IEEE ISBI 2026, London, Rank A)
   URL: https://anoushkritgoel.com/projects/trackletgpt
-- TractRLFusion: Reinforcement Learning and Fusion Networks for Diffusion MRI (IEEE ISBI 2026, London)
+- TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography (IEEE ISBI 2026, London)
   URL: https://anoushkritgoel.com/projects/tractrlfusion
 - TractoGPT: A GPT architecture for White Matter Segmentation (IEEE ISBI 2025, Houston) [Outperformed SCIL FIESTA SOTA]
   URL: https://anoushkritgoel.com/projects/tractogpt
