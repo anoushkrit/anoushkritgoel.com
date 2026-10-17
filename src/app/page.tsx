@@ -15,7 +15,7 @@ import CertificationsSection from "@/components/section/certifications-section";
 import WorkGallery from "@/components/section/work-gallery";
 import { LogoImage } from "@/components/ui/logo-image";
 import { ProjectCard } from "@/components/project-card";
-import { ArrowUpRight, GraduationCap, Briefcase, Cpu, Layers, Sparkles, Code2, ExternalLink } from "lucide-react";
+import { ArrowUpRight, GraduationCap, Briefcase, Cpu, Layers, Sparkles, Code2, ExternalLink, FileText } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -26,9 +26,20 @@ export default function Page() {
       <section id="hero" className="w-full pt-4">
         <div className="mx-auto w-full space-y-6">
           <div className="flex flex-col gap-3">
-            <div className="inline-flex items-center gap-2 w-fit px-3.5 py-1 rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-400 text-xs font-semibold backdrop-blur-md shadow-xs">
-              <Sparkles className="size-3.5" />
-              <span>Available for Research & AI Collaborations</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-2 w-fit px-3.5 py-1 rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-400 text-xs font-semibold backdrop-blur-md shadow-xs">
+                <Sparkles className="size-3.5" />
+                <span>{DATA.seekingPhD}</span>
+              </div>
+              <Link
+                href={DATA.cvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 w-fit px-3.5 py-1 rounded-full border border-border/80 bg-card/60 text-foreground text-xs font-semibold hover:border-rose-500/30 transition-colors"
+              >
+                <FileText className="size-3.5" />
+                <span>Download CV</span>
+              </Link>
             </div>
 
             <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-foreground">
@@ -140,6 +151,12 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="p-6 rounded-2xl border border-border/70 bg-card/60 backdrop-blur-xl prose max-w-full font-sans leading-relaxed text-muted-foreground/95 dark:prose-invert">
               <Markdown>{DATA.summary}</Markdown>
+              <h3 className="text-sm font-semibold text-foreground mt-4 mb-2">Research Interests</h3>
+              <ul className="my-0">
+                {DATA.researchInterests.map((interest) => (
+                  <li key={interest}>{interest}</li>
+                ))}
+              </ul>
             </div>
           </BlurFade>
         </div>

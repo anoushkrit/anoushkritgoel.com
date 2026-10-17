@@ -4,13 +4,13 @@
 Anoushkrit Goel is an Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience specializing in 3D Spatial AI (point cloud sequence modeling, B-Spline tokenization, transformer architectures), Medical Imaging & Neuroimaging (Diffusion MRI white matter tractography), Vector AI & Document OCR, and Reinforcement Learning.
 
 Current Role: Research Engineer 2 at Attentive.AI
-Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi (GPA: 9.47/10), B.Tech in Electronics Engineering with Minor in Design from Shiv Nadar University (GPA: 7.61/10).
+Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed Nov 2025 (GPA: 9.47/10), B.Tech in Electronics Engineering with Minor in Design from Shiv Nadar University (GPA: 7.61/10).
 
 ---
 
 ## Peer-Reviewed Publications & Research Papers
 
-### 1. TrackletGPT: A GPT architecture for White Matter Segmentation
+### 1. TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation
 - Venue: IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK) — Rank: A
 - Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
 - Code URL: https://github.com/anoushkrit/TrackletGPT
@@ -19,7 +19,7 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi (GPA: 9.47/1
 - BibTeX:
 ```bibtex
 @inproceedings{goel2026trackletgpt,
-  title={TrackletGPT: A GPT architecture for White Matter Segmentation},
+  title={TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation},
   author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2026}
@@ -35,18 +35,18 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi (GPA: 9.47/1
 ### 3. TractoGPT: A GPT architecture for White Matter Segmentation
 - Venue: 23rd IEEE International Symposium on Biomedical Imaging (ISBI 2025, Houston, TX, USA)
 - Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
-- ArXiv URL: https://arxiv.org/abs/2411.08187
+- ArXiv URL: https://arxiv.org/abs/2501.15464
 - Code URL: https://github.com/anoushkrit/TractoGPT
 - Page URL: https://anoushkritgoel.com/projects/tractogpt
 - SOTA Benchmark Result: Outperformed Sherbrooke Connectivity Imaging Lab (SCIL Canada)'s state-of-the-art model FIESTA.
 - Abstract & Method: TractoGPT models 3D tractography streamlines as spatial point cloud tokens. Introduces a dual-masking self-supervised pretraining objective (masking point coordinates within a patch and whole spatial patches across the brain). Fine-tuned on white matter tract anatomical classification.
 - BibTeX:
 ```bibtex
-@article{goel2024tractogpt,
+@article{goel2025tractogpt,
   title={TractoGPT: A GPT architecture for White Matter Segmentation},
   author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
-  journal={arXiv preprint arXiv:2411.08187},
-  year={2024}
+  journal={arXiv preprint arXiv:2501.15464},
+  year={2025}
 }
 ```
 

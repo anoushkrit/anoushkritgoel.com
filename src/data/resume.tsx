@@ -45,8 +45,17 @@ export const DATA = {
   description:
     "Applied Scientist | 1x Entrepreneur | Spatial AI (3D & 2D) | Medical AI & Neuroimaging | 7+ Years Experience",
   summary:
-    "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Currently pursuing M.Tech (by Research) at IIT Mandi under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions.",
+    "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Completed M.Tech (by Research) at IIT Mandi (Nov 2025) under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions. Currently seeking PhD positions in medical imaging and neuroimaging AI.",
   avatarUrl: "/me.png",
+  seekingPhD: "Seeking PhD positions in Medical Imaging & Neuroimaging AI",
+  cvUrl: "/cv.pdf",
+  researchInterests: [
+    "Diffusion MRI tractography & white matter tract segmentation",
+    "3D point cloud & geometric deep learning",
+    "Self-supervised & generative (GPT-style) pretraining for 3D medical data",
+    "Reinforcement learning for fiber tracking",
+    "Brain tumor progression & structural connectivity modeling",
+  ],
   skills: [
     { name: "3D Spatial AI (Point Clouds)", icon: Icons.globe },
     { name: "PyTorch & PyTorch3D", icon: Icons.globe },
@@ -248,7 +257,7 @@ export const DATA = {
         "White Matter Tract Segmentation is imperative for studying brain structural connectivity, neurological disorders and neurosurgery. This task remains complex, as tracts differ among themselves, across subjects and conditions, yet have similar 3D structure across hemispheres and subjects. To address these challenges, we propose TrackletGPT, a language-like GPT framework which reintroduces sequential information in tokens using tracklets. TrackletGPT generalises seamlessly across datasets, is fully automatic, and encodes granular sub-streamline segments, Tracklets, scaling and refining GPT models in Tractography Segmentation. Based on our experiments, TrackletGPT outperforms state-of-the-art methods on average DICE, Overlap and Overreach scores on TractoInferno and HCP datasets, even on inter-dataset experiments.",
       technologies: ["3D Spatial AI", "B-Spline Tokenization", "GPT Transformers", "PyTorch3D"],
       bibtex: `@inproceedings{goel2026trackletgpt,
-  title={TrackletGPT: A GPT architecture for White Matter Segmentation},
+  title={TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation},
   author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2026}
@@ -367,6 +376,7 @@ export const DATA = {
       venue: "International Conference on Pattern Recognition (ICPR)",
       year: "2024",
       dates: "ICPR 2024",
+      arxivUrl: "https://arxiv.org/abs/2411.08187",
       scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
@@ -392,6 +402,11 @@ export const DATA = {
           icon: <Icons.globe className="h-4 w-4" />,
         },
         {
+          type: "ArXiv",
+          href: "https://arxiv.org/abs/2411.08187",
+          icon: <Icons.globe className="h-4 w-4" />,
+        },
+        {
           type: "GitHub",
           href: "https://github.com/anoushkrit/TractoEmbed",
           icon: <Icons.github className="h-4 w-4" />,
@@ -412,6 +427,7 @@ export const DATA = {
       venue: "International Conference on Pattern Recognition (ICPR)",
       year: "2024",
       dates: "ICPR 2024",
+      arxivUrl: "https://arxiv.org/abs/2411.05757",
       scholarUrl: "https://scholar.google.com/citations?user=anoushkritgoel",
       active: true,
       description:
@@ -748,7 +764,7 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     arxivUrl: "https://arxiv.org/abs/2601.13935",
     technologies: ["3D Spatial AI", "B-Spline Tokenization", "GPT Transformers", "PyTorch3D", "Plotly"],
     bibtex: `@inproceedings{goel2026trackletgpt,
-  title={TrackletGPT: A GPT architecture for White Matter Segmentation},
+  title={TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation},
   author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2026}
