@@ -45,16 +45,16 @@ export const DATA = {
   description:
     "Applied Scientist | 1x Entrepreneur | Spatial AI (3D & 2D) | Medical AI & Neuroimaging | 7+ Years Experience",
   summary:
-    "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Completed M.Tech (by Research) at IIT Mandi (Nov 2025) under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions. Currently seeking PhD positions in medical imaging and neuroimaging AI.",
+    "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Completed M.Tech (by Research) at IIT Mandi (Nov 2025) under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions. I am now seeking a PhD in 3D vision and medical AI, to study how models can reconstruct, understand and edit 3D structure, from everyday scenes to the human brain.",
   avatarUrl: "/me.png",
-  seekingPhD: "Seeking PhD positions in Medical Imaging & Neuroimaging AI",
+  seekingPhD: "Seeking PhD positions in 3D Vision & Medical AI",
   cvUrl: "/cv.pdf",
   researchInterests: [
-    "Diffusion MRI tractography & white matter tract segmentation",
-    "3D point cloud & geometric deep learning",
-    "Self-supervised & generative (GPT-style) pretraining for 3D medical data",
-    "Reinforcement learning for fiber tracking",
-    "Brain tumor progression & structural connectivity modeling",
+    "3D reconstruction with point clouds & Gaussian splats",
+    "Editing & generation of 3D representations",
+    "Geometric deep learning for 3D medical data",
+    "Diffusion MRI tractography & white matter analysis",
+    "Self-supervised & generative pretraining for 3D data",
   ],
   skills: [
     { name: "3D Spatial AI (Point Clouds)", icon: Icons.globe },

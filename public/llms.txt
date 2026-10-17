@@ -6,7 +6,7 @@
 - Name: Anoushkrit Goel
 - Current Role: Research Engineer 2 at Attentive.AI
 - Academic Degree: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed Nov 2025 (GPA: 9.47/10)
-- Status: Seeking PhD positions in Medical Imaging & Neuroimaging AI
+- Status: Seeking PhD positions in 3D Vision & Medical AI
 - CV: https://anoushkritgoel.com/cv.pdf
 - Core Focus: 3D Spatial AI (Point Clouds, B-Splines, Transformers), Neuroimaging / Medical AI, Vector AI & OCR
 - Location: Mandi / Gurgaon, India
