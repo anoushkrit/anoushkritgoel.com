@@ -14,13 +14,11 @@ import Link from "next/link";
 
 export default function Navbar() {
   const desktopNavItems = [
-    { href: "#about", label: "About" },
-    { href: "#work", label: "Experience" },
-    { href: "#achievements", label: "Publications" },
-    { href: "#software-tools", label: "Software & Tools" },
-    { href: "#awards", label: "Awards" },
-    { href: "#certifications", label: "Certifications" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#about", label: "Interests" },
+    { href: "/#achievements", label: "Publications" },
+    { href: "/#work", label: "Experience" },
+    { href: "/#contact", label: "Contact" },
+    { href: "/details", label: "Full Profile" },
   ];
 
   return (

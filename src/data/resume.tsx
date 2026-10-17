@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, UserIcon } from "lucide-react";
 
 export interface ProjectDetail {
   slug: string;
@@ -47,6 +47,8 @@ export const DATA = {
   summary:
     "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Completed M.Tech (by Research) at IIT Mandi (Nov 2025) under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions. I am now seeking a PhD in 3D vision and medical AI, to study how models can reconstruct, understand and edit 3D structure, from everyday scenes to the human brain.",
   avatarUrl: "/me.png",
+  shortBio:
+    "I build 3D deep learning models for medical imaging and spatial AI. During my M.Tech (by Research) at IIT Mandi with Dr. Arnav Bhavsar and Dr. Aditya Nigam, I developed point cloud and GPT-style models for white matter tractography, published at ICPR and ISBI, and built SlicerTracto, a 3D Slicer extension for tractography. I now work as a Research Engineer at Attentive.AI, and earlier founded Tensr.AI, a biomedical wearables startup.",
   seekingPhD: "Seeking PhD positions in 3D Vision & Medical AI",
   // Set to "/cv.pdf" once public/cv.pdf is added; the Download CV button is hidden while empty.
   cvUrl: "",
@@ -74,6 +76,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/details", icon: UserIcon, label: "Full Profile" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
