@@ -12,7 +12,7 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 
 ### 1. TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation
 - Venue: IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK) — Rank: A
-- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Authors: Anoushkrit Goel, Simroop Singh, Ankita Joshi, Ranjeet Ranjan Jha, Chirag Ahuja, Aditya Nigam, Arnav Bhavsar
 - Code URL: https://github.com/anoushkrit/TrackletGPT
 - Page URL: https://anoushkritgoel.com/projects/trackletgpt
 - Abstract & Method: TrackletGPT introduces a novel 3D point cloud tokenization scheme for fiber tractography. Streamlines are decomposed into continuous B-Spline sub-segments ('tracklets'). Geometric curvature parameters are tokenized into discrete representations, enabling a decoder-only GPT transformer to pretrain on tracklet completion and dual-masking.
@@ -20,21 +20,21 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 ```bibtex
 @inproceedings{goel2026trackletgpt,
   title={TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2026}
 }
 ```
 
-### 2. TractRLFusion: Reinforcement Learning and Fusion Networks for Diffusion MRI
+### 2. TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography
 - Venue: IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK)
-- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Authors: Ankita Joshi, Ashutosh Sharma, Anoushkrit Goel, Ranjeet Ranjan Jha, Chirag Ahuja, Arnav Bhavsar, Aditya Nigam
 - Page URL: https://anoushkritgoel.com/projects/tractrlfusion
 - Abstract & Method: Combines reinforcement learning policy gradient algorithms with multi-modal neural fusion networks to track white matter fiber bundles directly through complex crossing-fiber regions in Diffusion MRI.
 
 ### 3. TractoGPT: A GPT architecture for White Matter Segmentation
 - Venue: 23rd IEEE International Symposium on Biomedical Imaging (ISBI 2025, Houston, TX, USA)
-- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Authors: Anoushkrit Goel, Simroop Singh, Ankita Joshi, Ranjeet Ranjan Jha, Chirag Ahuja, Aditya Nigam, Arnav Bhavsar
 - ArXiv URL: https://arxiv.org/abs/2501.15464
 - Code URL: https://github.com/anoushkrit/TractoGPT
 - Page URL: https://anoushkritgoel.com/projects/tractogpt
@@ -44,7 +44,7 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 ```bibtex
 @article{goel2025tractogpt,
   title={TractoGPT: A GPT architecture for White Matter Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   journal={arXiv preprint arXiv:2501.15464},
   year={2025}
 }
@@ -52,7 +52,7 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 
 ### 4. TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation
 - Venue: 27th International Conference on Pattern Recognition (ICPR 2024, Kolkata, India) — Springer
-- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Authors: Anoushkrit Goel, Bipanjit Singh, Ankita Joshi, Ranjeet Ranjan Jha, Chirag Ahuja, Aditya Nigam, Arnav Bhavsar
 - Paper URL: https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17
 - Code URL: https://github.com/anoushkrit/TractoEmbed
 - Page URL: https://anoushkritgoel.com/projects/tractoembed
@@ -62,7 +62,7 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 ```bibtex
 @inproceedings{goel2024tractoembed,
   title={TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Goel, Anoushkrit and Singh, Bipanjit and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
   booktitle={International Conference on Pattern Recognition},
   pages={262--278},
   year={2024},
@@ -72,7 +72,7 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 
 ### 5. Tract-RLformer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network
 - Venue: 27th International Conference on Pattern Recognition (ICPR 2024, Kolkata, India) — Springer
-- Authors: Anoushkrit Goel, Dr. Aditya Nigam, Dr. Arnav Bhavsar
+- Authors: Ankita Joshi, Ashutosh Sharma, Anoushkrit Goel, Ranjeet Ranjan Jha, Chirag Ahuja, Arnav Bhavsar, Aditya Nigam
 - Paper URL: https://link.springer.com/chapter/10.1007/978-3-031-78201-5_17
 - ArXiv URL: https://arxiv.org/abs/2411.05757
 - Page URL: https://anoushkritgoel.com/projects/tract-rlformer
@@ -82,7 +82,7 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 ```bibtex
 @inproceedings{goel2024tract,
   title={Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network},
-  author={Goel, Anoushkrit and Nigam, Aditya and Bhavsar, Arnav},
+  author={Joshi, Ankita and Sharma, Ashutosh and Goel, Anoushkrit and Jha, Ranjeet Ranjan and Ahuja, Chirag and Bhavsar, Arnav and Nigam, Aditya},
   booktitle={International Conference on Pattern Recognition},
   pages={279--295},
   year={2024},

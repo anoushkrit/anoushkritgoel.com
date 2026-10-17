@@ -19,7 +19,7 @@
 ## Key Peer-Reviewed Research Publications
 - TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation (IEEE ISBI 2026, London, Rank A)
   URL: https://anoushkritgoel.com/projects/trackletgpt
-- TractRLFusion: Reinforcement Learning and Fusion Networks for Diffusion MRI (IEEE ISBI 2026, London)
+- TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography (IEEE ISBI 2026, London)
   URL: https://anoushkritgoel.com/projects/tractrlfusion
 - TractoGPT: A GPT architecture for White Matter Segmentation (IEEE ISBI 2025, Houston) [Outperformed SCIL FIESTA SOTA]
   URL: https://anoushkritgoel.com/projects/tractogpt
