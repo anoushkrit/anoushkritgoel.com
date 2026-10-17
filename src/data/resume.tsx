@@ -48,11 +48,11 @@ export const DATA = {
     "Applied Scientist, Researcher, and Entrepreneur with 7+ years of experience across 3D Spatial AI, Medical Imaging, Document Layout OCR, and Reinforcement Learning. Founded Tensr.AI (Incubated at SIIC IIT Kanpur, HTIC IIT Madras, IIT Mandi Catalyst). Completed M.Tech (by Research) at IIT Mandi (Nov 2025) under Dr. Arnav Bhavsar and Dr. Aditya Nigam, developing SOTA 3D point cloud transformer models for white matter tractography and neuro-radiology extensions. I am now seeking a PhD in 3D vision and medical AI, to study how models can reconstruct, understand and edit 3D structure, from everyday scenes to the human brain.",
   avatarUrl: "/me.png",
   seekingPhD: "Seeking PhD positions in 3D Vision & Medical AI",
-  cvUrl: "/cv.pdf",
+  // Set to "/cv.pdf" once public/cv.pdf is added; the Download CV button is hidden while empty.
+  cvUrl: "",
   researchInterests: [
     "3D reconstruction with point clouds & Gaussian splats",
     "Editing & generation of 3D representations",
-    "Geometric deep learning for 3D medical data",
     "Diffusion MRI tractography & white matter analysis",
     "Self-supervised & generative pretraining for 3D data",
   ],

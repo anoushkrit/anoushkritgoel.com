@@ -31,15 +31,17 @@ export default function Page() {
                 <Sparkles className="size-3.5" />
                 <span>{DATA.seekingPhD}</span>
               </div>
-              <Link
-                href={DATA.cvUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 w-fit px-3.5 py-1 rounded-full border border-border/80 bg-card/60 text-foreground text-xs font-semibold hover:border-rose-500/30 transition-colors"
-              >
-                <FileText className="size-3.5" />
-                <span>Download CV</span>
-              </Link>
+              {DATA.cvUrl ? (
+                <Link
+                  href={DATA.cvUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 w-fit px-3.5 py-1 rounded-full border border-border/80 bg-card/60 text-foreground text-xs font-semibold hover:border-rose-500/30 transition-colors"
+                >
+                  <FileText className="size-3.5" />
+                  <span>Download CV</span>
+                </Link>
+              ) : null}
             </div>
 
             <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-foreground">
