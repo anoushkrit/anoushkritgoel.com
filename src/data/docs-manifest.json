@@ -1,0 +1,58 @@
+{
+  "syncedAt": "2026-10-18T13:34:09.935Z",
+  "source": "local-sibling",
+  "documents": [
+    {
+      "path": "/docs/cv/anoushkrit-cv-detailed.pdf",
+      "name": "anoushkrit-cv-detailed.pdf",
+      "relativeToDocs": "cv/anoushkrit-cv-detailed.pdf",
+      "sizeBytes": 199647
+    },
+    {
+      "path": "/docs/cv/pdfs/anoushkrit-cv.pdf",
+      "name": "anoushkrit-cv.pdf",
+      "relativeToDocs": "cv/pdfs/anoushkrit-cv.pdf",
+      "sizeBytes": 298264
+    },
+    {
+      "path": "/docs/projects/TractoEmbed/20628-poster.pdf",
+      "name": "20628-poster.pdf",
+      "relativeToDocs": "projects/TractoEmbed/20628-poster.pdf",
+      "sizeBytes": 2943230
+    },
+    {
+      "path": "/docs/resume/industry-resume.pdf",
+      "name": "industry-resume.pdf",
+      "relativeToDocs": "resume/industry-resume.pdf",
+      "sizeBytes": 413568
+    },
+    {
+      "path": "/docs/resume/pdfs/anoushkrit-resume-i9.pdf",
+      "name": "anoushkrit-resume-i9.pdf",
+      "relativeToDocs": "resume/pdfs/anoushkrit-resume-i9.pdf",
+      "sizeBytes": 108179
+    },
+    {
+      "path": "/docs/resume/pdfs/industry-resume.pdf",
+      "name": "industry-resume.pdf",
+      "relativeToDocs": "resume/pdfs/industry-resume.pdf",
+      "sizeBytes": 413568
+    },
+    {
+      "path": "/docs/resume/pdfs/resume.pdf",
+      "name": "resume.pdf",
+      "relativeToDocs": "resume/pdfs/resume.pdf",
+      "sizeBytes": 108179
+    },
+    {
+      "path": "/docs/sop/sop-edinburgh.pdf",
+      "name": "sop-edinburgh.pdf",
+      "relativeToDocs": "sop/sop-edinburgh.pdf",
+      "sizeBytes": 70046
+    }
+  ],
+  "aliases": {
+    "cv": "/cv.pdf",
+    "resume": "/resume.pdf"
+  }
+}

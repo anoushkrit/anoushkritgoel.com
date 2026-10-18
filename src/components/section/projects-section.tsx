@@ -77,7 +77,7 @@ export default function ProjectsSection() {
           {DATA.researchIntro && (
             <div className="w-full max-w-3xl border-l-4 border-rose-500/40 bg-card/60 backdrop-blur-md p-4 rounded-r-2xl border-border/60 text-left mt-2">
               <p className="text-xs sm:text-sm text-muted-foreground/90 leading-relaxed font-sans italic">
-                "{DATA.researchIntro}"
+                &ldquo;{DATA.researchIntro}&rdquo;
               </p>
             </div>
           )}

@@ -6,13 +6,16 @@
     "node": ">=18.0.0"
   },
   "scripts": {
+    "sync-docs": "node scripts/sync-docs.mjs",
+    "predev": "node scripts/sync-docs.mjs",
+    "prebuild": "node scripts/sync-docs.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
+    "deploy": "node scripts/sync-docs.mjs && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "node scripts/sync-docs.mjs && opennextjs-cloudflare build && opennextjs-cloudflare preview"
   },
   "dependencies": {
     "@content-collections/mdx": "^0.2.2",
