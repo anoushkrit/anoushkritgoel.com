@@ -33,11 +33,11 @@ export default async function WorkDetailPage({
       {/* Back Button */}
       <div>
         <Link
-          href="/#work"
+          href="/#experience"
           className="inline-flex items-center gap-2 text-xs font-mono text-rose-400 hover:text-rose-300 transition-colors p-2 rounded-lg bg-card/60 border border-border/60"
         >
           <ArrowLeft className="size-3.5" />
-          <span>Back to Overview</span>
+          <span>Back to Experience</span>
         </Link>
       </div>
 

@@ -48,11 +48,11 @@ export default async function ProjectDetailPage({
       {/* Back Button */}
       <div>
         <Link
-          href={project.orgSlug ? `/work/${project.orgSlug}` : "/#achievements"}
+          href={project.orgSlug ? `/work/${project.orgSlug}` : "/#projects"}
           className="inline-flex items-center gap-2 text-xs font-mono text-rose-400 hover:text-rose-300 transition-colors p-2 rounded-lg bg-card/60 border border-border/60"
         >
           <ArrowLeft className="size-3.5" />
-          <span>{project.orgSlug ? `Back to ${project.organization}` : "Back to Overview"}</span>
+          <span>{project.orgSlug ? `Back to ${project.organization}` : "Back to Projects"}</span>
         </Link>
       </div>
 

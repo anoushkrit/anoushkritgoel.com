@@ -289,7 +289,7 @@ export const DATA = {
     },
     {
       title: "TractRLFusion",
-      href: "/projects/tractrlfusion",
+      href: "https://arxiv.org/abs/2601.13897",
       authors: "Joshi, A., Sharma, A., Goel, A., Jha, R. R., Ahuja, C., Bhavsar, A., Nigam, A.",
       venue: "IEEE International Symposium on Biomedical Imaging (ISBI)",
       year: "2026",
@@ -307,11 +307,6 @@ export const DATA = {
   year={2026}
 }`,
       links: [
-        {
-          type: "Details",
-          href: "/projects/tractrlfusion",
-          icon: <Icons.globe className="h-4 w-4" />,
-        },
         {
           type: "ArXiv",
           href: "https://arxiv.org/abs/2601.13897",

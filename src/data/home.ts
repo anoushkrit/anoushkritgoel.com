@@ -1,5 +1,7 @@
 // Content for the one-page homepage. Facts match src/data/resume.tsx and arXiv.
 // Text in [brackets] is a placeholder for the owner to fill in.
+// Photos: in `media` and `photos`, replace a caption with an image path such as
+// "/photos/iit-mandi/lab.jpg" (file in public/photos/...). Captions show as placeholders.
 
 export type Viz = "tracts" | "points" | "boxes" | "wave";
 

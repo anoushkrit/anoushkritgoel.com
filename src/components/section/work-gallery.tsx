@@ -106,7 +106,7 @@ export default function WorkGallery() {
                   </div>
 
                   <div>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-rose-300">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#a9c1ea]">
                       {item.category}
                     </span>
                     <h4 className="text-white text-xs sm:text-sm font-semibold leading-snug mt-0.5 line-clamp-2">

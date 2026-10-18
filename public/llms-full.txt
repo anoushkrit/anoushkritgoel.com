@@ -29,7 +29,7 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 ### 2. TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography
 - Venue: IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK)
 - Authors: Ankita Joshi, Ashutosh Sharma, Anoushkrit Goel, Ranjeet Ranjan Jha, Chirag Ahuja, Arnav Bhavsar, Aditya Nigam
-- Page URL: https://anoushkritgoel.com/projects/tractrlfusion
+- ArXiv URL: https://arxiv.org/abs/2601.13897
 - Abstract & Method: Combines reinforcement learning policy gradient algorithms with multi-modal neural fusion networks to track white matter fiber bundles directly through complex crossing-fiber regions in Diffusion MRI.
 
 ### 3. TractoGPT: A GPT architecture for White Matter Segmentation
