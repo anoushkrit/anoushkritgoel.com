@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { DATA } from "@/data/resume";
 import { EXTRA_PROJECT_PAGES, FACETS, PAPERS, PROJECTS, ROLES, type Project } from "@/data/home";
+import { SiteHeader } from "@/components/site-header";
 import { VizFigure } from "./viz";
 import "./one-page.css";
 
@@ -14,14 +15,14 @@ const FILTERS: { key: "All" | Project["kind"]; label: string }[] = [
   { key: "Industry", label: "Industry" },
 ];
 
-const NAV = [
-  ["#about", "About"],
-  ["#research", "Research"],
-  ["#projects", "Projects"],
-  ["#experience", "Experience"],
-  ["#education", "Education"],
-  ["#contact", "Contact"],
-];
+// A photo slot: an entry starting with "/" is an image under public/, anything else is a placeholder caption.
+function Photo({ item, label = "" }: { item: string; label?: string }) {
+  if (item.startsWith("/")) {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src={item} alt="" loading="lazy" className="op-ph op-ph-img" />;
+  }
+  return <div className="op-ph">[{label}{item}]</div>;
+}
 
 function Authors({ p }: { p: Project }) {
   if (!p.authors || p.me === undefined) return null;
@@ -36,7 +37,7 @@ function Authors({ p }: { p: Project }) {
   );
 }
 
-export function OnePage({ fontClass }: { fontClass: string }) {
+export function OnePage() {
   const [facetId, setFacetId] = useState(FACETS[0].id);
   const [projectId, setProjectId] = useState(PROJECTS[0].id);
   const [filter, setFilter] = useState<(typeof FILTERS)[number]["key"]>("All");
@@ -56,17 +57,8 @@ export function OnePage({ fontClass }: { fontClass: string }) {
   };
 
   return (
-    <div className={`op ${fontClass}`}>
-      <header className="op-header">
-        <nav aria-label="Site" className="op-nav">
-          <a href="#about" className="op-brand">{DATA.name}</a>
-          <div className="op-links">
-            {NAV.map(([href, label]) => (
-              <a key={href} href={href}>{label}</a>
-            ))}
-          </div>
-        </nav>
-      </header>
+    <div className="op">
+      <SiteHeader onHome />
 
       <main className="op-main">
         <section id="about" aria-label="About" style={{ display: "flex", flexDirection: "column", gap: 28 }}>
@@ -102,7 +94,7 @@ export function OnePage({ fontClass }: { fontClass: string }) {
             </div>
             <div className="op-facet-light">
               <div className="op-photos">
-                {facet.media.map((m, i) => <div key={i} className="op-ph">[{m}]</div>)}
+                {facet.media.map((m, i) => <Photo key={i} item={m} />)}
               </div>
               <ul className="op-list">
                 {facet.points.map((p) => <li key={p}>{p}</li>)}
@@ -218,7 +210,7 @@ export function OnePage({ fontClass }: { fontClass: string }) {
                 <span className="op-role">{role.role}</span>
               </div>
               <div className="op-gallery">
-                {role.photos.map((ph, i) => <div key={i} className="op-ph">[Photo: {ph}]</div>)}
+                {role.photos.map((ph, i) => <Photo key={i} item={ph} label="Photo: " />)}
               </div>
               <p className="op-desc">{role.summary}</p>
               <ul className="op-bullets">

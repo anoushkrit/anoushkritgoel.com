@@ -47,36 +47,58 @@
   --color-research: var(--research-color);
 }
 
+/* The older pages use Tailwind hues (rose, emerald, amber...). Map them all onto the
+ * accent scale so every page keeps to three colors. 200-500 are the readable accent
+ * on paper; 50/100 are tints. */
+@theme {
+  --color-red-50: #f0f4fa; --color-red-100: #e3eaf6; --color-red-200: #2c4f86; --color-red-300: #2c4f86; --color-red-400: #2c4f86; --color-red-500: #2c4f86; --color-red-600: #1d3a66; --color-red-700: #1d3a66; --color-red-800: #172e52; --color-red-900: #12233e; --color-red-950: #0c1729;
+  --color-rose-50: #f0f4fa; --color-rose-100: #e3eaf6; --color-rose-200: #2c4f86; --color-rose-300: #2c4f86; --color-rose-400: #2c4f86; --color-rose-500: #2c4f86; --color-rose-600: #1d3a66; --color-rose-700: #1d3a66; --color-rose-800: #172e52; --color-rose-900: #12233e; --color-rose-950: #0c1729;
+  --color-pink-50: #f0f4fa; --color-pink-100: #e3eaf6; --color-pink-200: #2c4f86; --color-pink-300: #2c4f86; --color-pink-400: #2c4f86; --color-pink-500: #2c4f86; --color-pink-600: #1d3a66; --color-pink-700: #1d3a66; --color-pink-800: #172e52; --color-pink-900: #12233e; --color-pink-950: #0c1729;
+  --color-orange-50: #f0f4fa; --color-orange-100: #e3eaf6; --color-orange-200: #2c4f86; --color-orange-300: #2c4f86; --color-orange-400: #2c4f86; --color-orange-500: #2c4f86; --color-orange-600: #1d3a66; --color-orange-700: #1d3a66; --color-orange-800: #172e52; --color-orange-900: #12233e; --color-orange-950: #0c1729;
+  --color-amber-50: #f0f4fa; --color-amber-100: #e3eaf6; --color-amber-200: #2c4f86; --color-amber-300: #2c4f86; --color-amber-400: #2c4f86; --color-amber-500: #2c4f86; --color-amber-600: #1d3a66; --color-amber-700: #1d3a66; --color-amber-800: #172e52; --color-amber-900: #12233e; --color-amber-950: #0c1729;
+  --color-yellow-50: #f0f4fa; --color-yellow-100: #e3eaf6; --color-yellow-200: #2c4f86; --color-yellow-300: #2c4f86; --color-yellow-400: #2c4f86; --color-yellow-500: #2c4f86; --color-yellow-600: #1d3a66; --color-yellow-700: #1d3a66; --color-yellow-800: #172e52; --color-yellow-900: #12233e; --color-yellow-950: #0c1729;
+  --color-emerald-50: #f0f4fa; --color-emerald-100: #e3eaf6; --color-emerald-200: #2c4f86; --color-emerald-300: #2c4f86; --color-emerald-400: #2c4f86; --color-emerald-500: #2c4f86; --color-emerald-600: #1d3a66; --color-emerald-700: #1d3a66; --color-emerald-800: #172e52; --color-emerald-900: #12233e; --color-emerald-950: #0c1729;
+  --color-green-50: #f0f4fa; --color-green-100: #e3eaf6; --color-green-200: #2c4f86; --color-green-300: #2c4f86; --color-green-400: #2c4f86; --color-green-500: #2c4f86; --color-green-600: #1d3a66; --color-green-700: #1d3a66; --color-green-800: #172e52; --color-green-900: #12233e; --color-green-950: #0c1729;
+  --color-teal-50: #f0f4fa; --color-teal-100: #e3eaf6; --color-teal-200: #2c4f86; --color-teal-300: #2c4f86; --color-teal-400: #2c4f86; --color-teal-500: #2c4f86; --color-teal-600: #1d3a66; --color-teal-700: #1d3a66; --color-teal-800: #172e52; --color-teal-900: #12233e; --color-teal-950: #0c1729;
+  --color-cyan-50: #f0f4fa; --color-cyan-100: #e3eaf6; --color-cyan-200: #2c4f86; --color-cyan-300: #2c4f86; --color-cyan-400: #2c4f86; --color-cyan-500: #2c4f86; --color-cyan-600: #1d3a66; --color-cyan-700: #1d3a66; --color-cyan-800: #172e52; --color-cyan-900: #12233e; --color-cyan-950: #0c1729;
+  --color-sky-50: #f0f4fa; --color-sky-100: #e3eaf6; --color-sky-200: #2c4f86; --color-sky-300: #2c4f86; --color-sky-400: #2c4f86; --color-sky-500: #2c4f86; --color-sky-600: #1d3a66; --color-sky-700: #1d3a66; --color-sky-800: #172e52; --color-sky-900: #12233e; --color-sky-950: #0c1729;
+  --color-blue-50: #f0f4fa; --color-blue-100: #e3eaf6; --color-blue-200: #2c4f86; --color-blue-300: #2c4f86; --color-blue-400: #2c4f86; --color-blue-500: #2c4f86; --color-blue-600: #1d3a66; --color-blue-700: #1d3a66; --color-blue-800: #172e52; --color-blue-900: #12233e; --color-blue-950: #0c1729;
+  --color-indigo-50: #f0f4fa; --color-indigo-100: #e3eaf6; --color-indigo-200: #2c4f86; --color-indigo-300: #2c4f86; --color-indigo-400: #2c4f86; --color-indigo-500: #2c4f86; --color-indigo-600: #1d3a66; --color-indigo-700: #1d3a66; --color-indigo-800: #172e52; --color-indigo-900: #12233e; --color-indigo-950: #0c1729;
+  --color-violet-50: #f0f4fa; --color-violet-100: #e3eaf6; --color-violet-200: #2c4f86; --color-violet-300: #2c4f86; --color-violet-400: #2c4f86; --color-violet-500: #2c4f86; --color-violet-600: #1d3a66; --color-violet-700: #1d3a66; --color-violet-800: #172e52; --color-violet-900: #12233e; --color-violet-950: #0c1729;
+  --color-purple-50: #f0f4fa; --color-purple-100: #e3eaf6; --color-purple-200: #2c4f86; --color-purple-300: #2c4f86; --color-purple-400: #2c4f86; --color-purple-500: #2c4f86; --color-purple-600: #1d3a66; --color-purple-700: #1d3a66; --color-purple-800: #172e52; --color-purple-900: #12233e; --color-purple-950: #0c1729;
+  --color-fuchsia-50: #f0f4fa; --color-fuchsia-100: #e3eaf6; --color-fuchsia-200: #2c4f86; --color-fuchsia-300: #2c4f86; --color-fuchsia-400: #2c4f86; --color-fuchsia-500: #2c4f86; --color-fuchsia-600: #1d3a66; --color-fuchsia-700: #1d3a66; --color-fuchsia-800: #172e52; --color-fuchsia-900: #12233e; --color-fuchsia-950: #0c1729;
+}
+
 :root {
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: "Cabinet Grotesk", "Space Grotesk", sans-serif;
+  --font-sans: var(--font-body), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-display), "Cormorant Garamond", Garamond, serif;
   --font-mono: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --radius: 0.75rem;
 
-  /* Light Theme */
-  --background: oklch(0.985 0.002 247);
-  --foreground: oklch(0.14 0.02 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.14 0.02 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.14 0.02 250);
-  --primary: oklch(0.25 0.05 250);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.95 0.01 250);
-  --secondary-foreground: oklch(0.2 0.04 250);
-  --muted: oklch(0.96 0.005 250);
-  --muted-foreground: oklch(0.48 0.02 250);
-  --accent: oklch(0.94 0.02 250);
-  --accent-foreground: oklch(0.2 0.04 250);
+  /* Light theme: three colors (ink #161b26, paper #f5f6f8, accent #2c4f86) and their shades */
+  --background: #f5f6f8;
+  --foreground: #161b26;
+  --card: #ffffff;
+  --card-foreground: #161b26;
+  --popover: #ffffff;
+  --popover-foreground: #161b26;
+  --primary: #2c4f86;
+  --primary-foreground: #ffffff;
+  --secondary: #eceef2;
+  --secondary-foreground: #161b26;
+  --muted: #eceef2;
+  --muted-foreground: #5b6475;
+  --accent: #e3eaf6;
+  --accent-foreground: #1d3a66;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.91 0.01 250);
-  --input: oklch(0.91 0.01 250);
-  --ring: oklch(0.5 0.1 250);
+  --border: #d9dde5;
+  --input: #d9dde5;
+  --ring: #2c4f86;
 
-  /* Domain Color Tokens */
-  --spatial-color: oklch(0.58 0.22 22);   /* Crimson Ruby */
-  --medical-color: oklch(0.65 0.2 160);   /* Emerald Green */
-  --research-color: oklch(0.6 0.22 280);  /* Deep Indigo */
+  /* Domain Color Tokens: accent shades */
+  --spatial-color: #2c4f86;
+  --medical-color: #1d3a66;
+  --research-color: #4f74b3;
 
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -139,7 +161,7 @@ html {
 
 /* Custom Utilities for Glassmorphism & Micro-animations */
 .glass-card {
-  @apply bg-card/60 backdrop-blur-xl border border-border/60 shadow-xs hover:border-rose-500/30 hover:shadow-[0_0_20px_-5px_rgba(225,29,72,0.12)] transition-all duration-300;
+  @apply bg-card/60 backdrop-blur-xl border border-border/60 shadow-xs hover:border-rose-500/30 hover:shadow-[0_0_20px_-5px_rgba(44,79,134,0.12)] transition-all duration-300;
 }
 
 .gradient-text-spatial {
@@ -164,7 +186,7 @@ html {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(225, 29, 72, 0.35), rgba(244, 63, 94, 0.25), rgba(245, 158, 11, 0.25));
+  background: linear-gradient(135deg, rgba(44, 79, 134, 0.35), rgba(79, 116, 179, 0.25), rgba(169, 193, 234, 0.25));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -173,7 +195,7 @@ html {
 }
 
 .blood-red-glow {
-  box-shadow: 0 0 25px -5px rgba(220, 38, 38, 0.25);
+  box-shadow: 0 0 25px -5px rgba(44, 79, 134, 0.18);
 }
 
 .bento-card {

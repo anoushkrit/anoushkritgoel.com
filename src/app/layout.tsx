@@ -3,7 +3,23 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA, ALL_PROJECTS_DETAILS } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+
+const display = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const body = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -90,7 +106,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
+    <html lang="en" suppressHydrationWarning className={cn(display.variable, body.variable)}>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative overflow-x-hidden"
@@ -100,7 +116,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false}>
           <TooltipProvider delayDuration={0}>
             {children}
           </TooltipProvider>
