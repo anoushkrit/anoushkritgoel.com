@@ -3,17 +3,21 @@
 import Link from "next/link";
 import { useState } from "react";
 import { DATA } from "@/data/resume";
-import { EXTRA_PROJECT_PAGES, FACETS, PAPERS, PROJECTS, ROLES, type Project } from "@/data/home";
+import { EXTRA_PROJECT_PAGES, FACETS, PAPERS, PROJECTS, ROLES, type Figure, type Project } from "@/data/home";
 import { SiteHeader } from "@/components/site-header";
-import { VizFigure } from "./viz";
 import "./one-page.css";
 
 const FILTERS: { key: "All" | Project["kind"]; label: string }[] = [
   { key: "All", label: "All" },
-  { key: "Paper", label: "Papers" },
   { key: "Software", label: "Software" },
   { key: "Industry", label: "Industry" },
 ];
+
+const PAPER_FILTERS = [
+  { key: "All", label: "All" },
+  { key: "First", label: "First author" },
+  { key: "Co", label: "Co-author" },
+] as const;
 
 // A photo slot: an entry starting with "/" is an image under public/, anything else is a placeholder caption.
 function Photo({ item, label = "" }: { item: string; label?: string }) {
@@ -24,27 +28,42 @@ function Photo({ item, label = "" }: { item: string; label?: string }) {
   return <div className="op-ph">[{label}{item}]</div>;
 }
 
-function Authors({ p }: { p: Project }) {
-  if (!p.authors || p.me === undefined) return null;
-  const before = p.authors.slice(0, p.me).join(", ");
-  const after = p.authors.slice(p.me + 1).join(", ");
+function Authors({ authors, me }: { authors: string[]; me: number }) {
+  const before = authors.slice(0, me).join(", ");
+  const after = authors.slice(me + 1).join(", ");
   return (
     <p className="op-authors">
       {before && `${before}, `}
-      <strong>{p.authors[p.me]}</strong>
+      <strong>{authors[me]}</strong>
       {after && `, ${after}`}
     </p>
   );
 }
 
+// A real figure from the paper or repo, with its source caption. Nothing is drawn when there is none.
+function Shot({ figure }: { figure?: Figure }) {
+  if (!figure) return null;
+  return (
+    <figure className="op-shot">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={figure.src} alt={figure.caption} loading="lazy" />
+      <figcaption>{figure.caption}</figcaption>
+    </figure>
+  );
+}
+
 export function OnePage() {
   const [facetId, setFacetId] = useState(FACETS[0].id);
+  const [paperId, setPaperId] = useState(PAPERS[0].id);
+  const [paperFilter, setPaperFilter] = useState<(typeof PAPER_FILTERS)[number]["key"]>("All");
   const [projectId, setProjectId] = useState(PROJECTS[0].id);
   const [filter, setFilter] = useState<(typeof FILTERS)[number]["key"]>("All");
   const [roleId, setRoleId] = useState("iitmandi");
 
   const fi = Math.max(0, FACETS.findIndex((f) => f.id === facetId));
   const facet = FACETS[fi];
+  const paper = PAPERS.find((p) => p.id === paperId) ?? PAPERS[0];
+  const visiblePapers = PAPERS.filter((p) => paperFilter === "All" || (paperFilter === "First") === (p.me === 0));
   const project = PROJECTS.find((p) => p.id === projectId) ?? PROJECTS[0];
   const visible = PROJECTS.filter((p) => filter === "All" || p.kind === filter);
   const role = ROLES.find((r) => r.id === roleId) ?? ROLES[0];
@@ -54,6 +73,10 @@ export function OnePage() {
   const openProject = (id: string) => {
     setFilter("All");
     setProjectId(id);
+  };
+  const openPaper = (id: string) => {
+    setPaperFilter("All");
+    setPaperId(id);
   };
 
   return (
@@ -115,20 +138,47 @@ export function OnePage() {
           <div className="op-section-head">
             <span className="op-kicker">Research</span>
             <h2>Publications</h2>
+            <p>Pick a paper to see the abstract in brief, the authors and the links.</p>
           </div>
-          <div className="op-papers">
-            {PAPERS.map((p) => (
-              <div key={p.id} className="op-paper">
-                <span className="op-paper-venue">{p.venue}</span>
-                <div className="op-paper-body"><b>{p.title}</b><span>{p.authors}</span></div>
-                <span className="op-paper-links">
-                  {PROJECTS.some((x) => x.id === p.id) && (
-                    <a href="#projects" onClick={() => openProject(p.id)}>Details</a>
-                  )}
-                  <a href={p.url}>arXiv</a>
-                </span>
+          <div className="op-split">
+            <aside aria-label="Publication list" className="op-aside">
+              <div role="group" aria-label="Filter publications" className="op-filters">
+                {PAPER_FILTERS.map((f) => (
+                  <button key={f.key} type="button" className="op-filter" aria-pressed={f.key === paperFilter} onClick={() => setPaperFilter(f.key)}>
+                    {f.label}
+                  </button>
+                ))}
               </div>
-            ))}
+              <div className="op-cards">
+                {visiblePapers.map((c) => (
+                  <button key={c.id} type="button" className="op-card" aria-pressed={c.id === paper.id} onClick={() => setPaperId(c.id)}>
+                    <span className="op-card-top"><span className="op-card-title">{c.short}</span><span className="op-card-when">{c.venue}</span></span>
+                    <span className="op-card-sub">{c.blurb}</span>
+                    <span className="op-card-foot"><i aria-hidden="true" />{c.org}<em>{c.me === 0 ? "First author" : "Co-author"}</em></span>
+                  </button>
+                ))}
+              </div>
+            </aside>
+
+            <div className="op-pane" aria-live="polite">
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                <span className="op-kicker">{paper.venue} · {paper.me === 0 ? "First author" : "Co-author"}</span>
+                <h3>{paper.short}</h3>
+                <p className="op-paper-title">{paper.title}</p>
+                <Authors authors={paper.authors} me={paper.me} />
+              </div>
+              <Shot figure={paper.figure} />
+              <p className="op-desc">{paper.desc}</p>
+              <ul className="op-bullets">
+                {paper.points.map((pt) => <li key={pt}>{pt}</li>)}
+              </ul>
+              <div className="op-row">
+                {paper.links.map(([label, url], i) => (
+                  <a key={url} href={url} className={i === 0 ? "op-btn op-btn-primary" : "op-btn"}>{label}</a>
+                ))}
+                {paper.slug && <Link href={`/projects/${paper.slug}`} className="op-btn">Full write-up</Link>}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -162,13 +212,12 @@ export function OnePage() {
               <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                 <span className="op-kicker">{project.kind}</span>
                 <h3>{project.title}</h3>
-                <Authors p={project} />
                 <div className="op-pane-meta">
                   <span>Built at <strong>{project.org}</strong></span>
                   <span>{project.when}</span>
                 </div>
               </div>
-              <VizFigure id={project.id} viz={project.viz} />
+              <Shot figure={project.figure} />
               <p className="op-desc">{project.desc}</p>
               <ul className="op-bullets">
                 {project.points.map((pt) => <li key={pt}>{pt}</li>)}
@@ -221,6 +270,10 @@ export function OnePage() {
                   <span className="op-kicker">Projects built here</span>
                   <div className="op-row" style={{ gap: 8 }}>
                     {role.projects.map((name) => {
+                      const paperHit = PAPERS.find((p) => p.short === name);
+                      if (paperHit) {
+                        return <a key={name} href="#research" className="op-chip" onClick={() => openPaper(paperHit.id)}>{name} →</a>;
+                      }
                       const hit = PROJECTS.find((p) => p.title === name);
                       if (hit) {
                         return <a key={name} href="#projects" className="op-chip" onClick={() => openProject(hit.id)}>{name} →</a>;

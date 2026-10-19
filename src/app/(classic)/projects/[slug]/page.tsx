@@ -93,13 +93,16 @@ export default async function ProjectDetailPage({
 
           {/* Optional Media Preview */}
           {project.image && (
-            <div className="w-full aspect-video rounded-xl overflow-hidden border border-border/60 bg-black">
+            <figure className="flex flex-col gap-2">
               <img
                 src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover"
+                alt={project.imageCaption ?? project.title}
+                className="w-full h-auto max-h-[520px] object-contain rounded-xl border border-border/60 bg-white p-3"
               />
-            </div>
+              {project.imageCaption && (
+                <figcaption className="text-xs text-muted-foreground">{project.imageCaption}</figcaption>
+              )}
+            </figure>
           )}
 
           {/* Action Links Bar */}
