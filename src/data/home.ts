@@ -2,8 +2,9 @@
 // Text in [brackets] is a placeholder for the owner to fill in.
 // Photos: in `media` and `photos`, replace a caption with an image path such as
 // "/photos/iit-mandi/lab.jpg" (file in public/photos/...). Captions show as placeholders.
+// Figures in public/projects/ come from github.com/anoushkrit/all-projects; captions follow its READMEs.
 
-export type Viz = "tracts" | "points" | "boxes" | "wave";
+export type Figure = { src: string; caption: string };
 
 export type Facet = {
   id: string;
@@ -17,7 +18,21 @@ export type Facet = {
   points: string[];
 };
 
-export type Paper = { id: string; venue: string; title: string; authors: string; url: string };
+export type Paper = {
+  id: string;
+  slug?: string;
+  short: string;
+  title: string;
+  venue: string;
+  org: string;
+  blurb: string;
+  authors: string[];
+  me: number;
+  desc: string;
+  points: string[];
+  links: [string, string][];
+  figure?: Figure;
+};
 
 export type Project = {
   id: string;
@@ -25,14 +40,12 @@ export type Project = {
   title: string;
   org: string;
   when: string;
-  kind: "Paper" | "Software" | "Industry";
-  viz: Viz;
+  kind: "Software" | "Industry";
   blurb: string;
-  authors?: string[];
-  me?: number;
   desc: string;
   points: string[];
   links: [string, string][];
+  figure?: Figure;
 };
 
 export type Role = {
@@ -58,10 +71,10 @@ export const EXTRA_PROJECT_PAGES: Record<string, string> = {
 };
 
 export const FACETS: Facet[] = [
-  { id: "researcher", label: "Researcher", noun: "researcher", cta: "See research projects", href: "#projects",
+  { id: "researcher", label: "Researcher", noun: "researcher", cta: "See publications", href: "#research",
     statement: "I study how models reconstruct, understand and edit 3D structure, from everyday scenes to the human brain.",
     stats: [{ value: "5", label: "papers at ICPR and ISBI" }, { value: "9.47", label: "M.Tech (Research) CGPA, IIT Mandi" }, { value: "1", label: "3D Slicer extension, SlicerTracto" }],
-    media: ["Figure from TrackletGPT", "Poster at ISBI", "Tractography render"],
+    media: ["/projects/tractoaware-brain.webp", "/projects/tractogpt-results.webp", "/projects/slicertracto-render.webp"],
     points: ["3D reconstruction with point clouds & Gaussian splats", "Editing & generation of 3D representations", "Diffusion MRI tractography & white matter analysis", "Self-supervised & generative pretraining for 3D data"] },
   { id: "entrepreneur", label: "Entrepreneur", noun: "founder", cta: "Read the Tensr.AI story", href: "#experience",
     statement: "I founded Tensr.AI to put a cardiac lab on the chest: a wearable that records ECG and seismocardiograms.",
@@ -86,67 +99,66 @@ export const FACETS: Facet[] = [
 ];
 
 export const PAPERS: Paper[] = [
-  { id: "trackletgpt", venue: "ISBI 2026", title: "TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation", authors: "Goel, Singh, Joshi, Jha, Ahuja, Nigam, Bhavsar", url: "https://arxiv.org/abs/2601.13935" },
-  { id: "tractrlfusion", venue: "ISBI 2026", title: "TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography", authors: "Joshi, Sharma, Goel, Jha, Ahuja, Bhavsar, Nigam", url: "https://arxiv.org/abs/2601.13897" },
-  { id: "tractogpt", venue: "ISBI 2025", title: "TractoGPT: A GPT architecture for White Matter Segmentation", authors: "Goel, Singh, Joshi, Jha, Ahuja, Nigam, Bhavsar", url: "https://arxiv.org/abs/2501.15464" },
-  { id: "tractoembed", venue: "ICPR 2024", title: "TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation", authors: "Goel, Singh, Joshi, Jha, Ahuja, Nigam, Bhavsar", url: "https://arxiv.org/abs/2411.08187" },
-  { id: "tract-rlformer", venue: "ICPR 2024", title: "Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network", authors: "Joshi, Sharma, Goel, Jha, Ahuja, Bhavsar, Nigam", url: "https://arxiv.org/abs/2411.05757" }
-];
-
-export const PROJECTS: Project[] = [
-  { id: "trackletgpt", slug: "trackletgpt", title: "TrackletGPT", org: "IIT Mandi", when: "ISBI 2026", kind: "Paper", viz: "tracts",
+  { id: "trackletgpt", slug: "trackletgpt", short: "TrackletGPT", venue: "ISBI 2026", org: "IIT Mandi",
+    title: "TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation",
     blurb: "GPT-style tract segmentation from sub-streamline tokens.",
     authors: ["Goel, A.", "Singh, S.", "Joshi, A.", "Jha, R. R.", "Ahuja, C.", "Nigam, A.", "Bhavsar, A."], me: 0,
     desc: "TrackletGPT splits each streamline into short segments, called tracklets, and treats them as tokens for a GPT model. This puts sequential order back into the representation, so the model segments white matter tracts across subjects and datasets.",
     points: ["Evaluated on TractoInferno and HCP, including cross-dataset tests", "Reported with DICE, overlap and overreach"],
     links: [["arXiv", "https://arxiv.org/abs/2601.13935"]] },
-  { id: "tractrlfusion", title: "TractRLFusion", org: "IIT Mandi", when: "ISBI 2026", kind: "Paper", viz: "tracts",
+  { id: "tractrlfusion", short: "TractRLFusion", venue: "ISBI 2026", org: "IIT Mandi",
+    title: "TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography",
     blurb: "Fusing several RL tracking policies with a GPT-based fusion step.",
     authors: ["Joshi, A.", "Sharma, A.", "Goel, A.", "Jha, R. R.", "Ahuja, C.", "Bhavsar, A.", "Nigam, A."], me: 2,
     desc: "A GPT-based framework that fuses multiple reinforcement learning tractography policies, with a two-stage data selection step and multi-critic fine-tuning.",
     points: ["Evaluated on HCP, ISMRM and TractoInferno"],
     links: [["arXiv", "https://arxiv.org/abs/2601.13897"]] },
-  { id: "tractogpt", slug: "tractogpt", title: "TractoGPT", org: "IIT Mandi", when: "ISBI 2025", kind: "Paper", viz: "tracts",
+  { id: "tractogpt", slug: "tractogpt", short: "TractoGPT", venue: "ISBI 2025", org: "IIT Mandi",
+    title: "TractoGPT: A GPT architecture for White Matter Segmentation",
     blurb: "GPT architecture for white matter bundle segmentation.",
     authors: ["Goel, A.", "Singh, S.", "Joshi, A.", "Jha, R. R.", "Ahuja, C.", "Nigam, A.", "Bhavsar, A."], me: 0,
     desc: "A GPT-based model trained on streamline, cluster and fusion representations of tractography data, which keeps the shape of white matter bundles and runs fully automatically.",
     points: ["Evaluated on TractoInferno and 105HCP"],
-    links: [["arXiv", "https://arxiv.org/abs/2501.15464"]] },
-  { id: "tractoembed", slug: "tractoembed", title: "TractoEmbed", org: "IIT Mandi", when: "ICPR 2024", kind: "Paper", viz: "points",
+    links: [["arXiv", "https://arxiv.org/abs/2501.15464"]],
+    figure: { src: "/projects/tractogpt-overview.webp", caption: "TractoGPT overview: data representations, preprocessing and auto-regressive pretraining." } },
+  { id: "tractoembed", slug: "tractoembed", short: "TractoEmbed", venue: "ICPR 2024", org: "IIT Mandi",
+    title: "TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation",
     blurb: "Multi-level embeddings of streamlines, clusters and patches.",
     authors: ["Goel, A.", "Singh, B.", "Joshi, A.", "Jha, R. R.", "Ahuja, C.", "Nigam, A.", "Bhavsar, A."], me: 0,
     desc: "A modular framework that encodes tractography at three levels (single streamlines, clusters and patches) in separate encoders, then combines the embeddings for tract segmentation.",
     points: ["Published in Springer ICPR 2024 proceedings"],
-    links: [["Paper", "https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17"], ["arXiv", "https://arxiv.org/abs/2411.08187"], ["Code", "https://github.com/anoushkrit/TractoEmbed"]] },
-  { id: "tract-rlformer", slug: "tract-rlformer", title: "Tract-RLFormer", org: "IIT Mandi", when: "ICPR 2024", kind: "Paper", viz: "tracts",
+    links: [["Paper", "https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17"], ["arXiv", "https://arxiv.org/abs/2411.08187"], ["Code", "https://github.com/anoushkrit/TractoEmbed"]],
+    figure: { src: "/projects/tractoembed-abstract.webp", caption: "TractoEmbed graphical abstract (ICPR 2024)." } },
+  { id: "tract-rlformer", slug: "tract-rlformer", short: "Tract-RLFormer", venue: "ICPR 2024", org: "IIT Mandi",
+    title: "Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network",
     blurb: "Tract-specific RL policy with a decoder-only transformer.",
     authors: ["Joshi, A.", "Sharma, A.", "Goel, A.", "Jha, R. R.", "Ahuja, C.", "Bhavsar, A.", "Nigam, A."], me: 2,
     desc: "Combines supervised learning and reinforcement learning in a two-stage policy refinement, tracking the tracts of interest directly instead of segmenting afterwards.",
     points: ["Validated on TractoInferno, HCP and ISMRM-2015"],
-    links: [["Paper", "https://link.springer.com/chapter/10.1007/978-3-031-78201-5_17"], ["arXiv", "https://arxiv.org/abs/2411.05757"]] },
-  { id: "slicertracto", slug: "slicer-tracto", title: "SlicerTracto", org: "IIT Mandi", when: "2024 – now", kind: "Software", viz: "tracts",
+    links: [["Paper", "https://link.springer.com/chapter/10.1007/978-3-031-78201-5_17"], ["arXiv", "https://arxiv.org/abs/2411.05757"]] }
+];
+
+export const PROJECTS: Project[] = [
+  { id: "slicertracto", slug: "slicer-tracto", title: "SlicerTracto", org: "IIT Mandi", when: "2024 – now", kind: "Software",
     blurb: "3D Slicer extension for tractography.",
     desc: "An open-source 3D Slicer extension that brings reconstruction, tracking, segmentation and visualisation of white matter tracts into one desktop tool for clinicians.",
-    points: ["Runs inside 3D Slicer with DIPY and Scilpy backends", "Optional GPU offloading"], links: [] },
-  { id: "sculpt3d", slug: "sculpt3d", title: "Sculpt3D", org: "IIT Mandi", when: "2025", kind: "Software", viz: "points",
+    points: ["Runs inside 3D Slicer with DIPY and Scilpy backends", "Optional GPU offloading"], links: [],
+    figure: { src: "/projects/slicertracto-quickbundles.webp", caption: "SlicerTracto in 3D Slicer: QuickBundles clustering of a tractogram." } },
+  { id: "sculpt3d", slug: "sculpt3d", title: "Sculpt3D", org: "IIT Mandi", when: "2025", kind: "Software",
     blurb: "Text and sketch to 3D point clouds, with region edits.",
     desc: "Generates 3D point clouds from text, sketches or images, then edits chosen regions through natural-language feedback instead of regenerating the whole object.",
-    points: ["Built on SDFusion with LLM feedback", "Mentored B.Tech thesis project"], links: [] },
-  { id: "archglyph", slug: "archglyph-ocr", title: "ArchGlyphOCR", org: "Attentive.AI", when: "2025", kind: "Industry", viz: "boxes",
+    points: ["Built on SDFusion with LLM feedback", "Mentored B.Tech thesis project"], links: [],
+    figure: { src: "/projects/sculpt3d-results.webp", caption: "Sculpt3D results on ShapeTalk: point clouds edited from text instructions." } },
+  { id: "archglyph", slug: "archglyph-ocr", title: "ArchGlyphOCR", org: "Attentive.AI", when: "2025", kind: "Industry",
     blurb: "Text detection and reading on dense architectural plans.",
     desc: "A text-region proposal and recognition pipeline for large construction drawings, where callouts are small, rotated and packed among linework.",
     points: ["Vector path pretraining from PDF to SVG", "DEIMv2 with a DINOv3 backbone"], links: [] },
-  { id: "teresa", slug: "teresa-band", title: "Teresa Band", org: "Tensr.AI", when: "2020 – 21", kind: "Industry", viz: "wave",
+  { id: "teresa", slug: "teresa-band", title: "Teresa Band", org: "Tensr.AI", when: "2020 – 21", kind: "Industry",
     blurb: "Wearable for seismocardiogram and ECG signals.",
     desc: "A chest-worn wearable that records seismocardiogram (mechanical heart vibration) alongside ECG, with an LSTM model that annotates fiducial points in each cardiac cycle.",
-    points: ["Founded Tensr.AI; incubated at SIIC IIT Kanpur and HTIC IIT Madras"], links: [] }
+    points: ["Founded Tensr.AI; incubated at SIIC IIT Kanpur and HTIC IIT Madras"], links: [],
+    figure: { src: "/projects/pycardiograms-aortic-peaks.webp", caption: "pyCardiograms: aortic valve opening peaks marked on an SCG recording." } }
 ];
-export const CAPTIONS: Record<Viz, string> = {
-  tracts: "Illustration: white matter bundles, shaded by tract",
-  points: "Illustration: point cloud coloured by depth",
-  boxes: "Illustration: detected text regions on a plan sheet",
-  wave: "Illustration: ECG (top) and SCG (bottom)"
-};
 
 export const ROLES: Role[] = [
   { id: "attentive", slug: "attentive-ai", org: "Attentive.AI", role: "Research Engineer 2", when: "2025 – now", place: "Gurgaon", focus: "Vector AI and plan OCR",

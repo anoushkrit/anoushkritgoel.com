@@ -11,6 +11,7 @@ export interface ProjectDetail {
   dates: string;
   technologies: readonly string[];
   image?: string;
+  imageCaption?: string;
   video?: string;
   githubUrl?: string;
   paperUrl?: string;
@@ -609,7 +610,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     orgSlug: "xtlytics",
     dates: "Jan 2019 - Jan 2020",
     technologies: ["TFLite", "VGG-19", "MobileNet", "ResNet", "U-Net++", "Android", "Python"],
-    image: "https://prod-images-static.radiopaedia.org/images/45173030/101e4b11d9d079646ebea213875a48_gallery.jpeg",
+    image: "/projects/cadtnet-ultrasound.webp",
+    imageCaption: "CADtnet region of interest on a breast ultrasound scan.",
     shortDescription:
       "Developed an edge TFLite deep learning model for mobile breast cancer lesion segmentation and classification on ultrasound images (~6,500 scans dataset), deployed in Low-Middle Income Countries (Guadalajara, Mexico).",
     fullDescription:
@@ -630,7 +632,6 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     orgSlug: "xtlytics",
     dates: "Jan 2019 - Jan 2020",
     technologies: ["GCP Vision API", "Tesseract OCR", "Faster-RCNN", "OpenCV", "Python"],
-    image: "https://i0.wp.com/livefiredev.com/wp-content/uploads/2023/04/ocr_table_tool_1_contours.jpg?ssl=1",
     shortDescription:
       "State-of-the-art Invoice & Supermarket Bill OCR using GCP Vision + Tesseract + Faster-RCNN to extract and structure loosely-tabular content into CSV/XLSX via geometric bounding box heuristics for 50+ US gas station clients.",
     fullDescription:
@@ -693,7 +694,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     githubUrl: "https://github.com/anoushkrit/all-projects",
     dates: "Jan 2025 - Present",
     technologies: ["SDFusion", "LLaMA / GPT", "Open3D", "PyTorch3D", "Plotly", "Fury.gl", "Python"],
-    image: "https://mlr.cdn-apple.com/media/fig1_84b4ceb42b.png",
+    image: "/projects/sculpt3d-results.webp",
+    imageCaption: "Sculpt3D results on ShapeTalk: point clouds edited from text instructions.",
     shortDescription:
       "Multimodal Text & Sketch-to-3D point cloud generation and interactive editing framework using SDFusion + LLaMA/GPT continuous feedback loops for granular region-specific 3D spatial manipulation. Mentored B.Tech thesis project.",
     fullDescription:
@@ -715,7 +717,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     githubUrl: "https://github.com/anoushkrit/all-projects",
     dates: "Dec 2024 - Present",
     technologies: ["3D Slicer Extension", "DIPY", "Scilpy", "PyTorch", "Python", "Qt GUI"],
-    image: "https://brainsuite.org/wp-content/uploads/2015/02/tracts2.png",
+    image: "/projects/slicertracto-quickbundles.webp",
+    imageCaption: "SlicerTracto in 3D Slicer: QuickBundles clustering of a tractogram.",
     shortDescription:
       "Open-source 3D Slicer desktop extension enabling Neuro-Radiologists to visualize, track, and segment white matter tracts from Diffusion MRI scans in a standalone GUI app with optional on-prem/cloud GPU compute offloading. Deployed at PGI Chandigarh.",
     fullDescription:
@@ -814,6 +817,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     orgSlug: "iit-mandi",
     dates: "Feb 2023 - Jun 2023",
     technologies: ["3D Spatial AI", "Point Cloud Patching", "DIPY", "PyTorch", "Python"],
+    image: "/projects/tractoaware-overview.webp",
+    imageCaption: "TractoAware overview: preprocessing, feature extraction, model and external knowledge.",
     shortDescription:
       "Preliminary research project establishing spatial 3D streamline patch tokenization that laid the foundational groundwork for TractoGPT, TractoEmbed, and TrackletGPT.",
     fullDescription:
@@ -837,6 +842,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     arxivUrl: "https://arxiv.org/abs/2411.08187",
     dates: "ICPR 2024",
     technologies: ["PointNet", "dVAE", "CNN Embeddings", "PyTorch", "Harvard Benchmark"],
+    image: "/projects/tractoembed-abstract.webp",
+    imageCaption: "TractoEmbed graphical abstract (ICPR 2024).",
     bibtex: `@inproceedings{goel2024tractoembed,
   title={TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation},
   author={Goel, Anoushkrit and Singh, Bipanjit and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
@@ -867,6 +874,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     arxivUrl: "https://arxiv.org/abs/2501.15464",
     dates: "ISBI 2025",
     technologies: ["GPT Transformers", "Dual-Masking", "3D Spatial AI", "SCIL Benchmark", "PyTorch"],
+    image: "/projects/tractogpt-overview.webp",
+    imageCaption: "TractoGPT overview: data representations, preprocessing and auto-regressive pretraining.",
     bibtex: `@article{goel2025tractogpt,
   title={TractoGPT: A GPT architecture for White Matter Segmentation},
   author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
@@ -893,6 +902,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     orgSlug: "iit-mandi",
     dates: "Feb 2023 - Jun 2023",
     technologies: ["Mobile VR & AI (CS662)", "Unity 3D Engine", "C#", "Mobile VR", "Rigid Body Physics"],
+    image: "/projects/vikram-unity.webp",
+    imageCaption: "Vikram rover simulation in Unity (CS-662).",
     shortDescription:
       "Interactive 3D simulation of Chandrayaan-3 Vikram Rover lunar landing and surface traversal built in Unity Engine for mobile VR under Dr. Varun Dutt.",
     fullDescription:
@@ -933,6 +944,8 @@ export const ALL_PROJECTS_DETAILS: readonly ProjectDetail[] = [
     orgSlug: "tensr-ai",
     dates: "Feb 2020 - Jun 2021",
     technologies: ["Python", "LSTM Networks", "SciPy DSP", "PyTorch", "ECG / PPG / SCG Annotation"],
+    image: "/projects/pycardiograms-aortic-peaks.webp",
+    imageCaption: "Aortic valve opening peaks marked on an SCG recording.",
     shortDescription:
       "Core Python data science library for Tensr.AI featuring LSTM-based SCG waveform prediction, noise filtering, and automated peak annotation across multi-modal cardiac signals.",
     fullDescription:
