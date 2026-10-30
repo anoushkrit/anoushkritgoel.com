@@ -16,15 +16,15 @@
 - Google Scholar: https://scholar.google.com/citations?user=anoushkritgoel
 
 ## Key Peer-Reviewed Research Publications
-- TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation (IEEE ISBI 2026, London, Rank A)
+- TrackletGPT: A Language-Like GPT Framework for White Matter Tract Segmentation (IEEE ISBI 2026, London, Rank A)
   URL: https://anoushkritgoel.com/projects/trackletgpt
 - TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography (IEEE ISBI 2026, London)
-  URL: https://arxiv.org/abs/2601.13897
-- TractoGPT: A GPT architecture for White Matter Segmentation (IEEE ISBI 2025, Houston) [Outperformed SCIL FIESTA SOTA]
+  URL: https://doi.org/10.1109/ISBI61048.2026.11515392
+- TractoGPT: A GPT Architecture for White Matter Tract Segmentation (IEEE ISBI 2025, Houston) [Outperformed SCIL FIESTA SOTA]
   URL: https://anoushkritgoel.com/projects/tractogpt
-- TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation (ICPR 2024, Kolkata) [Outperformed Harvard TractCloud SOTA]
+- TractoEmbed: Modular Multi-level Embedding Framework for White Matter Tract Segmentation (ICPR 2024, Kolkata) [Outperformed Harvard TractCloud SOTA]
   URL: https://anoushkritgoel.com/projects/tractoembed
-- Tract-RLformer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network (ICPR 2024, Kolkata) [Outperformed SCIL Track2Learn SOTA]
+- Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network (ICPR 2024, Kolkata) [Outperformed SCIL Track2Learn SOTA]
   URL: https://anoushkritgoel.com/projects/tract-rlformer
 
 ## Open Source Software & AI Tools
