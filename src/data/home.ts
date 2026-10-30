@@ -1,4 +1,4 @@
-// Content for the one-page homepage. Facts match src/data/resume.tsx and arXiv.
+// Content for the one-page homepage. Facts match src/data/resume.tsx and the published versions (DOI).
 // Text in [brackets] is a placeholder for the owner to fill in.
 // Photos: in `media` and `photos`, replace a caption with an image path such as
 // "/photos/iit-mandi/lab.jpg" (file in public/photos/...). Captions show as placeholders.
@@ -100,29 +100,29 @@ export const FACETS: Facet[] = [
 
 export const PAPERS: Paper[] = [
   { id: "trackletgpt", slug: "trackletgpt", short: "TrackletGPT", venue: "ISBI 2026", org: "IIT Mandi",
-    title: "TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation",
+    title: "TrackletGPT: A Language-Like GPT Framework for White Matter Tract Segmentation",
     blurb: "GPT-style tract segmentation from sub-streamline tokens.",
     authors: ["Goel, A.", "Singh, S.", "Joshi, A.", "Jha, R. R.", "Ahuja, C.", "Nigam, A.", "Bhavsar, A."], me: 0,
     desc: "TrackletGPT splits each streamline into short segments, called tracklets, and treats them as tokens for a GPT model. This puts sequential order back into the representation, so the model segments white matter tracts across subjects and datasets.",
     points: ["Evaluated on TractoInferno and HCP, including cross-dataset tests", "Reported with DICE, overlap and overreach"],
-    links: [["arXiv", "https://arxiv.org/abs/2601.13935"]] },
+    links: [["Paper", "https://doi.org/10.1109/ISBI61048.2026.11515554"], ["arXiv", "https://arxiv.org/abs/2601.13935"]] },
   { id: "tractrlfusion", short: "TractRLFusion", venue: "ISBI 2026", org: "IIT Mandi",
     title: "TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography",
     blurb: "Fusing several RL tracking policies with a GPT-based fusion step.",
     authors: ["Joshi, A.", "Sharma, A.", "Goel, A.", "Jha, R. R.", "Ahuja, C.", "Bhavsar, A.", "Nigam, A."], me: 2,
     desc: "A GPT-based framework that fuses multiple reinforcement learning tractography policies, with a two-stage data selection step and multi-critic fine-tuning.",
     points: ["Evaluated on HCP, ISMRM and TractoInferno"],
-    links: [["arXiv", "https://arxiv.org/abs/2601.13897"]] },
+    links: [["Paper", "https://doi.org/10.1109/ISBI61048.2026.11515392"], ["arXiv", "https://arxiv.org/abs/2601.13897"]] },
   { id: "tractogpt", slug: "tractogpt", short: "TractoGPT", venue: "ISBI 2025", org: "IIT Mandi",
-    title: "TractoGPT: A GPT architecture for White Matter Segmentation",
+    title: "TractoGPT: A GPT Architecture for White Matter Tract Segmentation",
     blurb: "GPT architecture for white matter bundle segmentation.",
     authors: ["Goel, A.", "Singh, S.", "Joshi, A.", "Jha, R. R.", "Ahuja, C.", "Nigam, A.", "Bhavsar, A."], me: 0,
     desc: "A GPT-based model trained on streamline, cluster and fusion representations of tractography data, which keeps the shape of white matter bundles and runs fully automatically.",
     points: ["Evaluated on TractoInferno and 105HCP"],
-    links: [["arXiv", "https://arxiv.org/abs/2501.15464"]],
+    links: [["Paper", "https://doi.org/10.1109/ISBI60581.2025.10981049"], ["arXiv", "https://arxiv.org/abs/2501.15464"]],
     figure: { src: "/projects/tractogpt-overview.webp", caption: "TractoGPT overview: data representations, preprocessing and auto-regressive pretraining." } },
   { id: "tractoembed", slug: "tractoembed", short: "TractoEmbed", venue: "ICPR 2024", org: "IIT Mandi",
-    title: "TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation",
+    title: "TractoEmbed: Modular Multi-level Embedding Framework for White Matter Tract Segmentation",
     blurb: "Multi-level embeddings of streamlines, clusters and patches.",
     authors: ["Goel, A.", "Singh, B.", "Joshi, A.", "Jha, R. R.", "Ahuja, C.", "Nigam, A.", "Bhavsar, A."], me: 0,
     desc: "A modular framework that encodes tractography at three levels (single streamlines, clusters and patches) in separate encoders, then combines the embeddings for tract segmentation.",

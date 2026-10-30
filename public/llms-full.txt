@@ -10,31 +10,37 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 
 ## Peer-Reviewed Publications & Research Papers
 
-### 1. TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation
+### 1. TrackletGPT: A Language-Like GPT Framework for White Matter Tract Segmentation
 - Venue: IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK) — Rank: A
 - Authors: Anoushkrit Goel, Simroop Singh, Ankita Joshi, Ranjeet Ranjan Jha, Chirag Ahuja, Aditya Nigam, Arnav Bhavsar
+- Paper URL: https://doi.org/10.1109/ISBI61048.2026.11515554
 - Code URL: https://github.com/anoushkrit/TrackletGPT
 - Page URL: https://anoushkritgoel.com/projects/trackletgpt
 - Abstract & Method: TrackletGPT introduces a novel 3D point cloud tokenization scheme for fiber tractography. Streamlines are decomposed into continuous B-Spline sub-segments ('tracklets'). Geometric curvature parameters are tokenized into discrete representations, enabling a decoder-only GPT transformer to pretrain on tracklet completion and dual-masking.
 - BibTeX:
 ```bibtex
 @inproceedings{goel2026trackletgpt,
-  title={TrackletGPT: A Language-like GPT Framework for White Matter Tract Segmentation},
+  title={TrackletGPT: A Language-Like GPT Framework for White Matter Tract Segmentation},
   author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
-  booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
-  year={2026}
+  booktitle={2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI)},
+  pages={1--4},
+  year={2026},
+  organization={IEEE},
+  doi={10.1109/ISBI61048.2026.11515554}
 }
 ```
 
 ### 2. TractRLFusion: A GPT-Based Multi-Critic Policy Fusion Framework for Fiber Tractography
 - Venue: IEEE International Symposium on Biomedical Imaging (ISBI 2026, London, UK)
 - Authors: Ankita Joshi, Ashutosh Sharma, Anoushkrit Goel, Ranjeet Ranjan Jha, Chirag Ahuja, Arnav Bhavsar, Aditya Nigam
+- Paper URL: https://doi.org/10.1109/ISBI61048.2026.11515392
 - ArXiv URL: https://arxiv.org/abs/2601.13897
 - Abstract & Method: Combines reinforcement learning policy gradient algorithms with multi-modal neural fusion networks to track white matter fiber bundles directly through complex crossing-fiber regions in Diffusion MRI.
 
-### 3. TractoGPT: A GPT architecture for White Matter Segmentation
-- Venue: 23rd IEEE International Symposium on Biomedical Imaging (ISBI 2025, Houston, TX, USA)
+### 3. TractoGPT: A GPT Architecture for White Matter Tract Segmentation
+- Venue: 22nd IEEE International Symposium on Biomedical Imaging (ISBI 2025, Houston, TX, USA)
 - Authors: Anoushkrit Goel, Simroop Singh, Ankita Joshi, Ranjeet Ranjan Jha, Chirag Ahuja, Aditya Nigam, Arnav Bhavsar
+- Paper URL: https://doi.org/10.1109/ISBI60581.2025.10981049
 - ArXiv URL: https://arxiv.org/abs/2501.15464
 - Code URL: https://github.com/anoushkrit/TractoGPT
 - Page URL: https://anoushkritgoel.com/projects/tractogpt
@@ -42,15 +48,18 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 - Abstract & Method: TractoGPT models 3D tractography streamlines as spatial point cloud tokens. Introduces a dual-masking self-supervised pretraining objective (masking point coordinates within a patch and whole spatial patches across the brain). Fine-tuned on white matter tract anatomical classification.
 - BibTeX:
 ```bibtex
-@article{goel2025tractogpt,
-  title={TractoGPT: A GPT architecture for White Matter Segmentation},
+@inproceedings{goel2025tractogpt,
+  title={TractoGPT: A GPT Architecture for White Matter Tract Segmentation},
   author={Goel, Anoushkrit and Singh, Simroop and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
-  journal={arXiv preprint arXiv:2501.15464},
-  year={2025}
+  booktitle={2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)},
+  pages={1--4},
+  year={2025},
+  organization={IEEE},
+  doi={10.1109/ISBI60581.2025.10981049}
 }
 ```
 
-### 4. TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation
+### 4. TractoEmbed: Modular Multi-level Embedding Framework for White Matter Tract Segmentation
 - Venue: 27th International Conference on Pattern Recognition (ICPR 2024, Kolkata, India) — Springer
 - Authors: Anoushkrit Goel, Bipanjit Singh, Ankita Joshi, Ranjeet Ranjan Jha, Chirag Ahuja, Aditya Nigam, Arnav Bhavsar
 - Paper URL: https://link.springer.com/chapter/10.1007/978-3-031-78104-9_17
@@ -61,16 +70,19 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 - BibTeX:
 ```bibtex
 @inproceedings{goel2024tractoembed,
-  title={TractoEmbed: A Modular Multi-embedding Framework for White Matter Segmentation},
+  title={TractoEmbed: Modular Multi-level Embedding Framework for White Matter Tract Segmentation},
   author={Goel, Anoushkrit and Singh, Bipanjit and Joshi, Ankita and Jha, Ranjeet Ranjan and Ahuja, Chirag and Nigam, Aditya and Bhavsar, Arnav},
-  booktitle={International Conference on Pattern Recognition},
-  pages={262--278},
+  booktitle={International Conference on Pattern Recognition (ICPR 2024)},
+  series={Lecture Notes in Computer Science},
+  volume={15328},
+  pages={240--255},
   year={2024},
-  organization={Springer}
+  organization={Springer},
+  doi={10.1007/978-3-031-78104-9_17}
 }
 ```
 
-### 5. Tract-RLformer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network
+### 5. Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network
 - Venue: 27th International Conference on Pattern Recognition (ICPR 2024, Kolkata, India) — Springer
 - Authors: Ankita Joshi, Ashutosh Sharma, Anoushkrit Goel, Ranjeet Ranjan Jha, Chirag Ahuja, Arnav Bhavsar, Aditya Nigam
 - Paper URL: https://link.springer.com/chapter/10.1007/978-3-031-78201-5_17
@@ -83,10 +95,13 @@ Education: M.Tech (by Research) in Intelligent Systems at IIT Mandi, completed N
 @inproceedings{goel2024tract,
   title={Tract-RLFormer: A Tract-Specific RL Policy Based Decoder-Only Transformer Network},
   author={Joshi, Ankita and Sharma, Ashutosh and Goel, Anoushkrit and Jha, Ranjeet Ranjan and Ahuja, Chirag and Bhavsar, Arnav and Nigam, Aditya},
-  booktitle={International Conference on Pattern Recognition},
-  pages={279--295},
+  booktitle={International Conference on Pattern Recognition (ICPR 2024)},
+  series={Lecture Notes in Computer Science},
+  volume={15313},
+  pages={258--275},
   year={2024},
-  organization={Springer}
+  organization={Springer},
+  doi={10.1007/978-3-031-78201-5_17}
 }
 ```
 
